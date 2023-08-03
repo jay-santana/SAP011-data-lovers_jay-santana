@@ -21,4 +21,4 @@ function cardCharacters (dataRM) {
 
 window.addEventListener('load', () => cardCharacters(dataRM))
 
-console.log(example, data);
+console.log(example);
