@@ -25,23 +25,44 @@
       </nav>
     </header>
 
-    <section>
-      <div class="lateral-content">
-        <aside class="side-bar">
-          <div class="options-side-bar">
-            <button class="advanced-search" id="advanced-search"> Busca Avançada</button>
-          </div>
-        </aside>
-
-      </div>
-    </section>
-
-    <main>
+    <div class="lateral-container">
       <section>
-        <p class = message id="message-data"></p>
-        <div class="container-card" id="info-cards"></div>
+        <div class="lateral-content">
+          <aside class="side-bar">
+            <div class="options-side-bar">
+              <p class="advanced-search" id="advanced-search"> Busca Avançada</p>
+            </div>
+            <div class="search-bar" id="search-bar">
+              <select name="status" id="status-options">
+                <option disabled selected hidden> Status</option>
+                  <option value="Alive">Vivo</option>
+                  <option value="Dead">Morto</option>
+                  <option value="All">Todos</option>
+              </select>
+        
+              <select name="species" id="species-options">
+                <option disabled selected hidden> Espécie</option>
+                  <option value="Human">Humano</option>
+                  <option value="Alien">Alienigena</option>
+                  <option value="Animal">Animal</option>
+                  <option value="Robot">Robô</option>
+                  <option value="Vampire">Vampiro</option>
+                  <option value="Humanoid">Humanóide</option>
+              </select>
+            </div>
+          </aside>
+        </div>
       </section>
-    </main>
+    </div>
+
+    <div class="card-container">
+      <main>
+        <section>
+          <p class = message id="message-data"></p>
+          <div class="container-card" id="info-cards"></div>
+        </section>
+      </main>
+    </div>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
