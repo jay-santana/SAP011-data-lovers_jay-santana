@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(./Assets/background-page.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+
+}
+
+header {
+    font-family: 'Exo 2', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background-color: #5af5e0a6;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+}
+
+#logo {
+    width: 300px;
+    height: 150px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: auto; /* Move os itens para a esquerda */
+}
+
+nav li {
+    margin-left: 10px;
+    margin-right: 90px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.search-box {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 100px; /* Move a caixa de busca para a direita */
+}
+
+.search-label {
+    display: flex;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.search-box-field {
+    padding-left: 50px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+}
+
+.lupa-search {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+  
+  
+  
+  
+  
+  

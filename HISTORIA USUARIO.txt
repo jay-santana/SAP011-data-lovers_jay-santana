@@ -9,7 +9,7 @@ seus personagens.
 7 - O usuário poderá acessar o site de qualquer dispositivo 
 8 - O usuário terá acesso a um projeto com implementação de acessibilidade
 9 - O usuário terá a experiencia de clicar no card do personagem e visualizar as informações gerais do personagem em 
-questão, bem como expandir os dados e visualizar mais informações, como por exeplo os episódios em que este personagem
+questão, bem como expandir os dados e visualizar mais informações, como por exemplo os episódios em que este personagem
 aparece.
 
 DEFINIÇÃO DE PRODUTO
