@@ -25,44 +25,44 @@
       </nav>
     </header>
 
-    <div class="lateral-container">
-      <section>
-        <div class="lateral-content">
-          <aside class="side-bar">
-            <div class="options-side-bar">
-              <p class="advanced-search" id="advanced-search"> Busca Avançada</p>
-            </div>
-            <div class="search-bar" id="search-bar">
-              <select name="status" id="status-options">
-                <option disabled selected hidden> Status</option>
-                  <option value="Alive">Vivo</option>
-                  <option value="Dead">Morto</option>
-                  <option value="All">Todos</option>
-              </select>
-        
-              <select name="species" id="species-options">
-                <option disabled selected hidden> Espécie</option>
-                  <option value="Human">Humano</option>
-                  <option value="Alien">Alienigena</option>
-                  <option value="Animal">Animal</option>
-                  <option value="Robot">Robô</option>
-                  <option value="Vampire">Vampiro</option>
-                  <option value="Humanoid">Humanóide</option>
-              </select>
-            </div>
-          </aside>
-        </div>
+    <main>
+      <section class="lateral-container">
+        <aside class="side-bar">
+          <div class="options-side-bar">
+            <p class="advanced-search" id="advanced-search"> Busca Avançada</p>
+          </div>
+          <label for="status-filter"> Status:</label>
+            <select name="status" id="status-filter">
+              <option value="All">Todos</option>
+              <option value="Alive">Vivo</option>
+              <option value="Dead">Morto</option>
+              <option value="unknown">Indefinido</option>
+            </select>
+            
+          <label for="species-filter"> Espécie:</label>
+            <select name="species" id="species-filter">
+              <option value="All">Todos</option>
+              <option value="Human">Humano</option>
+              <option value="Alien">Alienigena</option>
+              <option value="Animal">Animal</option>
+              <option value="Robot">Robô</option>
+              <option value="Vampire">Vampiro</option>
+              <option value="Humanoid">Humanóide</option>
+              <option value="Poopybutthole">Poopybutthole</option>
+              <option value="Mytholog">Mitólogo</option>
+              <option value="Cronenberg">Cronenberg</option>
+              <option value="Disease">Doença</option>
+              <option value="Parasyte">Parasita</option>
+              <option value="unknown">Indefinido</option>
+            </select>
+        </aside>
       </section>
-    </div>
 
-    <div class="card-container">
-      <main>
-        <section>
-          <p class = message id="message-data"></p>
-          <div class="container-card" id="info-cards"></div>
-        </section>
-      </main>
-    </div>
+      <section class="card-container">
+        <p class = message id="message-data"></p>
+        <div class="container-card" id="info-cards"></div>
+      </section>
+    </main>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
