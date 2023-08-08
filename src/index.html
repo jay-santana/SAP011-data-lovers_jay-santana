@@ -1,69 +1,34 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="pt-br">
+
+<head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
 
     <header>
-      <img id="logo" src="./Assets/Rick-And-Morty-Logo.png" alt="rick_and_morty_logo">
-      <nav>
-        <ul>
-          <div class="search-box">
-            <input type="text" class="search-box-field" id="search-box-field" placeholder="Busca por personagem">
-            <a class="search-button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#fff" class="lupa-search" viewBox="0 0 20 20">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-              </svg>
-            </a>
-          </div>
-          <li><a href="index.html">Assistir Episódios</a></li>
-          <li><a href="index.html">Saiba Mais</a></li>
-        </ul>
-      </nav>
+        <img id="logo" src="./Assets/Rick-And-Morty-Logo.png" alt="rick_and_morty_logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Assistir Episódios</a></li>
+                <li><a href="index.html">Saiba Mais</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-      <section class="lateral-container">
-        <aside class="side-bar">
-          <div class="options-side-bar">
-            <p class="advanced-search" id="advanced-search"> Busca Avançada</p>
-          </div>
-          <label for="status-filter"> Status:</label>
-            <select name="status" id="status-filter">
-              <option value="All">Todos</option>
-              <option value="Alive">Vivo</option>
-              <option value="Dead">Morto</option>
-              <option value="unknown">Indefinido</option>
-            </select>
-            
-          <label for="species-filter"> Espécie:</label>
-            <select name="species" id="species-filter">
-              <option value="All">Todos</option>
-              <option value="Human">Humano</option>
-              <option value="Alien">Alienigena</option>
-              <option value="Animal">Animal</option>
-              <option value="Robot">Robô</option>
-              <option value="Vampire">Vampiro</option>
-              <option value="Humanoid">Humanóide</option>
-              <option value="Poopybutthole">Poopybutthole</option>
-              <option value="Mytholog">Mitólogo</option>
-              <option value="Cronenberg">Cronenberg</option>
-              <option value="Disease">Doença</option>
-              <option value="Parasyte">Parasita</option>
-              <option value="unknown">Indefinido</option>
-            </select>
-        </aside>
-      </section>
-
-      <section class="card-container">
-        <p class = message id="message-data"></p>
-        <div class="container-card" id="info-cards"></div>
-      </section>
+    <main id="container-informs">
+        <section class="initial-container">
+            <h2>Seja bem-vindo as aventuras interdimensionais de Rick and Morty</h2>
+            <h3>Junte-se a gente e venha se divertir descobrindo lugares incríveis e criaturas assustadoras através de universos e galáxias desconhecidas.</h3>
+            <a href="main.html"><button class="start button" type="button">Entrar</button></a>
+        </section>
+        <img class="initical-img" src="./Assets/gif_rick_morty.gif" alt="Rick and Morty - gif">
     </main>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
-  </body>
+</body>
+
 </html>
