@@ -7,11 +7,6 @@
 }
 
 body {
-    /* background-image: url(Img/Rick\ and\ Morty.gif);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center bottom; */
     width: 100%;
     height: 100vh;
     background-color:#252223;
@@ -19,7 +14,7 @@ body {
 
 header {
     font-family: 'Exo 2', sans-serif;
-    background-image: linear-gradient(to right,#0097b27a, #7ed95767);
+    background-image: linear-gradient(to right,#0097b248, #7ed95749);
     width: 100%;
     height: 100px;
     
@@ -57,8 +52,8 @@ main{
     flex-direction: column;
     margin-top: 150px;
     align-items: center;
-    /* gap: 100px; */
 }
+
 .initical-img{
     border: none;
     margin-left: 80px;
@@ -67,14 +62,12 @@ main{
 }
 
 button.start{
-    width: 150px;
-    height: 40px;
+    width: 140px;
+    height: 35px;
     font-family: 'Exo 2', sans-serif;
     font-size: 16px;
     font-weight: 900;
     color: #000000;
-    cursor: pointer;
-    /* text-align: center; */
 
     background-color: #aedc29;
     border-color: #017384;
@@ -82,29 +75,9 @@ button.start{
     border-radius: 33px;
     border-width: 3px;
 
-    /* margin-top: 100px; */
-    /* margin-left: 120px; */
+    cursor: pointer;
 }
-/* .start{
-    margin: 150px;
 
-} */
-
-/* h2{ 
-    font-size: 16px;
-    font-family: 'Exo 2', sans-serif;
-    color: #fff;
-    text-align: center;
-    align-items: center;
-} */
-
-/* h3{ 
-    font-size: 12px;
-    font-family: 'Exo 2', sans-serif;
-    color: #fff;
-    text-align: center;
-    align-items: center;
-} */
 
 nav ul {
     display: flex;
@@ -114,13 +87,13 @@ nav ul {
 
 nav li {
     margin-left: 10px;
-    margin-right: 90px;
+    margin-right: 50px;
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -134,6 +107,7 @@ nav a {
 #logo {
     width: 300px;
     height: 150px;
+    margin-left: 50px;
 }
 
 #advanced-search{
@@ -162,4 +136,5 @@ nav a {
     display: flex;
     margin-bottom: 50px;
 }
+
 
