@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 * {
     margin: 0;
@@ -13,7 +13,6 @@ body {
 }
 
 header {
-    font-family: 'Exo 2', sans-serif;
     background-image: linear-gradient(to right,#0097b248, #7ed95749);
     width: 100%;
     height: 100px;
@@ -25,17 +24,27 @@ header {
     position: fixed;
 }
 
+@font-face {
+    font-family:'kust';
+    src: url('Assets/kust-maisfontes.f0bb/kust.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 h2{
-    font-size: 24px;
-    font-family: 'Exo 2', sans-serif;
-    color: #fff;
-    text-align: center;
+    font-size: 28px;
+    font-family: 'kust', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #A4CD2D;
+    text-align: center;  
 }
 
 h3{
-    font-size: 16px;
-    font-family: 'Exo 2', sans-serif;
-    color: #fff;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #949494;
     text-align: justify;
     padding: 70px;
 }
@@ -64,9 +73,9 @@ main{
 button.start{
     width: 140px;
     height: 35px;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 600;
     color: #000000;
 
     background-color: #aedc29;
@@ -74,6 +83,7 @@ button.start{
     border-style: dashed;
     border-radius: 33px;
     border-width: 3px;
+    box-shadow: 0 6px 6px 0 #81818180; 
 
     cursor: pointer;
 }
@@ -91,10 +101,11 @@ nav li {
 }
 
 nav a {
-    text-decoration: none;
-    color: #fff;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
+    color: #fff; 
+    text-decoration: none;  
 }
 
 /* img{
@@ -108,33 +119,6 @@ nav a {
     width: 300px;
     height: 150px;
     margin-left: 50px;
-}
-
-#advanced-search{
-    color: #fff;
-    font-family: 'Exo 2', sans-serif;
-    font-size: 16px;
-}
-
-.search-box {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-right: 100px; /* Move a caixa de busca para a direita */
-}
-
-.search-box-field::placeholder{
-    color:#fff;
-    font-family: 'Exo 2', sans-serif;
-    font-size: 20px;
-}
-
-.search-label {
-    color: #fff;
-    display: flex;
-    margin-bottom: 50px;
 }
 
 

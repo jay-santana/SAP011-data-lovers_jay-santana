@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 
 * {
     margin: 0;
@@ -17,8 +19,14 @@ body {
     height: 100vh;
 }
 
+@font-face {
+    font-family:'kust';
+    src: url('Assets/kust-maisfontes.f0bb/kust.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 header {
-    font-family: 'Exo 2', sans-serif;
     background-image: linear-gradient(to right,#0097b27a, #7ed95767);
     width: 100%;
     height: 100px;
@@ -39,7 +47,8 @@ main {
 
 h2 { 
     font-size: 12px;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     color: #fff;
     height: 35px;
     padding-top: 3px;
@@ -53,7 +62,7 @@ h2 {
 
 h3 { 
     font-size: 10px;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #aedc29;
     text-align: center;
     align-items: center;
@@ -71,10 +80,11 @@ nav li {
 }
 
 nav a {
-    text-decoration: none;
-    color: #fff;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
+    color: #fff; 
+    text-decoration: none;
 }
 
 img {
@@ -92,12 +102,6 @@ img {
     margin-left: 50px;
 }
 
-#advanced-search {
-    color: #fff;
-    font-family: 'Exo 2', sans-serif;
-    font-size: 16px;
-}
-
 .search-box {
     flex-grow: 1;
     display: flex;
@@ -109,21 +113,17 @@ img {
 
 .search-box-field::placeholder{
     color:#fff;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     font-size: 18px;
 }
 
-.search-label {
-    color: #fff;
-    display: flex;
-    margin-bottom: 50px;
-}
-
 .search-box-field {
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    background-color: transparent;
+    font-weight: 400;
     color: #fff;
+    background-color: transparent;
     
     border: none;
     border-bottom: 2px solid #fff;
@@ -158,17 +158,16 @@ img {
     text-align: center;
     margin-top: 150px;
     padding-right: 100px;
-    
-    
+       
     gap: 5px;
 }
 
 #status-filter, #species-filter, #gender-filter, #origin-filter, #location-filter {
     width: 200px;
     height: 35px;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     color: #000000;
     text-align: center;
 
@@ -188,9 +187,9 @@ img {
 #order-select, #advanced-search {
     width: 250px;
     height: 30px;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 400;
     color: #fff;
     text-align: center;
 
