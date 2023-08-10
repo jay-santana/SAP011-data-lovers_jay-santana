@@ -14,12 +14,12 @@ function cardCharacters(dataRM) {
                 <div class = "cards">
                     <img src = "${dataRM.image}" alt = "Characters image">
                     <div class="name-container">
-                    <h2> ${dataRM.name}</h2>
+                        <h2> ${dataRM.name}</h2>
                     </div>
                 </div>
             </div>
         </div>`;
-        return card;
+        return card;    
     });
     document.getElementById("info-cards").innerHTML = printCard.join("");
 

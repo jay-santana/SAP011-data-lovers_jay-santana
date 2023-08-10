@@ -84,10 +84,8 @@ button.start{
     border-radius: 33px;
     border-width: 3px;
     box-shadow: 0 6px 6px 0 #81818180; 
-
     cursor: pointer;
 }
-
 
 nav ul {
     display: flex;
