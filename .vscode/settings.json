@@ -1,4 +1,4 @@
 {
-    "editor.wordWrap": "on",
-    "workbench.colorTheme": "Dracula Soft"
+    "editor.wordWrap": "off",
+    "workbench.colorTheme": "Atom One Dark"
 }
