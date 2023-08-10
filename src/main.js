@@ -2,6 +2,21 @@ import { statusFilter, speciesFilter } from './data.js';
 
 import data from './data/rickandmorty/rickandmorty.js';
 
+
+const openCardButton = document.getElementById('info-cards');
+const closeCardButton = document.getElementById("close-modal");
+const modal = document.getElementById("modal");
+const fade = document.getElementById("fade");
+
+const toggleModal = () => {
+    modal.classList.toggle('hide');
+    fade.classList.toggle('hide');
+}
+
+[openCardButton, closeCardButton, fade].forEach((el) => {
+    el.addEventListener('click', () => toggleModal());
+})
+
 const dataRM = data.results;
 
 
@@ -51,9 +66,9 @@ window.addEventListener('load', () => {
                 <div class="border-container">
                     <div class="cards">
                         <img id="img-card" src="${dataRM.image}" alt="Characters image">
-                        <h2>${dataRM.name}</h2>
-                        <h3> ${dataRM.status}</h3>
-                        <h3> ${dataRM.species}</h3>
+                        <div class="name-container">
+                            <h2>${dataRM.name}</h2>
+                        </div>
                     </div>    
                 </div>
             </div>`;
@@ -64,3 +79,4 @@ window.addEventListener('load', () => {
         cardsContainer.innerHTML = printCard.join("");
     }
 });
+

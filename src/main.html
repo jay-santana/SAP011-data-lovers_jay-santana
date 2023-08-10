@@ -9,8 +9,9 @@
 </head>
 
 <body>
+
   <header>
-    <img id="logo" src="./Assets/Rick-And-Morty-Logo.png" alt="rick_and_morty_logo">
+    <a href="index.html"><img id="logo" src="./Assets/Rick-And-Morty-Logo.png" alt="rick_and_morty_logo"></a>
     <nav>
       <ul>
         <div class="search-box">
@@ -24,13 +25,27 @@
             </svg>
           </a>
         </div>
+        <li><a href="index.html">Home</a></li>
         <li><a href="index.html">Sobre</a></li>
         <li><a href="index.html">Assistir Episódios</a></li>
       </ul>
     </nav>
   </header>
 
+
+  <div id="fade" class="hide"></div>
+  <div id="modal" class="hide">
+    <button id="close-modal">Fechar</button>
+      <div id="modal-body">
+        <p>OI EU SOU UM MODAL.
+          INSIRA MAIS INFORMAÇÕES DO CLICK DO PERSONAGEM
+          QUANDO VOCES ME FIZEREM FUNCIONAR!!!! #SOCORRO
+        </p>
+      </div>
+  </div>
+
   <main>
+    
     <section class="side-container">
       <aside class="side-bar">
         <div class="options-side-bar">
@@ -85,8 +100,8 @@
 
     <section class="card-container">
       <p class=message id="message-data"></p>
-      <div class="container-card" id="info-cards">
-      </div>
+        <div class="container-card" id="info-cards"></div>
+      
     </section>
 
   </main>
