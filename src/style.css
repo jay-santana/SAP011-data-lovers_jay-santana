@@ -38,26 +38,6 @@ header {
     position: fixed;
 }
 
-main {
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-h2 {
-    font-size: 12px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    color: #fff;
-}
-
-h3 {
-    font-size: 10px;
-    font-family: 'Roboto', sans-serif;
-    color: #aedc29;
-}
-
 nav ul {
     display: flex;
     list-style: none;
@@ -75,14 +55,6 @@ nav a {
     font-weight: 400;
     color: #fff;
     text-decoration: none;
-}
-
-img {
-    width: 100%;
-    height: 190px;
-    border: 0;
-    border-radius: 16px 16px 0 0;
-    object-fit: cover; /* box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);    */
 }
 
 #logo {
@@ -128,19 +100,27 @@ img {
     cursor: pointer;
 }
 
+main {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .side-container {
     width: 100%;
     margin-top: 180px;
     margin-left: 100px;
 }
 
-.card-container {
+/* .card-container {
     width: 100%;
     height: 100vh;
-}
+} */
 
 .container-card {
     width: 100%;
+    height: 100vh;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -148,6 +128,19 @@ img {
     margin-top: 150px;
     padding-right: 100px;
     gap: 5px;
+}
+
+h2 {
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #fff;
+}
+
+h3 {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #aedc29;
 }
 
 #status-filter, #species-filter, #gender-filter, #origin-filter, #location-filter {
@@ -211,6 +204,15 @@ img {
     height: 230px;
     padding: 5px;
 }
+
+#img-card {
+    width: 100%;
+    height: 190px;
+    border: 0;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover; /* box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);    */
+}
+
 .cards{
     position: relative;
 }
@@ -221,6 +223,7 @@ img {
     border-radius: 16px;
     border-style: solid;
     border-width: 1px;
+    overflow: hidden;
 
     position: absolute;
     top: 180px;

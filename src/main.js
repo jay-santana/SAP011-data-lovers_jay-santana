@@ -12,7 +12,7 @@ function cardCharacters(dataRM) {
         <div class="style-container">
             <div class="border-container">
                 <div class = "cards">
-                    <img src = "${dataRM.image}" alt = "Characters image">
+                    <img id="img-card" src = "${dataRM.image}" alt = "Characters image">
                     <div class="name-container">
                         <h2> ${dataRM.name}</h2>
                     </div>
@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
             <div class="style-container">
                 <div class="border-container">
                     <div class="cards">
-                        <img src="${dataRM.image}" alt="Characters image">
+                        <img id="img-card" src="${dataRM.image}" alt="Characters image">
                         <h2>${dataRM.name}</h2>
                         <h3> ${dataRM.status}</h3>
                         <h3> ${dataRM.species}</h3>
