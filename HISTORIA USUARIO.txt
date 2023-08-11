@@ -1,14 +1,12 @@
-1 - Tem a possibilidade de buscar o personagem por nome, status, specie, tipo, genero, origem e localização
-2 - Consegue visualizar de forma individual os episódios em que um personagem específicio aparece
-3 - Pode organizar o filtro por personagens principais crescente e decrescente
-4 - Pode organizar em ordem alfabética crescente e decrescente
-5 - Visualizar a porcentagem de uma filtragem específica em relação ao numero total de personagens ex. quero pesquisar
+1 - Tem a possibilidade de buscar o personagem por nome, status, specie e genero
+2 - Pode organizar o filtro por personagens principais crescente e decrescente
+3 - Pode organizar em ordem alfabética crescente e decrescente
+4 - Visualizar a porcentagem de uma filtragem específica em relação ao numero total de personagens ex. quero pesquisar
 status, da especiel tal, do genero tal. O resultado vai retornar a porcentagem desse filtro em relação ao numero total de
 seus personagens.
-6 - O usuário poderá acessar episódios completos.
+6 - O usuário poderá acessar episódios completos em uma plataforma de streaming externa.
 7 - O usuário poderá acessar o site de qualquer dispositivo 
-8 - O usuário terá acesso a um projeto com implementação de acessibilidade
-9 - O usuário terá a experiencia de clicar no card do personagem e visualizar as informações gerais do personagem em 
+8 - O usuário terá a experiencia de clicar no card do personagem e visualizar as informações gerais do personagem em 
 questão, bem como expandir os dados e visualizar mais informações, como por exemplo os episódios em que este personagem
 aparece.
 

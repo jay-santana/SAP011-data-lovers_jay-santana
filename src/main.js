@@ -66,3 +66,22 @@ window.addEventListener('load', () => {
     }
 });
 
+const btnTop = document.getElementById('btnTop');
+
+// Mostrar ou ocultar o botão ao rolar a página
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        btnTop.style.display = 'block';
+    } else {
+        btnTop.style.display = 'none';
+    }
+});
+
+// volta ao topo ao clicar no botão
+btnTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
