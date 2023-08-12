@@ -112,23 +112,23 @@ main{
 .ball-RM-gif{
     font-family: 'Roboto';
     color: #949494;
-    width: 250px;
+    width: 190px;
     margin-top: 90px;
 }
 
 button.start{
-    width: 100px;
-    height: 35px;
+    width: 56px;
+    height: 25px;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
     color: #000000;
 
-    background-color: #aedc29;
+    background-image: linear-gradient(to right,#0097B2, #7ED957);
     border-color: #017384;
     border-style: dashed;
-    border-radius: 33px;
+    border-radius: 8px;
     border-width: 3px;
-    box-shadow: 0 6px 6px 0 #d4d4d46e; 
+    box-shadow: 0 4px 4px 0 #a8a8a86e; 
     cursor: pointer;
 }

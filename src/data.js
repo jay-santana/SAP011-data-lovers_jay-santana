@@ -16,6 +16,14 @@ export const speciesFilter = (data, filter) => {
   }
 };
 
+export const genderFilter = (data, filter) => {
+  if (filter === "All") {
+    return data;
+  } else {
+    return data.filter((character) => character.gender === filter);
+  }
+};
+
 export const anotherExample = () => {
   return 'OMG';
 };
