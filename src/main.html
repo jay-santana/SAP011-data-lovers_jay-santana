@@ -5,14 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
-
+  <link rel="stylesheet" href="main.css"/>
 </head>
 
 <body>
-
   <header>
-    <a href="index.html"><img id="logo" src="./Assets/Rick-And-Morty-Logo.png" alt="rick_and_morty_logo"></a>
+    <a href="index.html"><img id="logo" src="./Assets/Rick-And-Morty-Logo.png" alt="Rick_and_Morty_logo"></a>
     <nav>
       <ul>
         <div class="search-box">
@@ -27,12 +25,11 @@
           </a>
         </div>
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html">Sobre</a></li>
+        <li><a href="about.html">Sobre</a></li>
         <li><a href="https://www.hbomax.com/br/pt/series/urn:hbo:series:GXkRjxwjR68PDwwEAABKJ" target="_blank">Assistir Episódios</a></li>
       </ul>
     </nav>
   </header>
-
 
   <div id="fade" class="hide"></div>
   <div id="modal" class="hide">
@@ -46,7 +43,6 @@
   </div>
 
   <main>
-    
     <section class="side-container">
       <aside class="side-bar">
         <div class="options-side-bar">
@@ -56,30 +52,31 @@
           <option value="All">Status</option>
           <option value="Alive">Vivo</option>
           <option value="Dead">Morto</option>
-          <option value="unknown">Indefinido</option>
+          <option value="unknown">Desconhecido</option>
         </select>
 
         <select name="species" id="species-filter">
           <option value="All">Espécie</option>
           <option value="Human">Humano</option>
-          <option value="Alien">Alienigena</option>
+          <option value="Alien">Alienígena</option>
           <option value="Animal">Animal</option>
           <option value="Robot">Robô</option>
           <option value="Vampire">Vampiro</option>
           <option value="Humanoid">Humanóide</option>
           <option value="Poopybutthole">Poopybutthole</option>
-          <option value="Mytholog">Mitólogo</option>
+          <option value="Mytholog">Mitológico</option>
           <option value="Cronenberg">Cronenberg</option>
           <option value="Disease">Doença</option>
           <option value="Parasite">Parasita</option>
-          <option value="unknown">Indefinido</option>
+          <option value="unknown">Desconhecida</option>
         </select>
 
         <select name="gender" id="gender-filter">
           <option value="All">Gênero</option>
           <option value="Male">Masculino</option>
           <option value="Female">Feminino</option>
-          <option value="unknown">Indefinido</option>
+          <option value="unknown">Desconhecido</option>
+          <option value="Genderless">Sem gênero</option>
         </select>
 
         <div class="order-side">
@@ -102,8 +99,8 @@
     <button id="btnTop" class="btn-top">
       <img class="btn-top" src="./Assets/arrowUp.png" alt="botão_voltar_topo">
     </button>
-
   </main>
+
   <div id="root"></div>
   <script src="main.js" type="module"></script>
 </body>
