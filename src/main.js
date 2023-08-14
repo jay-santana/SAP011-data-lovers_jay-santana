@@ -16,28 +16,35 @@ const toggleModal = (dataRM) => {
             <div class="cards-modal">
                 <img id="img-modal-card" src="${dataRM.image}" alt="Characters image">
                 <div class="name-modal-container">
-                    <h2>${dataRM.name}</h2>
+                    <h2 id="name-modal">${dataRM.name}</h2>
                 </div>
                 <div class="status-modal-container">
-                    <h2>Status: ${dataRM.status}</h2>
+                    <h2 id="status-modal">Status:</h2>
+                    <h2 id="status-modal-data">${dataRM.status}</h2>
                 </div>
                 <div class="species-modal-container">
-                    <h2>Espécie: ${dataRM.species}</h2>
+                    <h2 id="species-modal">Espécie:</h2>
+                    <h2 id="species-modal-data">${dataRM.species}</h2>
                 </div>
                 <div class="type-modal-container">
-                    <h2>Tipo: ${dataRM.type}</h2>
+                    <h2 id="type-modal">Tipo:</h2>
+                    <h2 id="type-modal-data">${dataRM.type}</h2>
                 </div>
                 <div class="gender-modal-container">
-                    <h2>Genero: ${dataRM.gender}</h2>
+                    <h2 id="gender-modal">Gênero:</h2>
+                    <h2 id="gender-modal-data">${dataRM.gender}</h2>
                 </div>
                 <div class="origin-modal-container">
-                    <h2>Origem: ${dataRM.origin.name}</h2>
+                    <h2 id="origin-modal">Origem:</h2>
+                    <h2 id="origin-modal-data">${dataRM.origin.name}</h2>
                 </div>
                 <div class="location-modal-container">
-                    <h2>localização: ${dataRM.location.name}</h2>
+                    <h2 id="location-modal">Localização:</h2>
+                    <h2 id="location-modal-data">${dataRM.location.name}</h2>
                 </div>
                 <div class="popularity-modal-container">
-                    <h2>Popularidade:</h2>
+                    <h2 id="popularity-modal">Popularidade:</h2>
+                    <h2 id="popularity-modal-data"></h2>
                 </div>
                 
             </div>
