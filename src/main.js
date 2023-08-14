@@ -1,4 +1,4 @@
-import { statusFilter, speciesFilter, genderFilter, searchName} from './data.js';
+import { statusFilter, speciesFilter, genderFilter, searchName, alphabeticalOrder} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 const closeCardButton = document.getElementById("close-modal");
@@ -142,3 +142,10 @@ function filterName () {
 
 inputSearchName.addEventListener('input', filterName);
 
+const selectionOrder =  document.getElementById('order-alphabetical');
+
+selectionOrder.addEventListener('change', () => {
+    const orderCharacter = alphabeticalOrder(selectionOrder.value, dataRM);
+
+    cardCharacters (orderCharacter);
+});

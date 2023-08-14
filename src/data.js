@@ -33,6 +33,29 @@ export const searchName = (dataRM, name) => {
   return filteredName;
 }
 
+export function alphabeticalOrder (value, dataRM) {
+  const charactersAlphabetical = [...dataRM];
+
+  if (value === "All") {
+    return dataRM;
+    
+  } else if (value === 'ascending-order') {
+    charactersAlphabetical.sort(function(a, b) {
+      if (a.name < b.name) {
+        return -1
+      }
+    })
+  } else {
+    charactersAlphabetical.sort(function(a, b) {
+      if (a.name > b.name) {
+        return -1
+      }
+    })
+  } 
+
+  return charactersAlphabetical;
+}
+
 // export const anotherExample = () => {
 //   return 'OMG';
 // };
