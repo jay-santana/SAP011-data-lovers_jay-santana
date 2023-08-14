@@ -128,24 +128,19 @@ btnTop.addEventListener('click', () => {
 });
 
 // Filtro de busca por nome
-
 const inputSearchName = document.getElementById("search-box-field");
 
 function filterName () {
     const characterNameFilter = inputSearchName.value;
-
     const filteredDataName = searchName (dataRM, characterNameFilter);
-
     cardCharacters (filteredDataName);
-
 }
-
 inputSearchName.addEventListener('input', filterName);
 
-const selectionOrder =  document.getElementById('order-alphabetical');
 
+//ordenação por ordem alfabetica
+const selectionOrder =  document.getElementById('order-alphabetical');
 selectionOrder.addEventListener('change', () => {
     const orderCharacter = alphabeticalOrder(selectionOrder.value, dataRM);
-
     cardCharacters (orderCharacter);
 });
