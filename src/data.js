@@ -24,6 +24,10 @@ export const genderFilter = (data, filter) => {
   }
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+// Filtro de busca por nome
+
+
+// export const anotherExample = () => {
+//   return 'OMG';
+// };
+

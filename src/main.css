@@ -311,6 +311,8 @@ button {
     position: absolute;
     top: 27px;
     right: 31px;
+    z-index: 11;
+    /* left: 100px; */
 
     display: flex;
     flex-direction: column;
@@ -330,12 +332,12 @@ button {
 }
 
 #img-modal-card{
-    width: 80%;
+    width: 90%;
     height: 200px;
     border: 0;
     border-radius: 30px 30px 0 0;
     object-fit: cover;
-    /* position: relative; */
+    /* position: absolute; */
 }
 
 .cards-modal{
@@ -394,7 +396,8 @@ color: #fff;
 #gender-modal-data,
 #type-modal-data,
 #species-modal-data,
-#status-modal-data{
+#status-modal-data,
+#popularity-modal-data{
     font-size: 12px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;

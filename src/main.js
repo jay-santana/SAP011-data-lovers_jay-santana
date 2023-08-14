@@ -1,4 +1,4 @@
-import { statusFilter, speciesFilter, genderFilter } from './data.js';
+import { statusFilter, speciesFilter, genderFilter, } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 const closeCardButton = document.getElementById("close-modal");
@@ -28,7 +28,7 @@ const toggleModal = (dataRM) => {
                 </div>
                 <div class="type-modal-container">
                     <h2 id="type-modal">Tipo:</h2>
-                    <h2 id="type-modal-data">${dataRM.type}</h2>
+                    <h2 id="type-modal-data">${dataRM.type ? dataRM.type : "unknown"}</h2>
                 </div>
                 <div class="gender-modal-container">
                     <h2 id="gender-modal">Gênero:</h2>
@@ -43,10 +43,9 @@ const toggleModal = (dataRM) => {
                     <h2 id="location-modal-data">${dataRM.location.name}</h2>
                 </div>
                 <div class="popularity-modal-container">
-                    <h2 id="popularity-modal">Popularidade:</h2>
-                    <h2 id="popularity-modal-data"></h2>
-                </div>
-                
+                    <h2 id="popularity-modal">Aparições:</h2>
+                    <h2 id="popularity-modal-data">${dataRM.episode.length}/31 episódios</h2>
+                </div>   
             </div>
         </div>`;
 
@@ -128,3 +127,4 @@ btnTop.addEventListener('click', () => {
     });
 });
 
+// Filtro de busca por nome
