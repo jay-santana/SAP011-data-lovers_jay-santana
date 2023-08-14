@@ -1,4 +1,4 @@
-import { statusFilter, speciesFilter, genderFilter, } from './data.js';
+import { statusFilter, speciesFilter, genderFilter, searchName} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 const closeCardButton = document.getElementById("close-modal");
@@ -128,3 +128,17 @@ btnTop.addEventListener('click', () => {
 });
 
 // Filtro de busca por nome
+
+const inputSearchName = document.getElementById("search-box-field");
+
+function filterName () {
+    const characterNameFilter = inputSearchName.value;
+
+    const filteredDataName = searchName (dataRM, characterNameFilter);
+
+    cardCharacters (filteredDataName);
+
+}
+
+inputSearchName.addEventListener('input', filterName);
+

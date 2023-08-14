@@ -26,6 +26,12 @@ export const genderFilter = (data, filter) => {
 
 // Filtro de busca por nome
 
+export const searchName = (dataRM, name) => {
+  const filterName = character => character.name.toUpperCase().includes(name.toUpperCase());
+  const filteredName = dataRM.filter(filterName);
+
+  return filteredName;
+}
 
 // export const anotherExample = () => {
 //   return 'OMG';
