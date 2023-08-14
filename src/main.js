@@ -8,6 +8,42 @@ const fade = document.getElementById("fade");
 const toggleModal = (dataRM) => {
     modal.classList.toggle('hide');
     fade.classList.toggle('hide');
+
+    const modalContent = document.getElementById ('modal-body');
+
+    const modalHTML = `
+        <div class="border-modal-container">
+            <div class="cards-modal">
+                <img id="img-modal-card" src="${dataRM.image}" alt="Characters image">
+                <div class="name-modal-container">
+                    <h2>${dataRM.name}</h2>
+                </div>
+                <div class="status-modal-container">
+                    <h2>Status: ${dataRM.status}</h2>
+                </div>
+                <div class="species-modal-container">
+                    <h2>Espécie: ${dataRM.species}</h2>
+                </div>
+                <div class="type-modal-container">
+                    <h2>Tipo: ${dataRM.type}</h2>
+                </div>
+                <div class="gender-modal-container">
+                    <h2>Genero: ${dataRM.gender}</h2>
+                </div>
+                <div class="origin-modal-container">
+                    <h2>Origem: ${dataRM.origin.name}</h2>
+                </div>
+                <div class="location-modal-container">
+                    <h2>localização: ${dataRM.location.name}</h2>
+                </div>
+                <div class="popularity-modal-container">
+                    <h2>Popularidade:</h2>
+                </div>
+                
+            </div>
+        </div>`;
+
+    modalContent.innerHTML = modalHTML;
     //passar aqui o parametro dataRM, dentro da TOGGLE MODAL criar a TEMPLATESTRING(parecido com CARDCHARACTER)
 }
 
@@ -36,7 +72,7 @@ function cardCharacters(data) {
         </div>`;
 
         container.innerHTML = card;
-        container.addEventListener("click", toggleModal);
+        container.addEventListener("click", () => toggleModal(dataRM));
         cardsContainer.appendChild(container);
     });
 }

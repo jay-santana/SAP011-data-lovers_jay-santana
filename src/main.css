@@ -251,9 +251,8 @@ button {
 
     border: none;
     border-radius: .50rem;
-    padding: .6rem 1.2rem;
-    margin-bottom: 10px;
-    margin-left: 380px;
+    padding: .2rem 1.2rem;
+    margin-left: 230px;
 
     display: flex;
     flex-direction: column;
@@ -281,16 +280,18 @@ button {
 }
 
 #modal {
+    background-image: url('Assets/estrelas-espaço-céu-estrelado-.jpg');
     position: fixed;
     left: 50%;
     top:50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
     z-index: 10;
-    width: 460px;
+    width: 300px;
+    height: 450px;
     max-width: 90%;
     padding: 1.2rem;
-    border-radius: .5rem;
+    border-radius: 2.5rem;
 }
 
 #modal.hide,
