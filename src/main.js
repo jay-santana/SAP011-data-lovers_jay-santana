@@ -1,4 +1,4 @@
-import { statusFilter, speciesFilter, genderFilter, searchName, alphabeticalOrder} from './data.js';
+import { statusFilter, speciesFilter, genderFilter, searchName, alphabeticalOrder, calculatePercent} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 const closeCardButton = document.getElementById("close-modal");
@@ -105,7 +105,15 @@ window.addEventListener('load', () => {
         cardCharacters(filteredDataBySpeciesAndStatus);
         const filteredDataBySpeciesAndStatusAndGender = genderFilter(filteredDataBySpeciesAndStatus, selectedGender);
         cardCharacters(filteredDataBySpeciesAndStatusAndGender);
+
+        //calculo de porcentagem em relação aos personagens filtrados
+        const percentReturned = document.getElementById("percent");
+        const percentData = calculatePercent(dataRM.length, filteredDataBySpeciesAndStatusAndGender.length);
+        percentReturned.innerHTML = (`Este filtro representa ${percentData}% do total de  ${dataRM.length} personagens `);        
+
     }
+
+
 });
 
 const btnTop = document.getElementById('btnTop');
@@ -144,3 +152,10 @@ selectionOrder.addEventListener('change', () => {
     const orderCharacter = alphabeticalOrder(selectionOrder.value, dataRM);
     cardCharacters (orderCharacter);
 });
+
+//ordenação por popularidade
+// const popularityCharacters =  document.getElementById("order-popularity");
+// popularityCharacters.addEventListener('change', () => {
+//     const orderPopularity = populatiryOrder(popularityCharacters.episode, dataRM);
+//     cardCharacters (orderPopularity);
+// });

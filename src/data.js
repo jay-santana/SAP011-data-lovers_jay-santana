@@ -56,6 +56,26 @@ export function alphabeticalOrder (value, dataRM) {
   return charactersAlphabetical;
 }
 
+export const calculatePercent = (dataRM, id) => {
+  return ((id / dataRM * 100)).toFixed(2);
+}
+
+// export function popularityOrder(value, dataRM) {
+//   const charactersPopularity = [...dataRM];
+
+//   if (value === "All") {
+//     return dataRM;
+//   } else if (value === 'more-popular') {
+//     charactersPopularity.sort((a, b) => b.episode.length - a.episode.length);
+//   } else if (value === 'less-popular') {
+//     charactersPopularity.sort((a, b) => a.episode.length - b.episode.length);
+//   }
+
+//   return charactersPopularity;
+// }
+
+
+
 // export const anotherExample = () => {
 //   return 'OMG';
 // };
