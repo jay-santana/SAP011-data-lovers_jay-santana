@@ -52,7 +52,6 @@ export function alphabeticalOrder (value, dataRM) {
       }
     })
   } 
-
   return charactersAlphabetical;
 }
 

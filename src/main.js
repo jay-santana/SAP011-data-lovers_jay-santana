@@ -107,13 +107,10 @@ window.addEventListener('load', () => {
         cardCharacters(filteredDataBySpeciesAndStatusAndGender);
 
         //calculo de porcentagem em relação aos personagens filtrados
-        const percentReturned = document.getElementById("percent");
+        const percentReturned = document.getElementById("percentText");
         const percentData = calculatePercent(dataRM.length, filteredDataBySpeciesAndStatusAndGender.length);
-        percentReturned.innerHTML = (`Este filtro representa ${percentData}% do total de  ${dataRM.length} personagens `);        
-
+        percentReturned.innerHTML = (`Este filtro representa <span class="percent">${percentData}%</span> do <span class="allCharacters">total de  ${dataRM.length}</span> personagens. `);
     }
-
-
 });
 
 const btnTop = document.getElementById('btnTop');
