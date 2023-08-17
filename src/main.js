@@ -1,4 +1,4 @@
-import { statusFilter, speciesFilter, genderFilter, searchName, alphabeticalOrder, calculatePercent} from './data.js';
+import { statusFilter, speciesFilter, genderFilter, searchName, alphabeticalOrder, calculatePercent, popularityOrder } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 const closeCardButton = document.getElementById("close-modal");
@@ -9,7 +9,7 @@ const toggleModal = (dataRM) => {
     modal.classList.toggle('hide');
     fade.classList.toggle('hide');
 
-    const modalContent = document.getElementById ('modal-body');
+    const modalContent = document.getElementById('modal-body');
 
     const modalHTML = `
         <div class="border-modal-container">
@@ -43,14 +43,13 @@ const toggleModal = (dataRM) => {
                     <h2 id="location-modal-data">${dataRM.location.name}</h2>
                 </div>
                 <div class="popularity-modal-container">
-                    <h2 id="popularity-modal">Aparições:</h2>
-                    <h2 id="popularity-modal-data">${dataRM.episode.length}/31 episódios</h2>
+                    <h2 id="popularity-modal">Aparição:</h2>
+                    <h2 id="popularity-modal-data">${dataRM.episode.length} de 31 episódios</h2>
                 </div>   
             </div>
         </div>`;
 
     modalContent.innerHTML = modalHTML;
-    //passar aqui o parametro dataRM, dentro da TOGGLE MODAL criar a TEMPLATESTRING(parecido com CARDCHARACTER)
 }
 
 [closeCardButton, fade].forEach((el) => {
@@ -66,7 +65,7 @@ function cardCharacters(data) {
     data.forEach((dataRM) => {
         const container = document.createElement("div")
         container.classList.add("style-container")
-        
+
         const card = `
         <div class="border-container">
             <div class = "cards">
@@ -110,6 +109,20 @@ window.addEventListener('load', () => {
         const percentReturned = document.getElementById("percentText");
         const percentData = calculatePercent(dataRM.length, filteredDataBySpeciesAndStatusAndGender.length);
         percentReturned.innerHTML = (`Este filtro representa <span class="percent">${percentData}%</span> do <span class="allCharacters">total de  ${dataRM.length}</span> personagens. `);
+
+        //ordenação por ordem alfabetica
+        const selectionOrder = document.getElementById('order-alphabetical');
+        selectionOrder.addEventListener('change', () => {
+            const orderCharacter = alphabeticalOrder(selectionOrder.value, filteredDataBySpeciesAndStatusAndGender);
+            cardCharacters(orderCharacter);
+        });
+
+        //ordenação por popularidade
+        const popularityCharacters = document.getElementById("order-popularity");
+        popularityCharacters.addEventListener('change', () => {
+            const orderPopularity = popularityOrder(popularityCharacters.value, filteredDataBySpeciesAndStatusAndGender);
+            cardCharacters(orderPopularity);
+        });
     }
 });
 
@@ -135,24 +148,23 @@ btnTop.addEventListener('click', () => {
 // Filtro de busca por nome
 const inputSearchName = document.getElementById("search-box-field");
 
-function filterName () {
+function filterName() {
     const characterNameFilter = inputSearchName.value;
-    const filteredDataName = searchName (dataRM, characterNameFilter);
-    cardCharacters (filteredDataName);
+    const filteredDataName = searchName(dataRM, characterNameFilter);
+    cardCharacters(filteredDataName);
 }
 inputSearchName.addEventListener('input', filterName);
 
-
 //ordenação por ordem alfabetica
-const selectionOrder =  document.getElementById('order-alphabetical');
+const selectionOrder = document.getElementById('order-alphabetical');
 selectionOrder.addEventListener('change', () => {
     const orderCharacter = alphabeticalOrder(selectionOrder.value, dataRM);
-    cardCharacters (orderCharacter);
+    cardCharacters(orderCharacter);
 });
 
 //ordenação por popularidade
-// const popularityCharacters =  document.getElementById("order-popularity");
-// popularityCharacters.addEventListener('change', () => {
-//     const orderPopularity = populatiryOrder(popularityCharacters.episode, dataRM);
-//     cardCharacters (orderPopularity);
-// });
+const popularityCharacters = document.getElementById("order-popularity");
+popularityCharacters.addEventListener('change', () => {
+    const orderPopularity = popularityOrder(popularityCharacters.value, dataRM);
+    cardCharacters(orderPopularity);
+});

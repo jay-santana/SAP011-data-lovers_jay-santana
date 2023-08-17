@@ -25,7 +25,6 @@ export const genderFilter = (data, filter) => {
 };
 
 // Filtro de busca por nome
-
 export const searchName = (dataRM, name) => {
   const filterName = character => character.name.toUpperCase().includes(name.toUpperCase());
   const filteredName = dataRM.filter(filterName);
@@ -59,23 +58,17 @@ export const calculatePercent = (dataRM, id) => {
   return ((id / dataRM * 100)).toFixed(2);
 }
 
-// export function popularityOrder(value, dataRM) {
-//   const charactersPopularity = [...dataRM];
+export function popularityOrder(value, dataRM) {
+  const charactersPopularity = [...dataRM];
 
-//   if (value === "All") {
-//     return dataRM;
-//   } else if (value === 'more-popular') {
-//     charactersPopularity.sort((a, b) => b.episode.length - a.episode.length);
-//   } else if (value === 'less-popular') {
-//     charactersPopularity.sort((a, b) => a.episode.length - b.episode.length);
-//   }
+  if (value === "All") {
+    return dataRM;
+  } else if (value === 'more-popular') {
+    charactersPopularity.sort((a, b) => b.episode.length - a.episode.length);
+  } else if (value === 'less-popular') {
+    charactersPopularity.sort((a, b) => a.episode.length - b.episode.length);
+  }
 
-//   return charactersPopularity;
-// }
-
-
-
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
+  return charactersPopularity;
+}
 

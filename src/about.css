@@ -18,8 +18,8 @@ body {
 }
 
 @font-face {
-    font-family:'kust';
-    src: url('Assets/kust-maisfontes.f0bb/kust.otf') format('opentype');
+    font-family:'crowbar';
+    src: url('Assets/dk_crowbar/DK\ Crowbar.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -69,23 +69,22 @@ main{
 }
 
 .text {
-    font-size: 18px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-family: 'crowbar','Roboto', sans-serif;
     font-weight: 400;
-    color: #949494;
+    color: #c4db43de; text-shadow: #000000 0.1em 0.1em 0.1em;
     text-align: center;
     padding: 60px;
 
     position: absolute;
-    top: 150px;
-    width: 500px;
+    top: 168px;
+    width: 520px;
     height: 35px;
-    right: 440px;
+    right: 422px;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: rotate(-15deg);
 }
 
 .text-container{
@@ -95,11 +94,11 @@ main{
 }
 
 .sky-img{
-    width: 550px;   
+    width: 565px;   
     position: absolute;
     right: 400px;
     border: none;
-    opacity: 0.6;   
+    opacity: 0.8;   
 }
 
 .menu-container{
@@ -120,7 +119,7 @@ button.start{
     width: 56px;
     height: 25px;
     font-family: 'Roboto', sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     color: #000000;
 
