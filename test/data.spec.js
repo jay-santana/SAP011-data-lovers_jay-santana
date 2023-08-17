@@ -1,13 +1,17 @@
-import { example, anotherExample } from '../src/data.js';
+import { statusFilter, anotherExample } from '../src/data.js';
+const array = [{name: "Rick", status: "alive"},{name: "Morty", status: "alive"},{name: "Alien", status: "dead"}]
 
-
-describe('example', () => {
+describe('statusFilter', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof statusFilter).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it(`retorna todos os personagens quando filtrar por All`, () => {
+    expect(statusFilter(array, "All")).toBe(array);
+  });
+
+  it(`retorna todos os personagens quando filtrar por All`, () => {
+    expect(statusFilter(array, "dead")).toStrictEqual([{name: "Alien", status: "dead"}]);
   });
 });
 
