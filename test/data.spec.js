@@ -1,8 +1,8 @@
 import { statusFilter, speciesFilter, genderFilter, searchName, alphabeticalOrder, popularityOrder, calculatePercent } from '../src/data.js';
 const array = [
   {name: "Rick", status: "alive", species: "human", gender: "Male", episode: ["S01E01","S01E02", "S01E03", "S01E04"]},
-  {name: "Morty", status: "alive", species: "human", gender: "Male",  episode: ["S01E01","S01E02", "S01E03"]},
   {name: "Alien", status: "dead" , species: "alien", gender: "Female",  episode: ["S01E01","S01E02"]},
+  {name: "Morty", status: "alive", species: "human", gender: "Male",  episode: ["S01E01","S01E02", "S01E03"]},
 ]
 
 describe('statusFilter', () => {
