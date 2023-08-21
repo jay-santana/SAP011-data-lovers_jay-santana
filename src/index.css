@@ -111,7 +111,7 @@ button.start{
     cursor: pointer;
 }
 
-.style-footer {
+footer {
     display: none;
 }
 
@@ -146,19 +146,19 @@ button.start{
     }
 
     h2{
-        font-size: 22px; 
+        font-size: 25px; 
         color: #A4CD2D; text-shadow: #000000 0.1em 0.1em 0.2em; 
     }
 
     h3{
-        font-size: 16px;
+        font-size: 20px;
         padding: 10vw;
     }
 
     button.start{
-        width: 26vw;
-        height: 4vh;
-        font-size: 14px;
+        width: 29vw;
+        height: 5vh;
+        font-size: 18px;
         border-width: 0.3em;
     }
 
@@ -170,28 +170,43 @@ button.start{
     }
 
     .initical-img{
-        border: none;
         width: 120vw;
-        margin-bottom: 15vh; 
+        display: flex;
         position: relative;
+        margin-bottom: 12vh;
     }
 
-    .style-footer {
-        width: 100vw;
-        height: 10vh;
+    footer {
+        display: flex;
+        width: 100%;
+        height: 12vh;
+        position: absolute;
+        top: 88vh;
         background-color: #017384c5;
-        position: fixed;
-        /* position: absolute;
-        top:10vh; */
     }
 
     .nav-footer {
-        color: #ADADAD;
+        display: flex;
+        flex-direction: column;
+        color: #949494;
+        padding: 1vh;
+        
     }
 
-    .ul-footer {
-        color: #ADADAD;
+    .icons-footer {
+        font-size: 30px;
+        display: flex;
+        justify-content: space-between;
+        gap: 8.5vh;
+        align-items: center;
+        padding: 4vw;
     }
 
-
+    .ul-footer a {
+        font-size: 15px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 5vh;
+    }
 }
