@@ -131,3 +131,82 @@ button.start{
     box-shadow: 0 4px 4px 0 #a8a8a86e; 
     cursor: pointer;
 }
+
+footer,
+.li-footer {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .start {
+        display: none;
+    }
+
+    main {
+        width: 100vw;
+    }
+
+    header {
+        width: 100vw;
+        height: 9vh;
+        padding: 5vw;
+    }
+
+    #logo {
+        width: 48vw;
+        height: 12vh;
+        margin-left: 1vw;
+    }
+
+    nav {
+        display: none;
+    }
+
+    footer {
+        display: flex;
+        width: 100vw;
+        height: 10vh;
+        position: absolute;
+        background-color: #017384c5;
+    }
+
+    .nav-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .li-footer {
+        font-size: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #949494;
+    }
+
+    .ul-footer {
+        width: 100vw;
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        align-items: center;
+        color: #949494;
+    }
+
+    nav a {
+        display: flex;
+        color: #949494;
+        padding-top: 0.5vh;
+        
+    }
+
+}

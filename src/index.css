@@ -111,7 +111,8 @@ button.start{
     cursor: pointer;
 }
 
-footer {
+footer,
+.li-footer {
     display: none;
 }
 
@@ -190,17 +191,16 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: #949494;
-        padding-bottom: 2vh;    
     }
 
     .li-footer {
-        font-size: 20px;
+        font-size: 22px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
+        color: #949494;
     }
 
     .ul-footer {
@@ -209,5 +209,14 @@ footer {
         text-align: center;
         justify-content: space-around;
         align-items: center;
+        color: #949494;
     }
+
+    nav a {
+        display: flex;
+        color: #949494;
+        padding-top: 0.5vh;
+        
+    }
+
 }
