@@ -74,7 +74,7 @@ main{
     font-weight: 400;
     color: #c4db43de; text-shadow: #000000 0.1em 0.1em 0.1em;
     text-align: center;
-    padding: 60px;
+    padding: 9vh;
 
     position: absolute;
     top: 26vh;
@@ -150,7 +150,7 @@ footer,
 
     main {
         width: 100vw;
-        height: 84vh;
+        height: 90vh;
         display: flex;
         flex-direction: column;
         /* align-items: center;
@@ -179,38 +179,38 @@ footer,
         display: flex;
         justify-content: center;
         align-items: flex-start;
+        text-align: center;
         margin-top: 0.1vh;
-        /* align-items: center; */
-        /* position: relative; */
     }
 
     .text {
-        font-size: 18px;
+        width: 100vw;
+        font-size: 15px;
         font-family: 'crowbar','Roboto', sans-serif;
         font-weight: 400;
         color: #c4db43de; text-shadow: #000000 0.1em 0.1em 0.1em;
-        text-align: center;
-    
-        position: relative;
+        
+        position: absolute;
         top: 14vh;
-        width: 100vw;
-        right: 5vw;
-    
+        right: auto;
+        padding: 6vh;
+       
         /* display: flex;
-        justify-content: center;
-        align-items: center; */
+        justify-content: flex-start;
+        align-items:self-end;    */
     }
     
     .sky-img{
-        width: 108vw;
+        width: 100vw;
         object-fit: contain;
+        border: none;
+        opacity: 0.8; 
+        position: relative;
+        right: auto;
+        
         /* display: flex;
         align-items: center; 
-        justify-content: center; */
-        position: absolute;
-        right: 0.1vw;
-        border: none;
-        opacity: 0.8;   
+        justify-content: center; */  
     }
 
     .menu-container{
