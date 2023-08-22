@@ -7,7 +7,7 @@
 }
 
 body {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color:#252223;
 }
@@ -21,7 +21,7 @@ body {
 
 header {
     background-image: linear-gradient(to right,#0097b248, #7ed95749);
-    width: 100%;
+    width: 100vw;
     height: 15vh;
     
     display: flex;
