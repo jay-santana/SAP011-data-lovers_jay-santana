@@ -131,7 +131,7 @@ footer {
 
     header {
         width: 100vw;
-        height: 8vh;
+        height: 9vh;
         padding: 5vw;
     }
 
@@ -146,12 +146,12 @@ footer {
     }
 
     h2{
-        font-size: 25px; 
+        font-size: 22px; 
         color: #A4CD2D; text-shadow: #000000 0.1em 0.1em 0.2em; 
     }
 
     h3{
-        font-size: 20px;
+        font-size: 16px;
         padding: 10vw;
     }
 
@@ -166,7 +166,7 @@ footer {
         width: 100vw;
         height: 100vh;
         margin-top: 14vh;
-        gap: 3vh;
+        gap: 2vh;
     }
 
     .initical-img{
@@ -178,8 +178,8 @@ footer {
 
     footer {
         display: flex;
-        width: 100%;
-        height: 12vh;
+        width: 100vw;
+        height: 10vh;
         position: absolute;
         top: 88vh;
         background-color: #017384c5;
@@ -188,25 +188,26 @@ footer {
     .nav-footer {
         display: flex;
         flex-direction: column;
-        color: #949494;
-        padding: 1vh;
-        
-    }
-
-    .icons-footer {
-        font-size: 30px;
-        display: flex;
-        justify-content: space-between;
-        gap: 8.5vh;
+        justify-content: center;
         align-items: center;
-        padding: 4vw;
+        color: #949494;
+        padding-bottom: 2vh;    
     }
 
-    .ul-footer a {
-        font-size: 15px;
+    .li-footer {
+        font-size: 20px;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ul-footer {
+        width: 100vw;
+        display: flex;
+        text-align: center;
         justify-content: space-around;
         align-items: center;
-        margin-right: 5vh;
     }
 }
