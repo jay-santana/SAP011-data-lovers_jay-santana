@@ -9,7 +9,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color:#252223;
+    background-color:#262324;
 }
 
 @font-face {
@@ -27,7 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5vw;
+    padding: 0 5.5vw;
     position: fixed;
 }
 
@@ -84,14 +84,17 @@ h3{
 .initial-container{
     display: flex;
     flex-direction: column;
-    margin-top: 24vh;
     align-items: center;
+    margin-top: 24vh;
+    width: 38vw;
+   
 }
 
 .initical-img{
     border: none;
     align-self: flex-end;
-    width: 133vh;   
+    width: 100%;
+
 }
 
 button.start{
@@ -175,7 +178,7 @@ footer,
     }
 
     .initical-img{
-        width: 120vw;
+        width: 90vw;
         display: flex;
         position: relative;
     }
