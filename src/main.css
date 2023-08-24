@@ -16,7 +16,7 @@ body {
     background-attachment: fixed;
     background-position: center bottom;
 
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -29,13 +29,13 @@ body {
 
 header {
     background-image: linear-gradient(to right, #0097b27a, #7ed95767);
-    width: 100%;
-    height: 100px;
+    width: 100vw;
+    height: 15vh;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 7vh;
     position: fixed;
     z-index: 10;
 }
@@ -47,8 +47,8 @@ nav ul {
 }
 
 nav li {
-    margin-left: 10px;
-    margin-right: 50px;
+    margin-left: 4vw;
+    margin-right: 3vh;
 }
 
 nav a {
@@ -60,9 +60,9 @@ nav a {
 }
 
 #logo {
-    width: 300px;
-    height: 150px;
-    margin-left: 50px;
+    width: 22vw;
+    height: 22vh;
+    margin-left: 3vw;
 }
 
 .search-box {
@@ -71,7 +71,7 @@ nav a {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-right: 100px; /* Move a caixa de busca para a direita */
+    margin-right: 7vw; /* Move a caixa de busca para a direita */
 }
 
 .search-box-field::placeholder {
@@ -91,7 +91,7 @@ nav a {
     border: none;
     border-bottom: 2px solid #fff;
     outline: none;
-    padding-left: 50px;
+    padding-left: 3vw;
 }
 
 .lupa-search {
@@ -103,16 +103,16 @@ nav a {
 }
 
 main {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .side-container {
     width: 100%;
-    margin-top: 210px;
-    margin-left: 100px;
+    margin-top: 32vh;
+    margin-left: 14vh;
 }
 
 .container-card {
@@ -122,9 +122,9 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     text-align: center;
-    margin-top: 130px;
-    padding-right: 80px;
-    gap: 20px;
+    margin-top: 20vh;
+    padding-right: 7vw;
+    gap: 1.5vw;
 }
 
 h2 {
@@ -555,7 +555,7 @@ button {
     font-weight: 400; 
 }
 
-footer {
+footer, .search-box-mobile, .percent-mobile {
     display: none;
 }
 
@@ -566,36 +566,10 @@ footer {
         height: 100vh;
     }
 
-    main{
-        width: 100%;
-        height: 100vh;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .container-card {
-        width: 100%;
-        height: 100vh;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        text-align: center;
-        margin-top: 130px;
-        padding-right: 0px;
-        gap: 20px;
-    }
-
-    .side-bar,
-    .side-container,
-    .btn-top,
-    nav {
-        display: none;
-    }
-
     header {
         width: 100vw;
         height: 9vh;
-        /* padding: 5vw; */
+        padding: 5vw;
     }
 
     #logo {
@@ -605,13 +579,92 @@ footer {
         object-fit: contain;
     }
 
+    main{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .search-box-mobile{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 10vh;
+    }
+
+    .search-box-field-mobile{
+        background-color: #024650;
+        color: #949494;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        border: none;
+        width: 85vw;
+        height: 5vh;
+        padding-left: 14vw;
+        position: relative;
+    }
+
+    .lupa-search{
+        position: absolute;
+        top: 12.8%;
+        left: 13vw;    
+    }
+
+    #percentText-mobile{
+        background-color: #afdc2942;
+        box-shadow: 2px 2px 8px 8px #afdc2942;
+        border-radius: 10px;
+        font-size: 18px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        color: #00B5CC; text-shadow: #000000 0.1em 0.1em 0.1em; 
+        text-align: center;
+        width: 95vw;
+        height: 5vh;
+        position: absolute;
+        top: 16vh;
+        display: flex; 
+    }
+    
+    /* .percent{
+        color: #b2df28;
+        font-weight: 400;
+    }
+    
+    .allCharacters{
+        color: #b2df28;
+        font-weight: 400; 
+    } */
+     
+    .container-card {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-right: 0px;
+        place-items: center;
+        margin-top: 7vh;
+        gap: 0vw;
+        row-gap: 2vh;
+    }
+
+    .side-bar,
+    .side-container,
+    .btn-top,
+    nav {
+        display: none;
+    }
+
     footer {
         display: flex;
         width: 100vw;
-        height: 10vh;
+        height: 9vh;
         position: fixed;
-        top: 90vh;
-        background-color: #017384c5;
+        top: 92vh;
+        background-color: #017384f1;
     }
 
     .nav-footer {
@@ -641,10 +694,13 @@ footer {
     }
 
     nav a {
+       font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
         display: flex;
         color: #949494;
-        padding-top: 0.5vh;
-        
+        padding-top: 0.2vh;
+        padding-bottom: 1vh;    
     }
 
 }
