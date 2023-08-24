@@ -68,38 +68,39 @@ main{
     grid-template-columns: repeat(2, 1fr);
 }
 
+.text-container{
+    width: 0vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: static;
+    position: relative;
+    bottom: 15vh;
+}
+
 .text {
-    font-size: clamp(0.97em, 0.78em + 1vw, 1.5em);
+    width: 70vh;
+    height: 45vh;
+    background-image: url(./Assets/estrelas-espaço-céu-estrelado-.jpg);
+    background-size: cover;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    
+    font-size: clamp(0.97em, 0.5em + 1vw, 1.5em);
     font-family: 'crowbar','Roboto', sans-serif;
     font-weight: 400;
     color: #c4db43de; text-shadow: #000000 0.1em 0.1em 0.1em;
+    box-shadow: 0 0 25px rgb(255, 255, 255);
+    border-radius: 40px;
     text-align: center;
-    padding: 9vh;
-
+    padding: 5vh;
     position: absolute;
-    top: 26vh;
-    width: 38vw;
-    height: 3vh;
-    right: 31vw;
+    top: 38vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.text-container{
-    margin-top: 12vh;
-    align-items: center;
-    position: relative;
-}
-
-.sky-img{
-    width: 41vw;
-    border: none;
-    opacity: 0.8;   
-    position: absolute;
-    right: 29.5vw;
-       
 }
 
 .menu-container{
@@ -154,9 +155,6 @@ footer,
     main {
         width: 100%;
         height: 100%;
-        /* display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        place-items: end; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -177,50 +175,38 @@ footer,
     }
 
     .text-container{
-        height: 100%;
+        width: 100vw;
+        height: 80vh;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: self-start;
         overflow: hidden;
-        margin-top: 0;
-        /* position: static; */
-        position: none;
-        border: 5px solid #fff;
+        margin-top: 0vh;
+        position: static;
+        position: relative;
+        bottom: 0vh;
+        /* border: 5px solid #fff; */
     }
 
     .text {
-        width: 50%;
-        height: 50%;
+        width: 80vw;
+        height: 35vh;
+        background-image: url(./Assets/estrelas-espaço-céu-estrelado-.jpg);
+        background-attachment: fixed;
         font-family: 'crowbar','Roboto', sans-serif;
+        font-size: clamp(1em, 0.9em + 1vw, 1.5em);
         font-weight: 400;
-        color: #c4db43de; text-shadow: #000000 0.1em 0.1em 0.1em;
+        color: #c4db43de; text-shadow: #000000 0.1em 0.1em 0.2em;
+        box-shadow: 0 0 25px rgb(255, 255, 255);
+        border-radius: 40px;
         position: absolute;
-        top: 35.5vh;
+        top: 10vh;
         right: auto;
-        padding: 0vw;
-        /* display: flex;
-        justify-content: center;
-        align-items:center; */
-        border: 5px solid red;
+        padding: 5vw;
     }
     
     .sky-img {
         display: none;
-    }
-
-    .sky-img-mobile{
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        border: none;
-        opacity: 0.8; 
-        position: relative;
-        right: auto;
-        transform: rotate(90deg);
-        display: flex;
-        align-items: center; 
-        justify-content: center;
-        border: 5px solid pink;
     }
 
     .menu-container{
@@ -279,8 +265,7 @@ footer,
         display: flex;
         color: #949494;
         padding-top: 0.2vh;
-        padding-bottom: 1vh;
-        
+        padding-bottom: 1vh;    
     }
 
     .home,

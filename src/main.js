@@ -1,9 +1,11 @@
 import { statusFilter, speciesFilter, genderFilter, searchName, alphabeticalOrder, calculatePercent, popularityOrder } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
+const dataRM = data.results;
 const closeCardButton = document.getElementById("close-modal");
 const modal = document.getElementById("modal");
 const fade = document.getElementById("fade");
+const totalEpisodes = popularityOrder("more-popular", dataRM)[0].episode.length;
 
 const toggleModal = (dataRM) => {
   modal.classList.toggle('hide');
@@ -44,7 +46,7 @@ const toggleModal = (dataRM) => {
                 </div>
                 <div class="popularity-modal-container">
                     <h2 id="popularity-modal">Aparição:</h2>
-                    <h2 id="popularity-modal-data">${dataRM.episode.length} de 31 episódios</h2>
+                    <h2 id="popularity-modal-data">${dataRM.episode.length} de ${totalEpisodes} episódios</h2>
                 </div>   
             </div>
         </div>`;
@@ -56,7 +58,7 @@ const toggleModal = (dataRM) => {
   el.addEventListener('click', () => toggleModal());
 })
 
-const dataRM = data.results;
+
 
 //função para trazer todos os personagens em tela
 function cardCharacters(data) {
@@ -138,12 +140,17 @@ window.addEventListener('scroll', () => {
 });
 
 // volta ao topo ao clicar no botão
-btnTop.addEventListener('click', () => {
+btnTop.addEventListener('click', scrollToTop);
+
+const buttonMobileTop = document.getElementById("btnTopMobile");
+buttonMobileTop.addEventListener('click', scrollToTop);
+
+function scrollToTop (){
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
   });
-});
+}
 
 // Filtro de busca por nome
 const inputSearchName = document.getElementById("search-box-field");
