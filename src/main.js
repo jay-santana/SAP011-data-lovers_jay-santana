@@ -154,13 +154,17 @@ function scrollToTop (){
 
 // Filtro de busca por nome
 const inputSearchName = document.getElementById("search-box-field");
+const inputSearchNameMobile = document.getElementById("search-box-field-mobile");
 
 function filterName() {
   const characterNameFilter = inputSearchName.value;
-  const filteredDataName = searchName(dataRM, characterNameFilter);
+  const characterNameFilterMobile = inputSearchNameMobile.value; // Renomeada para evitar conflito de nomes
+  const filteredDataName = searchName(dataRM, characterNameFilter, characterNameFilterMobile);
   cardCharacters(filteredDataName);
 }
+
 inputSearchName.addEventListener('input', filterName);
+inputSearchNameMobile.addEventListener('input', filterName);
 
 //ordenação por ordem alfabetica
 const selectionOrder = document.getElementById('order-alphabetical');
