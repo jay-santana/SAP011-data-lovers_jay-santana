@@ -656,7 +656,7 @@ h3 {
     display: flex;
   }
 
-  /* .percent{
+  .percent{
         color: #b2df28;
         font-weight: 400;
     }
@@ -664,7 +664,7 @@ h3 {
     .allCharacters{
         color: #b2df28;
         font-weight: 400; 
-    } */
+    }
 
   .container-card {
     width: 100vw;

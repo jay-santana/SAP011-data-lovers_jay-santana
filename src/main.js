@@ -84,6 +84,9 @@ function cardCharacters(data) {
   });
 }
 
+//do para trazer os IDS dos mobile e desktop
+
+//filtros
 const statusSelectMobile = document.getElementById('status-filter-mobile');
 const speciesSelectMobile = document.getElementById('species-filter-mobile');
 const genderSelectMobile = document.getElementById('gender-filter-mobile');
@@ -92,28 +95,42 @@ const statusSelect = document.getElementById('status-filter');
 const speciesSelect = document.getElementById('species-filter');
 const genderSelect = document.getElementById('gender-filter');
 
+//Porcentagem em relação ao total de personagens
+const percentReturned = document.getElementById("percentText");
+const percentReturnedMobile = document.getElementById("percentText-mobile");
+
+const selectionOrder = document.getElementById('order-alphabetical');
+const selectionOrderMobile = document.getElementById('order-alphabetical-mobile');
+
+
+
 window.addEventListener('load', () => {
   cardCharacters(dataRM);
 
   statusSelect.addEventListener('change', applyFiltersDesktop);
   speciesSelect.addEventListener('change', applyFiltersDesktop);
   genderSelect.addEventListener('change', applyFiltersDesktop);
+  selectionOrder.addEventListener('change', applyFiltersDesktop);
 
 
   statusSelectMobile.addEventListener('change', applyFiltersMobile);
   speciesSelectMobile.addEventListener('change', applyFiltersMobile);
   genderSelectMobile.addEventListener('change', applyFiltersMobile);
+  selectionOrderMobile.addEventListener('change', applyFiltersMobile);
+
+  
+  
 
   function applyFiltersMobile () {
-    applyFilters(statusSelectMobile.value, speciesSelectMobile.value, genderSelectMobile.value)
+    applyFilters(statusSelectMobile.value, speciesSelectMobile.value, genderSelectMobile.value, selectionOrderMobile.value)
   }
 
 
   function applyFiltersDesktop () {
-    applyFilters(statusSelect.value, speciesSelect.value, genderSelect.value)
+    applyFilters(statusSelect.value, speciesSelect.value, genderSelect.value, selectionOrder.value)
   }
 
-  function applyFilters(selectedStatus, selectedSpecies, selectedGender) {
+  function applyFilters(selectedStatus, selectedSpecies, selectedGender, selectionOrder, selectionOrderMobile) {
     
     // Filtrar os dados com base no status, espécie e gênero selecionados
     const filteredDataByStatus = statusFilter(dataRM, selectedStatus);
@@ -121,18 +138,19 @@ window.addEventListener('load', () => {
     cardCharacters(filteredDataBySpeciesAndStatus);
     const filteredDataBySpeciesAndStatusAndGender = genderFilter(filteredDataBySpeciesAndStatus, selectedGender);
     cardCharacters(filteredDataBySpeciesAndStatusAndGender);
+    const orderCharacter = alphabeticalOrder(selectionOrder, filteredDataBySpeciesAndStatusAndGender);
+    cardCharacters(orderCharacter);
+    const orderCharacterMobile = alphabeticalOrder(selectionOrderMobile, filteredDataBySpeciesAndStatusAndGender);
+    cardCharacters(orderCharacterMobile);
 
     //calculo de porcentagem em relação aos personagens filtrados
-    const percentReturned = document.getElementById("percentText");
     const percentData = calculatePercent(dataRM.length, filteredDataBySpeciesAndStatusAndGender.length);
     percentReturned.innerHTML = (`Este filtro representa <span class="percent">${percentData}%</span> do <span class="allCharacters">total de  ${dataRM.length}</span> personagens. `);
+    percentReturnedMobile.innerHTML = (`Este filtro representa <span class="percent">${percentData}%</span> do <span class="allCharacters">total de  ${dataRM.length}</span> personagens. `);
+    
 
-    //ordenação por ordem alfabetica
-    const selectionOrder = document.getElementById('order-alphabetical');
-    selectionOrder.addEventListener('change', () => {
-      const orderCharacter = alphabeticalOrder(selectionOrder.value, filteredDataBySpeciesAndStatusAndGender);
-      cardCharacters(orderCharacter);
-    });
+
+    
 
     //ordenação por popularidade
     const popularityCharacters = document.getElementById("order-popularity");
@@ -188,11 +206,11 @@ inputSearchName.addEventListener('input', filterName);
 inputSearchNameMobile.addEventListener('input', filterNameMobile);
 
 //ordenação por ordem alfabetica
-const selectionOrder = document.getElementById('order-alphabetical');
-selectionOrder.addEventListener('change', () => {
-  const orderCharacter = alphabeticalOrder(selectionOrder.value, dataRM);
-  cardCharacters(orderCharacter);
-});
+// const selectionOrder = document.getElementById('order-alphabetical');
+// selectionOrder.addEventListener('change', () => {
+//   const orderCharacter = alphabeticalOrder(selectionOrder.value, dataRM);
+//   cardCharacters(orderCharacter);
+// });
 
 //ordenação por popularidade
 const popularityCharacters = document.getElementById("order-popularity");
