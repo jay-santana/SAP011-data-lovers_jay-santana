@@ -134,6 +134,7 @@ h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   color: #fff;
+  text-shadow: #000000 0.1em 0.1em 0.1em;
 }
 
 h3 {
@@ -559,7 +560,7 @@ h3 {
   font-weight: 400;
 }
 
-footer,
+#style-footer-mobile,
 .search-box-mobile,
 .percent-mobile,
 .side-container-mobile,
@@ -567,7 +568,7 @@ footer,
   display: none;
 }
 
-@media (max-width: 820px) {
+@media screen and (max-width: 768px) {
 
   .side-container,
   .side-bar,
@@ -677,7 +678,7 @@ footer,
     row-gap: 1vh;
   }
 
-  footer {
+  #style-footer-mobile {
     display: flex;
     width: 100vw;
     height: 9vh;
@@ -725,35 +726,38 @@ footer,
     background-color: transparent;
     cursor: pointer;
   }
-  
-  #style-mobile {
-    display: flex;
-    width: 60vw;
-    height: 40vh;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border: solid yellow;
-    position: absolute;
-    right: 0;
-    top: 10%;
-
-  }
 
   #burguer {
     display: flex;
     width: 70vw;
     font-size: 2em;
     color: #949494;
+    cursor: pointer;
     position: absolute;
-    left: 85%;
+    left: 75%;
     top: 2%;
+  }
+
+  #style-mobile {
+    width: 60vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    right: 0;
+    top: 10%;
   }
 
   .side-container-mobile,
   #select-mobile {
     width: 60vw;
     height: 50vh;
+    /* height: 0; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -761,64 +765,76 @@ footer,
     position: absolute;
     right: 1%;
     top: 20%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    text-align: center;
+    z-index: 50;
+    /* transition: 2s; */
+  }
+
+  #select-mobile {
+    visibility: hidden;
+  }
+
+  .status-filter:hover {
+    background-color: #83a02bee;
+    cursor: pointer;
+  }
+
+  .side-bar-mobile.active #select-mobile {
+    visibility: visible;
+    /* height: calc(100vh - 50vh); */
   }
 
   .side-container-mobile {
     width: 0;
     height: 0;
-
   }
-
 
   #advanced-search-mobile,
-  #order-mobile{
-  width: 60vw;
-  height: 5vh;
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  color: #fff;
-  text-align: center;
-  gap: 2;
-  background-color: #034e59;
-  border-color: #aedc29;
-  border-style: solid;
-  border-radius: 0px;
-  border-width: 1px;
+  #order-mobile {
+    width: 60vw;
+    height: 5vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: #000000de 0.1em 0.1em 0.1em;
+    text-align: center;
+    gap: 2;
+    background-color: #034e59;
+    border-color: #aedc29;
+    border-style: solid;
+    border-radius: 0px;
+    border-width: 1px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    cursor: pointer;
   }
 
+  .status-filter {
+    width: 60vw;
+    height: 5vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #cccccc;
+    text-shadow: #0000005e 0.1em 0.1em 0.1em;
+    text-align: center;
+    gap: 2;
 
-.status-filter {
-  width: 60vw;
-  height: 5vh;
-  font-family: 'Roboto', sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  color: #ADADAD;
-  text-align: center;
-  gap: 2;
+    background-color: #017384e7;
+    border-color: #90a033;
+    border-style: solid;
+    border-radius: 0px;
+    border-width: 1px;
 
-  background-color: #017384c7;
-  border-color: #aedc29;
-  border-style: solid;
-  border-radius: 0px;
-  border-width: 1px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  cursor: pointer;
-} 
-
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    cursor: pointer;
+  }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {}

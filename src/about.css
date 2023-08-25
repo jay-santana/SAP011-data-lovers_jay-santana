@@ -1,290 +1,296 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url(./Assets/background-page.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center bottom;
+  background-image: url(./Assets/background-page.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom;
 
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 @font-face {
-    font-family:'crowbar';
-    src: url('Assets/dk_crowbar/DK\ Crowbar.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'crowbar';
+  src: url('Assets/dk_crowbar/DK\ Crowbar.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 header {
-    background-image: linear-gradient(to right,#0097b248, #7ed95749);
-    width: 100vw;
-    height: 15vh;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5vw;
-    position: fixed;
+  background-image: linear-gradient(to right, #0097b248, #7ed95749);
+  width: 100vw;
+  height: 15vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
+  position: fixed;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    margin-right: auto; /* Move os itens para a esquerda */
+  display: flex;
+  list-style: none;
+  margin-right: auto;
+  /* Move os itens para a esquerda */
 }
 
 nav li {
-    margin-left: 1vw;
-    margin-right: 3vw;
+  margin-left: 1vw;
+  margin-right: 3vw;
 }
 
 nav a {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #fff; 
-    text-decoration: none;  
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
 }
 
 #logo {
-    width: 22vw;
-    height: 22vh;
-    margin-left: 3vw;
+  width: 22vw;
+  height: 22vh;
+  margin-left: 3vw;
 }
 
-main{
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+main {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.text-container{
-    width: 0vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    position: static;
-    position: relative;
-    bottom: 15vh;
+.text-container {
+  width: 0vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: static;
+  position: relative;
+  bottom: 15vh;
 }
 
 .text {
-    width: 70vh;
-    height: 45vh;
-    background-image: url(./Assets/estrelas-espaço-céu-estrelado-.jpg);
-    background-size: cover;
-    background-position: fixed;
-    background-repeat: no-repeat;
-    
-    font-size: clamp(0.97em, 0.5em + 1vw, 1.5em);
-    font-family: 'crowbar','Roboto', sans-serif;
-    font-weight: 400;
-    color: #c4db43de; text-shadow: #000000 0.1em 0.1em 0.1em;
-    box-shadow: 0 0 25px rgb(255, 255, 255);
-    border-radius: 40px;
-    text-align: center;
-    padding: 5vh;
-    position: absolute;
-    top: 38vh;
+  width: 70vh;
+  height: 45vh;
+  background-image: url(./Assets/estrelas-espaço-céu-estrelado-.jpg);
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: clamp(0.97em, 0.5em + 1vw, 1.5em);
+  font-family: 'crowbar', 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #c4db43de;
+  text-shadow: #000000 0.1em 0.1em 0.1em;
+  box-shadow: 0 0 25px rgb(255, 255, 255);
+  border-radius: 40px;
+  text-align: center;
+  padding: 5vh;
+  position: absolute;
+  top: 38vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.menu-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 15vw;
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15vw;
 }
 
-.ball-RM-gif{
-    font-family: 'Roboto', sans-serif;
-    color: #949494;
-    width: 15vw;
-    margin-top: 15vh;
+.ball-RM-gif {
+  font-family: 'Roboto', sans-serif;
+  color: #949494;
+  width: 15vw;
+  margin-top: 15vh;
 }
 
-.start{
-    width: 4vw;
-    height: 4vh;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    color: #000000;
+.start {
+  width: 4vw;
+  height: 4vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000000;
 
-    background-image: linear-gradient(to right,#0097B2, #7ED957);
-    border-color: #017384;
-    border-style: dashed;
-    border-radius: 8px;
-    border-width: 3px;
-    box-shadow: 0 4px 4px 0 #a8a8a86e; 
-    cursor: pointer;
+  background-image: linear-gradient(to right, #0097B2, #7ED957);
+  border-color: #017384;
+  border-style: dashed;
+  border-radius: 8px;
+  border-width: 3px;
+  box-shadow: 0 4px 4px 0 #a8a8a86e;
+  cursor: pointer;
 }
 
-footer,
+#style-footer-mobile,
 .li-footer,
 .sky-img-mobile,
 .li-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .start {
     display: none;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header {
+    width: 100vw;
+    height: 9vh;
+    padding: 5vw;
+  }
+
+  #logo {
+    width: 50vw;
+    height: 16vh;
+    margin-left: 1vw;
+    object-fit: contain;
+  }
+
+  .text-container {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    overflow: hidden;
+    margin-top: 0vh;
+    position: static;
+    position: relative;
+    bottom: 0vh;
+    /* border: 5px solid #fff; */
+  }
+
+  .text {
+    width: 80vw;
+    height: 35vh;
+    background-image: url(./Assets/estrelas-espaço-céu-estrelado-.jpg);
+    background-attachment: fixed;
+    font-family: 'crowbar', 'Roboto', sans-serif;
+    font-size: clamp(1em, 0.9em + 1vw, 1.5em);
+    font-weight: 400;
+    color: #c4db43de;
+    text-shadow: #000000 0.1em 0.1em 0.2em;
+    box-shadow: 0 0 25px rgb(255, 255, 255);
+    border-radius: 40px;
+    position: absolute;
+    top: 10vh;
+    right: auto;
+    padding: 5vw;
+  }
+
+  .menu-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 0;
+  }
+
+  .ball-RM-gif {
+    font-family: 'Roboto', sans-serif;
+    color: #949494;
+    width: 45vw;
+    margin-top: 9vh;
+  }
+
+  #style-footer-mobile {
+    display: flex;
+    width: 100vw;
+    height: 9vh;
+    position: fixed;
+    top: 92vh;
+    background-color: #017384f1;
+  }
+
+  .nav-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .li-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #949494;
+  }
+
+  .ul-footer {
+    width: 100vw;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    color: #949494;
+  }
+
+  nav a,
+  #btnTopMobile {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    color: #949494;
+    padding-top: 0.2vh;
+    padding-bottom: 1vh;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .home,
+  .about,
+  .episode,
+  button,
+  .sky-img {
+    display: none;
+  }
+
+  .li-mobile,
+  .nav-cards {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ADADAD;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
-@media (max-width: 820px) {
-
-    body {
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .start {
-        display: none;
-    }
-
-    main {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    header {
-        width: 100vw;
-        height: 9vh;
-        padding: 5vw;
-    }
-
-    #logo {
-        width: 50vw;
-        height: 16vh;
-        margin-left: 1vw;
-        object-fit: contain;
-    }
-
-    .text-container{
-        width: 100vw;
-        height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: self-start;
-        overflow: hidden;
-        margin-top: 0vh;
-        position: static;
-        position: relative;
-        bottom: 0vh;
-        /* border: 5px solid #fff; */
-    }
-
-    .text {
-        width: 80vw;
-        height: 35vh;
-        background-image: url(./Assets/estrelas-espaço-céu-estrelado-.jpg);
-        background-attachment: fixed;
-        font-family: 'crowbar','Roboto', sans-serif;
-        font-size: clamp(1em, 0.9em + 1vw, 1.5em);
-        font-weight: 400;
-        color: #c4db43de; text-shadow: #000000 0.1em 0.1em 0.2em;
-        box-shadow: 0 0 25px rgb(255, 255, 255);
-        border-radius: 40px;
-        position: absolute;
-        top: 10vh;
-        right: auto;
-        padding: 5vw;
-    }
-
-    .menu-container{
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-right: 0;
-    }
-
-    .ball-RM-gif{
-        font-family: 'Roboto', sans-serif;
-        color: #949494;
-        width: 45vw;
-        margin-top: 9vh;
-    }
-
-    footer {
-        display: flex;
-        width: 100vw;
-        height: 9vh;
-        position: fixed;
-        top: 92vh;
-        background-color: #017384f1;
-    }
-
-    .nav-footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .li-footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: #949494;
-    }
-
-    .ul-footer {
-        width: 100vw;
-        display: flex;
-        text-align: center;
-        justify-content: space-around;
-        align-items: center;
-        color: #949494;
-    }
-
-    nav a, #btnTopMobile {
-        font-family: 'Roboto', sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        display: flex;
-        color: #949494;
-        padding-top: 0.2vh;
-        padding-bottom: 1vh; 
-        border: none;
-        background-color: transparent;  
-        cursor: pointer; 
-    }
-
-    .home,
-    .about,
-    .episode,
-    button,
-    .sky-img {
-        display: none;
-    }
-   
-    .li-mobile, .nav-cards {
-        font-family: 'Roboto', sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        color: #ADADAD;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    
-}
+@media (min-width: 768px) and (max-width: 1024px) {}

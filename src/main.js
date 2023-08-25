@@ -85,8 +85,8 @@ function cardCharacters(data) {
 }
 
 const statusSelectMobile = document.getElementById('status-filter-mobile');
-const selectedSpeciesMobile = document.getElementById('species-filter-mobile');
-const selectedGenderMobile = document.getElementById('gender-filter-mobile');
+const speciesSelectMobile = document.getElementById('species-filter-mobile');
+const genderSelectMobile = document.getElementById('gender-filter-mobile');
 
 const statusSelect = document.getElementById('status-filter');
 const speciesSelect = document.getElementById('species-filter');
@@ -101,11 +101,11 @@ window.addEventListener('load', () => {
 
 
   statusSelectMobile.addEventListener('change', applyFiltersMobile);
-  selectedSpeciesMobile.addEventListener('change', applyFiltersMobile);
-  selectedGenderMobile.addEventListener('change', applyFiltersMobile);
+  speciesSelectMobile.addEventListener('change', applyFiltersMobile);
+  genderSelectMobile.addEventListener('change', applyFiltersMobile);
 
   function applyFiltersMobile () {
-    applyFilters(statusSelectMobile.value, selectedSpeciesMobile.value, selectedGenderMobile.value)
+    applyFilters(statusSelectMobile.value, speciesSelectMobile.value, genderSelectMobile.value)
   }
 
 
@@ -200,3 +200,16 @@ popularityCharacters.addEventListener('change', () => {
   const orderPopularity = popularityOrder(popularityCharacters.value, dataRM);
   cardCharacters(orderPopularity);
 });
+
+//Função menu-burguer
+const sideBarMobile = document.querySelector('.side-bar-mobile');
+const menuBurguer = document.getElementById('burguer');
+
+menuBurguer.addEventListener('click', toggleMenuBurguer);
+
+function toggleMenuBurguer(){
+  sideBarMobile.classList.toggle('active');
+  menuBurguer.classList.toggle('open');
+}
+
+
