@@ -562,11 +562,19 @@ h3 {
 footer,
 .search-box-mobile,
 .percent-mobile,
-.side-container-mobile {
+.side-container-mobile,
+#burguer {
   display: none;
 }
 
 @media (max-width: 820px) {
+
+  .side-container,
+  .side-bar,
+  .btn-top,
+  nav {
+    display: none;
+  }
 
   body {
     width: 100vw;
@@ -596,17 +604,23 @@ footer,
   }
 
   .search-box-mobile {
+    flex-grow: 1;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     margin-top: 12vh;
+
   }
 
   #search-box-field-mobile {
+    color: #ffffffc4;
+    font-family: 'Roboto', sans-serif;
     background-color: #024650;
     border: none;
+    font-size: 18px;
     width: 85vw;
     height: 4vh;
+    padding-left: 8vw;
   }
 
   #search-box-field-mobile::placeholder {
@@ -621,7 +635,7 @@ footer,
   #lupa-search-mobile {
     position: absolute;
     top: 12.5%;
-    left: 13vw;
+    left: 9vw;
   }
 
   #percentText-mobile {
@@ -661,22 +675,6 @@ footer,
     margin-top: 8vh;
     gap: 0vw;
     row-gap: 1vh;
-  }
-
-  .side-container,
-  .side-bar,
-  #order,
-  #advanced-search,
-  #status-filter,
-  #species-filter,
-  #gender-filter,
-  #origin-filter,
-  #location-filter,
-  #order-popularity,
-  #order-alphabetical,
-  .btn-top,
-  nav {
-    display: none;
   }
 
   footer {
@@ -727,47 +725,106 @@ footer,
     background-color: transparent;
     cursor: pointer;
   }
+  
+  #style-mobile {
+    display: flex;
+    width: 90vw;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    right: 0;
+    top: 10%;
 
-  #burguer {
-    width: 70vw;
-    font-size: 2em;
-    /* display: flex;
-    justify-content: flex-end;
-    align-items: flex-end; */
-    color: #949494;
   }
 
-   .side-container-mobile {
-    width: 50vw;
-    height: 100vh;
+  #burguer {
+    display: flex;
+    width: 70vw;
+    font-size: 2em;
+    color: #949494;
+    position: absolute;
+    left: 85%;
+    top: 2%;
+  }
+
+   .side-container-mobile,
+  #select-mobile {
+    width: 60vw;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    border: violet  solid;
+    /* background-color: #034e59; */
+    position: absolute;
+    right: 1%;
+    top: 10%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: center;
   }
 
-  .side-bar-mobile{
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    border: blue solid;
+  .side-container-mobile {
+    width: 0;
+    height: 0;
+
   }
 
-  .options-side-bar-mobile{
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    align-items: flex-start;
-    border: #fff solid;
+
+  #advanced-search-mobile,
+  #order-mobile{
+  width: 60vw;
+  height: 5vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  gap: 2;
+  background-color: #034e59;
+  border-color: #aedc29;
+  border-style: solid;
+  border-radius: 0px;
+  border-width: 1px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  cursor: pointer;
   }
 
-  .advanced-search-mobile{
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    align-items: flex-start;
-    border: red solid;
-  }
+
+#status-filter,
+#species-filter,
+#gender-filter,
+#origin-filter,
+#location-filter,
+#order-popularity,
+#order-alphabetical {
+  width: 60vw;
+  height: 5vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #ADADAD;
+  text-align: center;
+  gap: 2;
+
+  background-color: #017384c7;
+  border-color: #aedc29;
+  border-style: solid;
+  border-radius: 0px;
+  border-width: 1px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  cursor: pointer;
+}
+
 
 }

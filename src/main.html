@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="main.css" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
 </head>
 
 <body>
@@ -16,7 +15,7 @@
     <nav>
       <ul>
         <div class="search-box">
-          <input type="text" class="search-box-field" id="search-box-field-desktop" placeholder="Busca por personagem">
+          <input type="text" class="search-box-field" id="search-box-field-desktop" placeholder="Busca por personagem"></input>
           <a class="search-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#fff" id="lupa-search-desktop"
               viewBox="0 0 20 20">
@@ -33,63 +32,70 @@
       </ul>
     </nav>
 
-    <span id="burguer" class="material-symbols-outlined">menu</span>
-    <section class="side-container-mobile">
-      <aside class="side-bar-mobile">
-        <div class="options-side-bar-mobile">
-          <a href="./main.html">
-            <p id="advanced-search-mobile">Busca Avançada</p>
-          </a>
-        </div>
-        <select class="status-filter-mobile" name="status" id="status-filter">
-          <option value="All">Status</option>
-          <option value="Alive">Vivo</option>
-          <option value="Dead">Morto</option>
-          <option value="unknown">Desconhecido</option>
-        </select>
+    <div id="style-mobile">
+      <span id="burguer" class="material-symbols-outlined">menu</span>
+      <section class="side-container-mobile">
+        <aside class="side-bar-mobile">
 
-        <select class="status-filter-mobile" name="species" id="species-filter">
-          <option value="All">Espécie</option>
-          <option value="Human">Humano</option>
-          <option value="Alien">Alienígena</option>
-          <option value="Animal">Animal</option>
-          <option value="Robot">Robô</option>
-          <option value="Vampire">Vampiro</option>
-          <option value="Humanoid">Humanóide</option>
-          <option value="Poopybutthole">Poopybutthole</option>
-          <option value="Mytholog">Mitológico</option>
-          <option value="Cronenberg">Cronenberg</option>
-          <option value="Disease">Doença</option>
-          <option value="Parasite">Parasita</option>
-          <option value="unknown">Desconhecida</option>
-        </select>
+          <div id="select-mobile">
 
-        <select class="status-filter-mobile" name="gender" id="gender-filter">
-          <option value="All">Gênero</option>
-          <option value="Male">Masculino</option>
-          <option value="Female">Feminino</option>
-          <option value="unknown">Desconhecido</option>
-          <option value="Genderless">Sem gênero</option>
-        </select>
+            <div class="options-side-bar-mobile">
+              <a href="./main.html">
+                <p id="advanced-search-mobile">Busca Avançada</p>
+              </a>
+            </div>
 
-        <div class="order-side-mobile">
-          <a href="./main.html">
-            <p id="order-mobile">Ordenação</p>
-          </a>
-          <select class="status-filter-mobile" name="order-alphabetical" id="order-alphabetical">
-            <option value="All">Alfabética</option>
-            <option value="ascending-order">A-Z</option>
-            <option value="descending-order">Z-A</option>
-          </select>
-
-          <select class="status-filter-mobile" name="order-popularity" id="order-popularity">
-            <option value="All">Popularidade</option>
-            <option value="more-popular">Mais populares</option>
-            <option value="less-popular">Menos populares</option>
-          </select>
-        </div>
-      </aside>
-    </section>
+            <select class="status-filter-mobile" name="status" id="status-filter">
+              <option value="All">Status</option>
+              <option value="Alive">Vivo</option>
+              <option value="Dead">Morto</option>
+              <option value="unknown">Desconhecido</option>
+            </select>
+  
+            <select class="status-filter-mobile" name="species" id="species-filter">
+              <option value="All">Espécie</option>
+              <option value="Human">Humano</option>
+              <option value="Alien">Alienígena</option>
+              <option value="Animal">Animal</option>
+              <option value="Robot">Robô</option>
+              <option value="Vampire">Vampiro</option>
+              <option value="Humanoid">Humanóide</option>
+              <option value="Poopybutthole">Poopybutthole</option>
+              <option value="Mytholog">Mitológico</option>
+              <option value="Cronenberg">Cronenberg</option>
+              <option value="Disease">Doença</option>
+              <option value="Parasite">Parasita</option>
+              <option value="unknown">Desconhecida</option>
+            </select>
+  
+            <select class="status-filter-mobile" name="gender" id="gender-filter">
+              <option value="All">Gênero</option>
+              <option value="Male">Masculino</option>
+              <option value="Female">Feminino</option>
+              <option value="unknown">Desconhecido</option>
+              <option value="Genderless">Sem gênero</option>
+            </select>
+  
+            <div class="order-side-mobile">
+              <a href="./main.html">
+                <p id="order-mobile">Ordenação</p>
+              </a>
+              <select class="status-filter-mobile" name="order-alphabetical" id="order-alphabetical">
+                <option value="All">Alfabética</option>
+                <option value="ascending-order">A-Z</option>
+                <option value="descending-order">Z-A</option>
+              </select>
+  
+              <select class="status-filter-mobile" name="order-popularity" id="order-popularity">
+                <option value="All">Popularidade</option>
+                <option value="more-popular">Mais populares</option>
+                <option value="less-popular">Menos populares</option>
+              </select>
+          </div>
+          </div>
+        </aside>
+      </section>
+    </div>
   </header>
 
   <div id="fade" class="hide"></div>

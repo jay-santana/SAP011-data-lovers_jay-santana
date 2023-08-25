@@ -158,7 +158,7 @@ const inputSearchNameMobile = document.getElementById("search-box-field-mobile")
 
 function filterName() {
   const characterNameFilter = inputSearchName.value;
-  const characterNameFilterMobile = inputSearchNameMobile.value; // Renomeada para evitar conflito de nomes
+  const characterNameFilterMobile = inputSearchNameMobile.value;
   const filteredDataName = searchName(dataRM, characterNameFilter, characterNameFilterMobile);
   cardCharacters(filteredDataName);
 }
