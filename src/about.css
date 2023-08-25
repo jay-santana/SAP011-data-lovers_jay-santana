@@ -117,7 +117,7 @@ main{
     margin-top: 15vh;
 }
 
-button.start{
+.start{
     width: 4vw;
     height: 4vh;
     font-family: 'Roboto', sans-serif;
@@ -204,10 +204,6 @@ footer,
         right: auto;
         padding: 5vw;
     }
-    
-    .sky-img {
-        display: none;
-    }
 
     .menu-container{
         width: 100vw;
@@ -258,19 +254,24 @@ footer,
         color: #949494;
     }
 
-    nav a {
+    nav a, #btnTopMobile {
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
         font-weight: 500;
         display: flex;
         color: #949494;
         padding-top: 0.2vh;
-        padding-bottom: 1vh;    
+        padding-bottom: 1vh; 
+        border: none;
+        background-color: transparent;  
+        cursor: pointer; 
     }
 
     .home,
     .about,
-    .episode {
+    .episode,
+    button,
+    .sky-img {
         display: none;
     }
    

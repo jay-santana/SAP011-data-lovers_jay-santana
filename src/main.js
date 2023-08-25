@@ -153,7 +153,7 @@ function scrollToTop (){
 }
 
 // Filtro de busca por nome
-const inputSearchName = document.getElementById("search-box-field");
+const inputSearchName = document.getElementById("search-box-field-desktop");
 const inputSearchNameMobile = document.getElementById("search-box-field-mobile");
 
 function filterName() {
