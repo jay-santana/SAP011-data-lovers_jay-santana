@@ -84,22 +84,37 @@ function cardCharacters(data) {
   });
 }
 
+const statusSelectMobile = document.getElementById('status-filter-mobile');
+const selectedSpeciesMobile = document.getElementById('species-filter-mobile');
+const selectedGenderMobile = document.getElementById('gender-filter-mobile');
+
+const statusSelect = document.getElementById('status-filter');
+const speciesSelect = document.getElementById('species-filter');
+const genderSelect = document.getElementById('gender-filter');
+
 window.addEventListener('load', () => {
   cardCharacters(dataRM);
 
-  const statusSelect = document.getElementById('status-filter');
-  const speciesSelect = document.getElementById('species-filter');
-  const genderSelect = document.getElementById('gender-filter');
+  statusSelect.addEventListener('change', applyFiltersDesktop);
+  speciesSelect.addEventListener('change', applyFiltersDesktop);
+  genderSelect.addEventListener('change', applyFiltersDesktop);
 
-  statusSelect.addEventListener('change', applyFilters);
-  speciesSelect.addEventListener('change', applyFilters);
-  genderSelect.addEventListener('change', applyFilters);
 
-  function applyFilters() {
-    const selectedStatus = statusSelect.value;
-    const selectedSpecies = speciesSelect.value;
-    const selectedGender = genderSelect.value;
+  statusSelectMobile.addEventListener('change', applyFiltersMobile);
+  selectedSpeciesMobile.addEventListener('change', applyFiltersMobile);
+  selectedGenderMobile.addEventListener('change', applyFiltersMobile);
 
+  function applyFiltersMobile () {
+    applyFilters(statusSelectMobile.value, selectedSpeciesMobile.value, selectedGenderMobile.value)
+  }
+
+
+  function applyFiltersDesktop () {
+    applyFilters(statusSelect.value, speciesSelect.value, genderSelect.value)
+  }
+
+  function applyFilters(selectedStatus, selectedSpecies, selectedGender) {
+    
     // Filtrar os dados com base no status, espécie e gênero selecionados
     const filteredDataByStatus = statusFilter(dataRM, selectedStatus);
     const filteredDataBySpeciesAndStatus = speciesFilter(filteredDataByStatus, selectedSpecies);
@@ -158,13 +173,19 @@ const inputSearchNameMobile = document.getElementById("search-box-field-mobile")
 
 function filterName() {
   const characterNameFilter = inputSearchName.value;
+  const filteredDataName = searchName(dataRM, characterNameFilter);
+  cardCharacters(filteredDataName);
+}
+
+
+function filterNameMobile() {
   const characterNameFilterMobile = inputSearchNameMobile.value;
-  const filteredDataName = searchName(dataRM, characterNameFilter, characterNameFilterMobile);
+  const filteredDataName = searchName(dataRM, characterNameFilterMobile);
   cardCharacters(filteredDataName);
 }
 
 inputSearchName.addEventListener('input', filterName);
-inputSearchNameMobile.addEventListener('input', filterName);
+inputSearchNameMobile.addEventListener('input', filterNameMobile);
 
 //ordenação por ordem alfabetica
 const selectionOrder = document.getElementById('order-alphabetical');
