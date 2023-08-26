@@ -84,9 +84,9 @@ function cardCharacters(data) {
   });
 }
 
-//do para trazer os IDS dos mobile e desktop
+//DOM para trazer os IDS dos mobile e desktop
 
-//filtros
+//Filtros
 const statusSelectMobile = document.getElementById('status-filter-mobile');
 const speciesSelectMobile = document.getElementById('species-filter-mobile');
 const genderSelectMobile = document.getElementById('gender-filter-mobile');
@@ -99,10 +99,9 @@ const genderSelect = document.getElementById('gender-filter');
 const percentReturned = document.getElementById("percentText");
 const percentReturnedMobile = document.getElementById("percentText-mobile");
 
+//Oredenação alfabética
 const selectionOrder = document.getElementById('order-alphabetical');
 const selectionOrderMobile = document.getElementById('order-alphabetical-mobile');
-
-
 
 window.addEventListener('load', () => {
   cardCharacters(dataRM);
@@ -112,19 +111,14 @@ window.addEventListener('load', () => {
   genderSelect.addEventListener('change', applyFiltersDesktop);
   selectionOrder.addEventListener('change', applyFiltersDesktop);
 
-
   statusSelectMobile.addEventListener('change', applyFiltersMobile);
   speciesSelectMobile.addEventListener('change', applyFiltersMobile);
   genderSelectMobile.addEventListener('change', applyFiltersMobile);
   selectionOrderMobile.addEventListener('change', applyFiltersMobile);
 
-  
-  
-
   function applyFiltersMobile () {
     applyFilters(statusSelectMobile.value, speciesSelectMobile.value, genderSelectMobile.value, selectionOrderMobile.value)
   }
-
 
   function applyFiltersDesktop () {
     applyFilters(statusSelect.value, speciesSelect.value, genderSelect.value, selectionOrder.value)
@@ -145,13 +139,9 @@ window.addEventListener('load', () => {
 
     //calculo de porcentagem em relação aos personagens filtrados
     const percentData = calculatePercent(dataRM.length, filteredDataBySpeciesAndStatusAndGender.length);
-    percentReturned.innerHTML = (`Este filtro representa <span class="percent">${percentData}%</span> do <span class="allCharacters">total de  ${dataRM.length}</span> personagens. `);
-    percentReturnedMobile.innerHTML = (`Este filtro representa <span class="percent">${percentData}%</span> do <span class="allCharacters">total de  ${dataRM.length}</span> personagens. `);
+    percentReturned.innerHTML = (`Este filtro representa <span class="percentStyleDesktop">${percentData}% </span> do <span class="allCharactersDesktop"> total de ${dataRM.length} </span> personagens.`);
+    percentReturnedMobile.innerHTML = (`Este filtro representa <span class="percentStyleMobile">${percentData}% </span>do <span class="allCharactersMobile"> total de ${dataRM.length} </span>personagens.`);
     
-
-
-    
-
     //ordenação por popularidade
     const popularityCharacters = document.getElementById("order-popularity");
     popularityCharacters.addEventListener('change', () => {

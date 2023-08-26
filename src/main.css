@@ -536,7 +536,7 @@ h3 {
   padding: 10px;
 }
 
-#percentText {
+.percentDesktop {
   background-color: #afdc2942;
   box-shadow: 2px 2px 8px 8px #afdc2942;
   border-radius: 10px;
@@ -550,19 +550,19 @@ h3 {
   bottom: 370px;
 }
 
-.percent {
+.percentStyleDesktop {
   color: #b2df28;
   font-weight: 400;
 }
 
-.allCharacters {
+.allCharactersDesktop {
   color: #b2df28;
   font-weight: 400;
 }
 
 #style-footer-mobile,
 .search-box-mobile,
-.percent-mobile,
+.percentMobile,
 .side-container-mobile,
 #burguer {
   display: none;
@@ -573,7 +573,8 @@ h3 {
   .side-container,
   .side-bar,
   .btn-top,
-  nav {
+  nav,
+  .percentDesktop {
     display: none;
   }
 
@@ -610,7 +611,6 @@ h3 {
     justify-content: flex-start;
     align-items: flex-start;
     margin-top: 12vh;
-
   }
 
   #search-box-field-mobile {
@@ -639,7 +639,7 @@ h3 {
     left: 9vw;
   }
 
-  #percentText-mobile {
+  .percentMobile {
     background-color: #afdc2942;
     box-shadow: 2px 2px 8px 8px #afdc2942;
     border-radius: 10px;
@@ -648,20 +648,20 @@ h3 {
     font-weight: 600;
     color: #00B5CC;
     text-shadow: #000000 0.1em 0.1em 0.1em;
+    display: block;
     text-align: center;
-    width: 95vw;
+    width: 80vw;
     height: 5vh;
     position: absolute;
-    top: 18vh;
-    display: flex;
+    top: 18vh; 
   }
 
-  .percent{
+  .percentStyleMobile{
         color: #b2df28;
         font-weight: 400;
     }
     
-    .allCharacters{
+  .allCharactersMobile{
         color: #b2df28;
         font-weight: 400; 
     }
@@ -679,12 +679,12 @@ h3 {
   }
 
   #style-footer-mobile {
-    display: flex;
     width: 100vw;
     height: 9vh;
-    position: fixed;
-    top: 92vh;
     background-color: #017384f1;
+    display: flex;
+    position: fixed;
+    top: 92vh;  
   }
 
   .nav-footer {
@@ -728,7 +728,7 @@ h3 {
   }
 
   #burguer {
-    display: flex;
+    display: block;
     width: 70vw;
     font-size: 2em;
     color: #949494;
@@ -754,7 +754,6 @@ h3 {
   #select-mobile {
     width: 60vw;
     height: 50vh;
-    /* height: 0; */
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     text-align: center;
@@ -766,7 +765,6 @@ h3 {
     right: 1%;
     top: 20%;
     z-index: 50;
-    /* transition: 2s; */
   }
 
   #select-mobile {
@@ -780,7 +778,6 @@ h3 {
 
   .side-bar-mobile.active #select-mobile {
     visibility: visible;
-    /* height: calc(100vh - 50vh); */
   }
 
   .side-container-mobile {
