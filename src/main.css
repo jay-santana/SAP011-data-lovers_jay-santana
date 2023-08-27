@@ -120,7 +120,6 @@ main {
 .container-card {
   width: 100%;
   height: 100vh;
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
@@ -834,4 +833,321 @@ h3 {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {}
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .side-container,
+  .side-bar,
+  .btn-top,
+  nav,
+  .percentDesktop {
+    display: none;
+  }
+
+
+  header {
+    width: 100vw;
+    height: 9vh;
+    padding: 0vw;
+  }
+
+  #logo {
+    width: 50vw;
+    height: 13vh;
+    margin-left: 0vw;
+    object-fit: contain;
+  }
+
+  main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .search-box-mobile {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 11.5vh;
+  }
+
+  #search-box-field-mobile {
+    color: #ffffffc4;
+    font-family: 'Roboto', sans-serif;
+    background-color: #024650;
+    border: none;
+    font-size: 30px;
+    width: 85vw;
+    height: 4vh;
+    padding-left: 18vw;
+  }
+
+  #search-box-field-mobile::placeholder {
+    background-color: #024650;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #979797;
+    padding-left: 14vw;
+    position: relative;
+  }
+
+  #lupa-search-mobile {
+    position: absolute;
+    top: 12.5%;
+    left: 9vw;
+  }
+
+  .percentMobile {
+    background-color: #afdc2942;
+    box-shadow: 2px 2px 8px 8px #afdc2942;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #00B5CC;
+    text-shadow: #000000 0.1em 0.1em 0.1em;
+    display: block;
+    text-align: center;
+    width: 80vw;
+    height: 5vh;
+    position: absolute;
+    top: 18vh; 
+  }
+
+  .percentStyleMobile{
+        color: #b2df28;
+        font-weight: 400;
+    }
+    
+  .allCharactersMobile{
+        color: #b2df28;
+        font-weight: 400; 
+    }
+
+  .container-card {
+    width: 90vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-right: 0px;
+    place-items: center;
+    margin-top: 8vh;
+    gap: 0vw;
+    row-gap: 2vh;
+  }
+
+  #style-footer-mobile {
+    width: 100vw;
+    height: 9vh;
+    background-color: #017384f1;
+    display: flex;
+    position: fixed;
+    top: 92vh;  
+  }
+
+  .nav-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .li-footer {
+    font-size: 30px;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #949494;
+  }
+
+  .ul-footer {
+    width: 100vw;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    color: #949494;
+  }
+
+  nav a,
+  #btnTopMobile {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    color: #949494;
+    padding-top: 0.2vh;
+    padding-bottom: 1vh;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  #burguer {
+    display: block;
+    width: 90vw;
+    font-size: 3.5em;
+    color: #949494;
+    cursor: pointer;
+    position: absolute;
+    left: 80%;
+    top: 3.5%;
+  }
+
+  #style-mobile {
+    width: 60vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    right: 0;
+    top: 10%;
+  }
+
+  .side-container-mobile,
+  #select-mobile {
+    width: 60vw;
+    height: 50vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    right: 1%;
+    top: 20%;
+    z-index: 50;
+  }
+
+  #select-mobile {
+    visibility: hidden;
+  }
+
+  .status-filter:hover {
+    background-color: #83a02bee;
+    cursor: pointer;
+  }
+
+  .side-bar-mobile.active #select-mobile {
+    visibility: visible;
+  }
+
+  .side-container-mobile {
+    width: 0;
+    height: 0;
+  }
+
+  #advanced-search-mobile,
+  #order-mobile {
+    width: 60vw;
+    height: 5vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: #000000de 0.1em 0.1em 0.1em;
+    text-align: center;
+    gap: 2;
+    background-color: #034e59;
+    border-color: #aedc29;
+    border-style: solid;
+    border-radius: 0px;
+    border-width: 1px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .status-filter {
+    width: 60vw;
+    height: 5vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: #cccccc;
+    text-shadow: #0000005e 0.1em 0.1em 0.1em;
+    text-align: center;
+    gap: 2;
+
+
+    background-color: #017384e7;
+    border-color: #90a033;
+    border-style: solid;
+    border-radius: 0px;
+    border-width: 1px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .style-container {
+    background-image: url('Assets/estrelas-espaço-céu-estrelado-.jpg');
+    border-radius: 25px;
+    width: 215px;
+    height: 300px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    /* box-shadow: 0 10px 10px 0 rgba(123, 148, 90, 0.3); */
+  }
+  
+  .border-container {
+    border: solid #aedc29;
+    border-radius: 25px;
+    width: 210px;
+    height: 280px;
+    padding: 5px;
+  }
+  
+  #img-card {
+    width: 100%;
+    height: 260px;
+    border: 0;
+    object-fit: cover;
+  }
+  
+  .cards {
+    position: relative;
+    cursor: pointer;
+  }
+  h2 {
+    font-size: 19px;
+
+  }
+  
+  .name-container {
+    background-color: #034e59;
+    border-color: #1f9dcb;
+    border-radius: 16px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+  
+    position: absolute;
+    top: 224px;
+    width: 170px;
+    height: 45px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}

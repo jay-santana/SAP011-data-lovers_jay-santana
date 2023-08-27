@@ -103,6 +103,10 @@ const percentReturnedMobile = document.getElementById("percentText-mobile");
 const selectionOrder = document.getElementById('order-alphabetical');
 const selectionOrderMobile = document.getElementById('order-alphabetical-mobile');
 
+//Oredenação por popularidade 
+const selectionOrderPopularity = document.getElementById('order-popularity');
+const selectionOrderPopularityMobile = document.getElementById('order-popularity-mobile');
+
 window.addEventListener('load', () => {
   cardCharacters(dataRM);
 
@@ -110,44 +114,44 @@ window.addEventListener('load', () => {
   speciesSelect.addEventListener('change', applyFiltersDesktop);
   genderSelect.addEventListener('change', applyFiltersDesktop);
   selectionOrder.addEventListener('change', applyFiltersDesktop);
+  selectionOrderPopularity.addEventListener('change', applyFiltersDesktop);
 
   statusSelectMobile.addEventListener('change', applyFiltersMobile);
   speciesSelectMobile.addEventListener('change', applyFiltersMobile);
   genderSelectMobile.addEventListener('change', applyFiltersMobile);
   selectionOrderMobile.addEventListener('change', applyFiltersMobile);
+  selectionOrderPopularityMobile.addEventListener('change', applyFiltersMobile);
 
   function applyFiltersMobile () {
-    applyFilters(statusSelectMobile.value, speciesSelectMobile.value, genderSelectMobile.value, selectionOrderMobile.value)
+    applyFilters(statusSelectMobile.value, speciesSelectMobile.value, genderSelectMobile.value, selectionOrderMobile.value, selectionOrderPopularityMobile.value)
   }
 
   function applyFiltersDesktop () {
-    applyFilters(statusSelect.value, speciesSelect.value, genderSelect.value, selectionOrder.value)
+    applyFilters(statusSelect.value, speciesSelect.value, genderSelect.value, selectionOrder.value, selectionOrderPopularity.value)
   }
 
-  function applyFilters(selectedStatus, selectedSpecies, selectedGender, selectionOrder, selectionOrderMobile) {
+  function applyFilters(selectedStatus, selectedSpecies, selectedGender, selectionOrder, selectionOrderPopularity) {
     
     // Filtrar os dados com base no status, espécie e gênero selecionados
     const filteredDataByStatus = statusFilter(dataRM, selectedStatus);
     const filteredDataBySpeciesAndStatus = speciesFilter(filteredDataByStatus, selectedSpecies);
-    cardCharacters(filteredDataBySpeciesAndStatus);
     const filteredDataBySpeciesAndStatusAndGender = genderFilter(filteredDataBySpeciesAndStatus, selectedGender);
-    cardCharacters(filteredDataBySpeciesAndStatusAndGender);
-    const orderCharacter = alphabeticalOrder(selectionOrder, filteredDataBySpeciesAndStatusAndGender);
-    cardCharacters(orderCharacter);
-    const orderCharacterMobile = alphabeticalOrder(selectionOrderMobile, filteredDataBySpeciesAndStatusAndGender);
-    cardCharacters(orderCharacterMobile);
+    
+    // criar cópia dos dados filtrados para ordenação
+    let orderedCharacters = [...filteredDataBySpeciesAndStatusAndGender];
+
+    orderedCharacters = popularityOrder (selectionOrderPopularity, orderedCharacters);
+    cardCharacters (orderedCharacters);
+
+    orderedCharacters = alphabeticalOrder (selectionOrder, orderedCharacters);
+    cardCharacters(orderedCharacters);
+
 
     //calculo de porcentagem em relação aos personagens filtrados
-    const percentData = calculatePercent(dataRM.length, filteredDataBySpeciesAndStatusAndGender.length);
+    const percentData = calculatePercent(dataRM.length, orderedCharacters.length);
     percentReturned.innerHTML = (`Este filtro representa <span class="percentStyleDesktop">${percentData}% </span> do <span class="allCharactersDesktop"> total de ${dataRM.length} </span> personagens.`);
     percentReturnedMobile.innerHTML = (`Este filtro representa <span class="percentStyleMobile">${percentData}% </span>do <span class="allCharactersMobile"> total de ${dataRM.length} </span>personagens.`);
     
-    //ordenação por popularidade
-    const popularityCharacters = document.getElementById("order-popularity");
-    popularityCharacters.addEventListener('change', () => {
-      const orderPopularity = popularityOrder(popularityCharacters.value, filteredDataBySpeciesAndStatusAndGender);
-      cardCharacters(orderPopularity);
-    });
   }
 });
 
@@ -195,19 +199,6 @@ function filterNameMobile() {
 inputSearchName.addEventListener('input', filterName);
 inputSearchNameMobile.addEventListener('input', filterNameMobile);
 
-//ordenação por ordem alfabetica
-// const selectionOrder = document.getElementById('order-alphabetical');
-// selectionOrder.addEventListener('change', () => {
-//   const orderCharacter = alphabeticalOrder(selectionOrder.value, dataRM);
-//   cardCharacters(orderCharacter);
-// });
-
-//ordenação por popularidade
-const popularityCharacters = document.getElementById("order-popularity");
-popularityCharacters.addEventListener('change', () => {
-  const orderPopularity = popularityOrder(popularityCharacters.value, dataRM);
-  cardCharacters(orderPopularity);
-});
 
 //Função menu-burguer
 const sideBarMobile = document.querySelector('.side-bar-mobile');
