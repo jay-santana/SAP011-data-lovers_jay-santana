@@ -16,7 +16,7 @@
 
 ***
 <p align="center">
-<img style = 'border-radius: 12px' src="./src/Assets/Rick-And-Morty-readme.jpg" alt="Rick ando Morty Logo" />
+<img style = 'border-radius: 20px' src="./src/Assets/Rick-And-Morty-readme.jpg" alt="Rick ando Morty Logo" />
 </p>
 
 ***
@@ -247,7 +247,7 @@ O desenho da interface do usuário (UI) é uma etapa fundamental de extrema impo
 ### Protótipo de alta fidelidade (mobile)
 
 <h1 align = 'center'>
-  <img width = 190vw  alt = prototypeHighFidelityMobile title = prototypeHighFidelityMobile src="./src/Assets/prototipo_de_alta_fidelidade_mobile.gif"/>
+  <img width = 200  alt = prototypeHighFidelityMobile title = prototypeHighFidelityMobile src="./src/Assets/prototipo_de_alta_fidelidade_mobile.gif"/>
 </h1>
 
 ### Testes de usabilidade
