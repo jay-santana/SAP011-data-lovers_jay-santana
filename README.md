@@ -5,651 +5,324 @@
 * [1. Prefácio](#1-prefácil)
 * [2. Resumo do projeto](#2-resumo-do-projeto)
 * [3. Histórias de usuário](#3-histórias-de-usuário)
-* [4. Protótipos](#4-protótipos)
-* [5. Testes de usabilidade](#5-testes-de-usabilidade)
-* [6. Interface do projeto e objetivos alcançados](#6-interface-do-projeto-e-objetivos-alcançados)
-* [7. Instruções de uso](#7-instruções-de-uso)
-* [8. Testes unitários](#8-testes-unitários)
-* [9. Especificações Técnicas](#9-especificações-técnicas)
-* [10. Implementações futuras](#10-implementações-futuras)
-* [11. Referências](#11-referências)
-* [12. Desenvolvedoras](#12-desenvolvedoras)
+* [4. Desenho de interface do usuário](#4-desenho-de-interface-do-usuário)
+* [5. Interface do projeto e objetivos alcançados](#5-interface-do-projeto-e-objetivos-alcançados)
+* [6. Instruções de uso](#6-instruções-de-uso)
+* [7. Testes unitários](#7-testes-unitários)
+* [8. Especificações Técnicas](#8-especificações-técnicas)
+* [9. Implementações futuras](#9-implementações-futuras)
+* [10. Referências](#10-referências)
+* [11. Desenvolvedoras](#11-desenvolvedoras)
 
 ***
 
 ## 1. Prefácio
 
-Segundo a
-[Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read)
-90% dos dados que existem hoje foram gerados durante os últimos dois anos. A
-cada dia geramos 2.5 milhões de terabytes de dados, uma cifra sem precedentes.
-
-Apesar disso, os dados por si só são de pouca utilidade. Para que essas grandes
-quantidades de dados se convertam em **informação** compreensível para os
-usuários, precisamos entender e processar estes dados. Uma forma simples de
-fazer isso é criando _interfaces_ e _visualizações_.
-
-Na imagem seguinte, você pode ver como os dados que estão na parte esquerda
-podem ser usados para construir a interface amigável e compreensível que está
-na parte direita.
-
-![pokemon-data-to-ui](https://user-images.githubusercontent.com/12631491/218505816-c6d11758-9de4-428f-affb-2a56ea4d68c4.png)
+Este projeto foi desenvolvido como parte do bootcamp da Laboratória e consiste em um projeto de nível 2 de um catálogo de projetos de complexidade crescente, associados a objetivos de aprendizagem concretos. Portanto, se trata de uma aplicação web, tendo como principal objetivo permitir ao usuário visualizar e interagir com um conjunto (set) de dados, possibilitando pesquisar, filtrar e ordenar de acordo com às suas necessidades. Aos dados foi utilizado cálculo agregado (porcentagem) para mostrar a informação mais relevante. 
 
 ## 2. Resumo do projeto
 
-Neste projeto você **construirá uma _página web_ para visualizar um _conjunto
-(set) de dados_** que se adeque às necessidades de seu usuário.
+O produto em questão é uma aplicação web desenvolvida para atender às necessidades daqueles que desejam explorar mais profundamente os personagens da famosa série "Rick and Morty". Com uma abordagem centrada nos entusiastas da série, incluindo tanto fãs casuais que desejam saber mais sobre os personagens quanto fãs assíduos que desejam aprofundar seu conhecimento sobre o universo da série, a aplicação visa proporcionar uma experiência envolvente e informativa para os usuários enquanto exploram os detalhes e nuances dos personagens. 
 
-Como entregável final terá uma página web que permita **visualizar dados,
-filtrá-los, ordená-los e fazer algum cálculo agregado**. Por cálculo agregado
-nos referimos aos diversos cálculos que podem ser feitos com os dados para
-mostrar a informação mais relevante para os usuários (médias, valores máximos e
-mínimos, etc).
+Na interface da aplicação, os dados mais relevantes que os usuários desejam ver incluem detalhes como o nome dos personagens, seu gênero, espécie, status vital e, também, uma indicação do índice de popularidade, além de poder fazer uma busca pelo nome completo ou parcial do personagem. A visualização dessas informações em um formato claro e de fácil compreensão é essencial para a usabilidade da aplicação, permitindo aos usuários entender a dinâmica da série e como os personagens evoluem ao longo do tempo. 
 
-Para este projeto trazemos uma série de dados de _temáticas diferentes_ para que
-você explore e decida com qual delas deseja trabalhar. Escolhemos
-especificamente estes conjuntos de dados porque cremos que se adequem bem a esta
-etapa de sua aprendizagem.
+## 3. Histórias de usuário
 
-Uma vez que você defina sua área de interesse, busque entender quem é seu
-usuário e o que exatamente ele necessita saber ou ver, para que assim possa
-construir a interface que o ajude a interagir e entender melhor os dados.
+As histórias de usuário definiram os requisitos principais para a criação da aplicação web de exploração dos personagens da série "Rick and Morty". Cada história se concentra em uma funcionalidade específica, tornando a experiência do usuário mais completa e agradável.
 
-Este são os dados que propomos:
+### História de Usuário 1 - Pesquisa por personagem
 
-* [Pokémon](src/data/pokemon/pokemon.json): Neste conjunto você encontrará uma
-  lista com os 251 Pokémon da região de Kanto, com suas respectivas estatísticas
-  utilizadas no jogo [Pokémon GO](http://pokemongolive.com).
-  - [Pesquisa com jogadores de Pokémon Go](src/data/pokemon/README.pt-BR.md)
+Como um fã da série "Rick and Morty", eu quero poder pesquisar por personagens usando nomes completos ou parciais, para que eu possa encontrar personagens específicos com facilidade.
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json): Este
-  conjunto mostra a lista de campeões do jogo League of Legends
-  (LoL).
-  - [Pesquisa com jogadores de LoL](src/data/lol/README.pt-BR.md)
+#### Critérios de Aceitação:
 
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json). Lista de
-  personagens da série Rick & Morty. Você pode revisar a documentação da API
-  neste [link](https://rickandmortyapi.com).
-  - [Pesquisa com seguidores de Rick and Morty](src/data/rickandmorty/README.pt-BR.md)
+*	A plataforma do site deve conter uma barra de pesquisa claramente visível.
+*	Os usuários devem poder digitar o nome completo ou parcial do personagem na barra de pesquisa.
+*	Ao realizar a pesquisa, o site deve exibir uma lista de personagens correspondentes aos critérios de pesquisa.
+*	Os resultados da pesquisa devem ser apresentados de forma organizada e legível.
+*	Caso a pesquisa não retorne nenhum resultado, o site deve exibir uma mensagem de feedback apropriada, informando ao usuário que nenhum personagem foi encontrado.
 
-* [Jogos Olímpicos do Rio de Janeiro](src/data/athletes/athletes.json).
-   Este conjunto nos fornece a lista de atletas que conquistaram medalhas nas
-   Olimpíadas do Rio de Janeiro.
-  - [Pesquisa com stakeholders dos Jogos Olímpicos do Rio de Janeiro](src/data/athletes/README.pt-BR.md)
+#### Definição de Pronto:
 
-* [Studio Ghibli](src/data/ghibli/ghibli.json).
-  Lista de animações e personagens do [Studio Ghibli](https://ghiblicollection.com/).
-  - [Pesquisa com seguidores de Studio Ghibli](src/data/ghibli/README.pt.md)
+A história de usuário "Pesquisa por Personagem" estará pronta quando:
+*	A barra de pesquisa estiver implementada e visível na página do site.
+*	Os usuários puderem digitar nomes completos ou parciais de personagens na barra de pesquisa.
+*	A pesquisa retornar resultados relevantes, exibindo uma lista organizada de personagens correspondentes aos critérios de pesquisa.
+*	Os resultados da pesquisa estiverem apresentados de maneira legível.
+*	A funcionalidade de pesquisa se adaptar corretamente a diferentes dispositivos e tamanhos de tela.
+*	Testes de usabilidade forem realizados para verificar a eficiência e a experiência do usuário na pesquisa por personagem, como também testes de compatibilidade em diferentes dispositivos.
+*	A documentação relevante for atualizada para refletir as mudanças implementadas.
+*	A história de usuário passar por revisão e aprovação em teste unitário, assegurando que atende aos critérios de aceitação definidos.
 
+### História de Usuário 2 - Busca Avançada:
 
-* [Breaking Bad](src/data/breakingbad/breakingbad.json): Neste conjunto você encontrará uma
-  lista com personagens da série Breaking Bad.
-  - [Pesquisa com seguidores Breaking Bad](src/data/breakingbad/README.pt.md)
+Como usuário, eu quero poder realizar uma busca avançada por personagens da série "Rick and Morty" com base em diferentes critérios, como status, espécie e gênero, para encontrar personagens específicos de acordo com minhas preferências.
 
-* [Países](src/data/countries/countries.json): Neste conjunto você encontrará uma
-  lista de países.
-  - [Pesquisa com estudantes de geografia](src/data/countries/README.pt.md)
+#### Critérios de Aceitação:
 
-* [Game of Thrones](src/data/got/got.json): Neste conjunto você encontrará uma
-  lista com personagens da série Breaking Bad.
-  - [Pesquisa com seguidores de Game of Thrones](src/data/got/README.pt.md)
+* A plataforma deve fornecer uma interface de busca avançada clara e intuitiva, onde os usuários possam selecionar os critérios desejados.
+*	A busca por status deve apresentar as opções "vivo", "morto" e "desconhecido". Ao selecionar uma opção, os personagens correspondentes devem ser exibidos.
+*	A busca por espécie deve permitir a seleção de espécies específicas (ex.: humano, alienígena, robô etc.) a partir de uma lista predefinida, e os personagens correspondentes devem ser exibidos.
+*	A busca por gênero deve oferecer as opções "masculino", "feminino" e "sem gênero". A seleção de uma opção deve resultar na exibição dos personagens correspondentes.
+*	Os resultados da busca avançada devem ser apresentados de maneira organizada.
 
-* [Tarot](src/data/tarot/tarot.json): Neste conjunto você encontrará uma
-  lista com cartas de Tarot.
-  - [Pesquisa com usuários de Tarot](src/data/tarot/README.pt.md)
+#### Definição de Pronto:
 
-O objetivo principal deste projeto é que aprenda a desenhar e construir uma
-interface web onde se possa visualizar e manipular dados, entendendo o que o
-usuário necessita.
+A história de usuário "Busca Avançada" estará pronta quando:
 
-## 3. Objetivos de aprendizagem
+*	A interface de busca avançada estiver implementada e acessível para os usuários.
+*	As opções de busca por status, espécie e gênero estiverem funcionando corretamente.
+*	Os resultados da busca avançada estiverem exibindo os personagens de acordo com os critérios selecionados.
+*	Os resultados forem apresentados de forma organizada e legível.
+*	A busca avançada for responsiva e se adaptar corretamente a diferentes dispositivos e tamanhos de tela.
+*	Testes de usabilidade e compatibilidade forem realizados para garantir a funcionalidade em diferentes dispositivos.
+*	A documentação relevante for atualizada para refletir as mudanças implementadas.
+*	A história de usuário passar por revisão e aprovação em testes unitários, assegurando que atende aos critérios de aceitação definidos.
 
-Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projeto. Pense nisso para decidir sua estratégia de trabalho.
+### História de Usuário 3 - Visualização de Porcentagem:
 
-### HTML
+Como usuário, eu quero poder visualizar a porcentagem de personagens que se encaixam em um filtro específico em relação ao número total de personagens, para obter uma compreensão clara da proporção de personagens que atendem aos critérios selecionados.
 
-- [ ] **Uso de HTML semântico**
+#### Critérios de Aceitação:
 
-  <details><summary>Links</summary><p>
+*	A plataforma deve permitir ao usuário escolher um ou mais filtros, como status, espécie e gênero.
+*	A porcentagem de personagens que correspondem aos filtros selecionados deve ser calculada com base no número total de personagens e exibida em tela de forma clara e legível.
+*	A mensagem que exibe a porcentagem deve ser visualmente destacada, permitindo que os usuários compreendam rapidamente a informação.
 
-  * [HTML semântico](https://curriculum.laboratoria.la/pt/topics/html/02-html5/02-semantic-html)
-  * [Semantics in HTML - MDN](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
+#### Definição de Pronto:
 
-### CSS
+A história de usuário "Visualização de Porcentagem" estará pronta quando:
 
-- [ ] **Uso de seletores de CSS**
+*	A interface permitir aos usuários escolher filtros, como status, espécie e gênero.
+*	A porcentagem de personagens correspondentes aos filtros selecionados for calculada corretamente e exibida de forma clara.
+*	A mensagem que exibe a porcentagem for visualmente destacada e de fácil leitura.
+*	A atualização da porcentagem ocorrer instantaneamente e de maneira suave.
+*	A visualização da porcentagem for responsiva e se adaptar corretamente a diferentes dispositivos e tamanhos de tela.
+*	Testes de usabilidade forem realizados para verificar a compreensão e eficácia da visualização da porcentagem, como também, testes de compatibilidade forem realizados para garantir a funcionalidade em diferentes dispositivos.
+*	A documentação relevante for atualizada para refletir as mudanças implementadas.
+*	A história de usuário passar por revisão e aprovação em teste unitário, assegurando que atende aos critérios de aceitação definidos.
 
-  <details><summary>Links</summary><p>
+### História de Usuário 4 - Organização de Personagens Principais:
 
-  * [Intro a CSS](https://curriculum.laboratoria.la/pt/topics/css/01-css/01-intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org/pt_BR/docs/Web/CSS/CSS_Selectors)
-</p></details>
+Como usuário, eu quero poder organizar a lista de personagens principais da série "Rick and Morty" em ordem crescente e decrescente, com base em sua relevância na série, para facilitar a compreensão da dinâmica dos personagens.
 
-- [ ] **Modelo de caixa (box model): borda, margem, preenchimento**
+#### Critérios de Aceitação:
 
-  <details><summary>Links</summary><p>
+*	A plataforma deve ter uma opção para classificar os personagens principais por ordem crescente (mais populares) e outra por ordem decrescente (menos populares).
+*	A ordem dos personagens deve ser baseada em sua popularidade na série, medida pelo número de aparições nos episódios.
+*	Ao selecionar uma opção de ordenação crescente ou decrescente, a lista de personagens principais deve ser reorganizada de acordo com a opção selecionada.
 
-  * [Modelo de Caixa e Display](https://curriculum.laboratoria.la/pt/topics/css/01-css/02-boxmodel-and-display)
-  * [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  * [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  * [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-</p></details>
+#### Definição de Pronto:
 
-- [ ] **Uso de flexbox em CSS**
+A história de usuário "Organização de Personagens Principais" estará pronta quando:
 
-  <details><summary>Links</summary><p>
+*	A opção de ordenação “Mais populares” e “Menos populares” estiver implementada e facilmente acessível na interface.
+*	A ordenação dos personagens principais for realizada com base em sua popularidade, conforme o número de aparições nos episódios.
+*	A reorganização da lista for fluida e ocorrer instantaneamente ao selecionar uma opção de ordenação.
+*	A ordenação dos personagens for responsiva e se adaptar corretamente a diferentes dispositivos e tamanhos de tela.
+*	Testes de usabilidade e compatibilidade forem realizados para garantir a funcionalidade em diferentes dispositivos.
+*	A documentação relevante for atualizada para refletir as mudanças implementadas.
+*	A história de usuário passar por revisão e aprovação em teste unitário, assegurando que atende aos critérios de aceitação definidos.
 
-  * [A Complete Guide to Flexbox - CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-  * [Flexbox Froggy](https://flexboxfroggy.com/#pt-br)
-  * [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-</p></details>
+### História de Usuário 5 - Ordenação Alfabética:
 
-### Web APIs
+Como usuário, eu quero poder ordenar a lista de personagens da série "Rick and Morty" em ordem alfabética crescente e decrescente, para localizar personagens com facilidade e navegar pela lista de forma mais organizada.
 
-- [ ] **Uso de seletores de DOM**
+#### Critérios de Aceitação:
 
-  <details><summary>Links</summary><p>
+*	A plataforma deve apresentar uma opção visível para ordenar os personagens alfabeticamente tanto em ordem crescente (A-Z) quanto decrescente (Z-A).
+*	A ordenação alfabética deve ser aplicada com base nos nomes dos personagens.
+*	Ao selecionar uma opção de ordenação crescente ou decrescente a lista de personagens deve ser reorganizada em ordem alfabética, de acordo com a opção selecionada.
 
-  * [Modificando o DOM](https://curriculum.laboratoria.la/pt/topics/browser/02-dom/03-1-dom-methods-selection)
-  * [Introdução ao DOM - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
-  * [Locating DOM elements using selectors - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-</p></details>
+#### Definição de Pronto:
 
-- [ ] **Manipulação de eventos de DOM (listeners, propagação, delegação)**
+A história de usuário "Ordenação Alfabética" estará pronta quando:
 
-  <details><summary>Links</summary><p>
+*	A opção de ordenação alfabética “A-Z” e “Z-A” estiver implementada e facilmente acessível na interface.
+*	A ordenação alfabética for aplicada corretamente com base nos nomes dos personagens.
+*	A reorganização da lista for fluida e ocorrer instantaneamente ao selecionar uma opção de ordenação.
+*	A ordenação alfabética for responsiva e se adaptar corretamente a diferentes dispositivos e tamanhos de tela.
+*	Testes de usabilidade e compatibilidade forem realizados para garantir a funcionalidade em diferentes dispositivos.
+*	A documentação relevante for atualizada para refletir as mudanças implementadas.
+*	A história de usuário passar por revisão e aprovação em teste unitário, assegurando que atende aos critérios de aceitação definidos.
 
-  * [Introdução a eventos - MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
-  * [EventTarget.addEventListener() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener)
-  * [EventTarget.removeEventListener() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/removeEventListener)
-  * [Objeto Event](https://developer.mozilla.org/pt-BR/docs/Web/API/Event)
-</p></details>
+### História de Usuário 6 - Visualização Detalhada do Personagem:
 
-- [ ] **Manipulação dinâmica de DOM**
+Como usuário, eu quero poder clicar em um card de personagem e visualizar informações gerais sobre o personagem selecionado, para que eu possa conhecer as características específicas desse personagem.
 
-  <details><summary>Links</summary><p>
+#### Critérios de Aceitação:
 
-  * [Introdução ao DOM](https://developer.mozilla.org/pt-BR/docs/DOM/Referencia_do_DOM/Introdu%C3%A7%C3%A3o)
-  * [Node.appendChild() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Node/appendChild)
-  * [Document.createElement() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Document/createElement)
-  * [Document.createTextNode()](https://developer.mozilla.org/pt-BR/docs/Web/API/Document/createTextNode)
-  * [Element.innerHTML - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Element/innerHTML)
-  * [Node.textContent - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Node/textContent)
-</p></details>
+*	A plataforma deve exibir um card de personagem contendo o nome.
+*	Ao clicar em um card de personagem, a plataforma deve expandir o verso do card para exibir informações mais detalhadas, incluindo nome, imagem, espécie, tipo, gênero, status, origem, localização e popularidade.
+*	As informações detalhadas do personagem devem ser apresentadas de maneira organizada e legível.
+*	O usuário deve ser capaz de fechar a visualização detalhada do personagem clicando novamente no card, em um botão de fechamento ou fora do campo do card.
 
-### JavaScript
+#### Definição de Pronto:
 
-- [ ] **Diferenciar entre tipos de dados primitivos e não primitivos**
+A história de usuário "Visualização Detalhada do Personagem" estará pronta quando:
 
-- [ ] **Arrays (arranjos)**
+*	Os cards de personagem estiverem apresentando informações detalhadas sobre os personagens, incluindo nome, imagem, espécie, gênero, status, tipo, origem, localização e aparições em episódios.
+*	Ao clicar em um card de personagem, a plataforma expandir o verso do card para exibir as informações detalhadas do personagem. 
+*	A expansão do card for feita de maneira suave e agradável.
+*	As informações detalhadas do personagem estiverem organizadas e legíveis.
+*	O usuário puder fechar a visualização detalhada do personagem de forma eficiente.
+*	O layout da visualização detalhada se adaptar corretamente a diferentes dispositivos e tamanhos de tela.
+*	Testes usabilidade forem realizados para verificar a funcionalidade e a experiência do usuário na expansão e visualização detalhada das informações sobre o personagem, como também testes de compatibilidade em diferentes dispositivos.
+*	A documentação relevante for atualizada para refletir as mudanças implementadas.
+*	A história de usuário passar por revisão e aprovação em teste interno, assegurando que atende aos critérios de aceitação definidos.
 
-  <details><summary>Links</summary><p>
+### História de Usuário 7 - Acesso a Episódios Completos:
 
-  * [Arranjos](https://curriculum.laboratoria.la/pt/topics/javascript/04-arrays)
-  * [Array - MDN](https://developer.mozilla.org//pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/)
-  * [Array.prototype.sort() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-  * [Array.prototype.forEach() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-  * [Array.prototype.map() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-  * [Array.prototype.filter() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-  * [Array.prototype.reduce() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-</p></details>
+Como usuário, eu quero ter acesso aos episódios completos da série "Rick and Morty" de forma indireta na plataforma, para que eu possa assistir facilmente aos episódios diretamente da plataforma de streaming.
 
-- [ ] **Objetos (key, value)**
+#### Critérios de Aceitação:
 
-  <details><summary>Links</summary><p>
+*	A plataforma deve fornecer uma interface que permita aos usuários acessar os episódios completos da série "Rick and Morty".
+*	Os episódios completos devem ser disponibilizados através de uma plataforma de streaming reconhecida e confiável.
+*	O acesso aos episódios deve ser indireto, direcionando os usuários para a plataforma de streaming correspondente, onde poderão assistir aos episódios.
 
-  * [Objetos em JavaScript](https://curriculum.laboratoria.la/pt/topics/javascript/05-objects/01-objects)
-</p></details>
+#### Definição de Pronto:
 
-- [ ] **Variáveis (declaração, atribuição, escopo)**
+A história de usuário "Acesso a Episódios Completos" estará pronta quando:
 
-  <details><summary>Links</summary><p>
+*	A plataforma fornecer uma interface para acesso aos episódios completos da série "Rick and Morty" de forma clara e acessível.
+*	Os episódios completos estiverem disponíveis em uma plataforma de streaming reconhecida.
+*	O direcionamento para assistir os episódios estiver funcional e atualizado.
+*	A interface para acesso aos episódios for responsiva e se adaptar corretamente a diferentes dispositivos e tamanhos de tela.
+*	Testes de usabilidade e compatibilidade forem realizados para garantir a funcionalidade em diferentes dispositivos.
+*	A documentação relevante for atualizada para refletir as mudanças implementadas.
+*	A história de usuário passar por revisão e aprovação em teste interno, assegurando que atende aos critérios de aceitação definidos.
 
-  * [Valores, tipos de dados e operadores](https://curriculum.laboratoria.la/pt/topics/javascript/01-basics/01-values-variables-and-types)
-  * [Variáveis](https://curriculum.laboratoria.la/pt/topics/javascript/01-basics/02-variables)
-</p></details>
+### História de Usuário 8 - Acesso Multiplataforma:
 
-- [ ] **Uso de condicionais (if-else, switch, operador ternário, lógica booleana)**
+Como usuário, eu quero poder acessar o site da plataforma de qualquer dispositivo, como computadores, tablets e smartphones, para ter uma experiência agradável independentemente do dispositivo que estou usando.
 
-  <details><summary>Links</summary><p>
+#### Critérios de Aceitação:
 
-  * [Estruturas condicionais e repetitivas](https://curriculum.laboratoria.la/pt/topics/javascript/02-flow-control/01-conditionals-and-loops)
-  * [Tomando decisões no seu código — condicionais - MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals)
-</p></details>
+*	A plataforma deve ser responsiva, permitindo que se adapte automaticamente ao tamanho e resolução da tela do dispositivo.
+*	Ao acessar o site a partir de um dispositivo, a interface e o layout devem se reorganizar de maneira adequada para garantir uma boa experiência ao usuário.
+*	A navegação, elementos interativos e conteúdo da plataforma devem ser facilmente acessíveis e utilizáveis em diferentes dispositivos.
+*	As funcionalidades da plataforma devem permanecer ativas em todos os dispositivos, garantindo que os usuários tenham acesso a todos os recursos.
 
-- [ ] **Uso de laços (while, for, for..of)**
+#### Definição de Pronto:
 
-  <details><summary>Links</summary><p>
+A história de usuário "Acesso Multiplataforma" estará pronta quando:
 
-  * [Laços (Loops)](https://curriculum.laboratoria.la/pt/topics/javascript/02-flow-control/02-loops)
-  * [Laços e iterações - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration)
-</p></details>
+*	A plataforma estiver desenvolvida com design responsivo, adaptando-se automaticamente a diferentes tamanhos e resoluções de tela.
+*	A interface e o layout da plataforma se reorganizarem de maneira adequada ao acessar de diferentes dispositivos.
+*	A navegação, elementos interativos e conteúdo estiverem facilmente acessíveis e utilizáveis em computadores, tablets e smartphones.
+*	As funcionalidades da plataforma estiverem consistentes e totalmente funcionais em todos os dispositivos.
+*	A adaptação da plataforma a diferentes dispositivos for fluida e não afetar negativamente o desempenho.
+*	Testes de usabilidade e compatibilidade forem realizados para verificar a experiência do usuário em diferentes dispositivos.
+*	A documentação relevante for atualizada para refletir as mudanças implementadas.
+*	A história de usuário passar por revisão e aprovação em teste interno, assegurando que atende aos critérios de aceitação definidos.
 
-- [ ] **Funções (params, args, return)**
+## 4. Desenho de interface do usuário
 
-  <details><summary>Links</summary><p>
+O desenho da interface do usuário (UI) é uma etapa fundamental de extrema importância pois é o ponto de interação entre os usuários e o produto digital. Dessa forma, os protótipos desenvolvidos para esta aplicação web buscaram otimizar a experiência do usuário, tornando a sua interação intuitiva, eficiente e agradável. Portanto, os protótipos de baixa fidelidade foram desenvolvidos à mão utilizando lápis e papel. Já os protótipos de alta fidelidade foram desenvolvidos utilizando como ferramenta de visual designer a plataforma online, Canva.  
 
-  * [Funções (controle de fluxo)](https://curriculum.laboratoria.la/pt/topics/javascript/02-flow-control/03-functions)
-  * [Funções clássicas](https://curriculum.laboratoria.la/pt/topics/javascript/03-functions/01-classic)
-  * [Arrow Functions](https://curriculum.laboratoria.la/pt/topics/javascript/03-functions/02-arrow)
-  * [Funções — blocos reutilizáveis de código - MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
-</p></details>
+### Protótipo de baixa fidelidade (desktop)
 
-- [ ] **Testes unitários (unit tests)**
 
-  <details><summary>Links</summary><p>
+### Protótipo de baixa fidelidade (mobile)
 
-  * [Introdução ao Jest - Documentação oficial](https://jestjs.io/docs/pt-BR/getting-started)
-</p></details>
 
-- [ ] **Módulos de ECMAScript (ES modules)**
+### Protótipo de alta fidelidade (desketop)
 
-  <details><summary>Links</summary><p>
 
-  * [import - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/import)
-  * [export - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export)
-</p></details>
+### Protótipo de alta fidelidade (mobile)
 
-- [ ] **Uso de linter (ESLINT)**
 
-- [ ] **Uso de identificadores descritivos (Nomenclatura e Semântica)**
+### Testes de usabilidade
 
-- [ ] **Diferença entre expressões (expressions) e declarações (statements)**
+Os testes de usabilidade foram realizados com o intuito de fazer uma análise sobre a interação do usuário com a aplicação desenvolvida. Buscamos, portanto, entender se o produto criado era fácil de usar, agradável visualmente e capazes de atender às necessidades e expectativas dos usuários, resultando em uma experiência geral satisfatória. Dessa forma, desenvolvemos um protótipo de alta fidelidade, no qual, o usuário pode interagir e ao final preencher um formulário com perguntas que nos informavam sobre sua experiência de usuário com a aplicação. Como sugestões de melhorias, indicadas pelos usuários, vamos citar duas:
+ * Alterar o layout do menu de navegação lateral do desktop, para que seguisse um padrão único nas opções de "Busca avançada" e "Ordenação". Na primeira versão a "Ordenação" apresentava as opções de seleção "Alfabética" e "Popularidade" ocultas. Concordamos com a sugestão, pois visualmente falando, a informação fica mais nítida ao usuário. 
+ * Alterar o layout do texto informativo sobre a série. Na primeira versão o texto era apresentado com uma leve inclinação, porém analisando melhor, percebemos que poderia não ser acessível para pessoas com deficiência. Concordamos em fazer essa alteração para tornar o nosso texto mais acessível.
 
-### Controle de Versões (Git e GitHub)
+## 5. Interface do projeto e objetivos alcançados
 
-- [ ] **Git: Instalação e configuração**
+A interface do projeto foi idealizada para trazer autonomia ao usuário em relação a manipulação dos dados, realizando o seu desejo em aprofundar o conhecimento sobre os personagens da série. Dessa forma, a aplicação do projeto foi pensada para que fosse de fácil uso, intuitiva e interativa, no qual o usuário irá poder utilizar os filtros de "Busca por personagem", para que possa pesquisar por personagens específicos com facilidade, além de poder utilizar o filtro de "Busca avanaçada" para poder encontrar personagens com base em diferentes critérios, como status, espécie e gênero, de acordo com minhas preferências, podendo visualizar também estastísticas referentes aos critérios selecionados em comparação ao número total de personagens.
 
-- [ ] **Git: Controle de versão com git (init, clone, add, commit, status, push, pull, remote)**
+O usuário poderá, também, clicar em um card de personagem e visualizar informações gerais sobre o personagem selecionado; Utilizar a "Ordenação" alfabética (A-Z e Z-A), crescente e descrecente, ou por popularidade (Mais populares e Menos populares), com base em sua relevância na série; Acessar aos episódios da série através de um link que irá direcioná-lo para uma plataforma de streaming. E por fim, poderá acessar o site da plataforma de qualquer dispositivo, como computadores, tablets e smartphones, possibilitando ao usuário ter uma experiência satisfatória de uso.
 
-- [ ] **Git: Integração de mudanças entre ramos (branch, checkout, fetch, merge, reset, rebase, tag)**
+Demonstração de uso:
 
-- [ ] **GitHub: Criação de contas e repositórios, configuração de chave SSH**
 
-- [ ] **GitHub: Implantação com GitHub Pages**
+### Objetivos gerais alcançados no projeto:
 
-  <details><summary>Links</summary><p>
+[✔] Mostrar os dados em uma interface: pode ser em cards, tabelas, listas, etc.
 
-  * [Site oficial do GitHub Pages](https://pages.github.com/)
-</p></details>
+[✔] Permitir ao usuário interagir com a interface para obter as informações que necessita;
 
-- [ ] **GitHub: Colaboração pelo Github (branches | forks | pull requests | code review | tags)**
+[✔] Ser responsiva, ou seja, deve ser visualizada sem problemas a partir de diversos tamanhos de tela: celulares, tablets, notebooks, etc.
 
-### Centrado no usuário
+[✔] Que a interface siga os fundamentos de visual design;
 
-- [ ] **Desenhar e desenvolver um produto ou serviço colocando as usuárias no centro**
+[✔] Testes unitários cobrirem um mínimo de 70% de statements, functions, lines e branches.
 
-### Design de produto
+## 6. Instruções de uso
 
-- [ ] **Criar protótipos para obter feedback e iterar**
 
-- [ ] **Aplicar os princípios de desenho visual (contraste, alinhamento, hierarquia)**
+## 7. Testes unitários
 
-### Pesquisa
+Para este projeto foi desenvolvido um _boilerplate_ que inclui testes unitários do projeto. Assim, foram escritos testes unitários para as funções encarregadas de _processar_, _filtrar_ e _ordenar_ os dados, assim como _calcular_ estatísticas.
 
-- [ ] **Planejar e executar testes de usabilidade**
+Os testes unitários realizados obtiveram uma cobertura de 100% de _statements_ (_sentenças_)_functions_ (_funções_), _lines_ (_linhas_), e 95% das _branches_ (_ramos_) do arquivo `src/data.js`, no qual contém as funções referentes a esse projeto.
 
-## 4. Considerações gerais
+## 8. Especificações Técnicas
 
-* Este projeto será executado em duplas.
-* O intervalo de tempo estimado para concluir o projeto é de 3 a 4 Sprints.
-* Este projeto será entregue através do GitHub e a interface deve ser publicada
-  no [GitHub Pages](https://pages.github.com/).
+O projeto foi desenvolvido utilizando como ferramentas e tecnologias:
 
-## 5. Critérios mínimos de aceitação do projeto
+* HTML5
+* CSS3
+* JavaScript
+* Visual Studio Code
+* Node.js
+* GitBash
+* GitHub
 
-Os critérios considerados para que tenha terminado este projeto são:
+## 9. Implementações futuras
 
-### Definição de produto
+Ideias para melhorias futuras:
 
-Documente brevemente seu trabalho no arquivo `README.md` de seu repositório,
-contando como foi o processo de desenho e como você acredita que o produto possa
-resolver o problema (ou problemas) de seu usuário.
-
-### Histórias de usuário
-
-Uma vez que entenda a necessidade dos usuários, escreva as [Historias de
-Usuario](https://pt.wikipedia.org/wiki/Hist%C3%B3ria_de_usu%C3%A1rio) que
-representem tudo que o usuário precisa fazer/ver. As **histórias de usuário**
-devem ser o resultado de seu processo de investigação/pesquisa de seus usuários.
-
-Não esqueça de incluir a definição de pronto (_definition of done_) e os
-critérios de aceitação para cada uma.
-
-Na medida do possível, termine uma história de usuário antes de passar para a
-seguinte (cumpra com as definições de pronto + critérios de aceitação).
-
-### Desenho de interface do usuário
-
-#### Protótipo de baixa fidelidade
-
-Durante seu trabalho você deverá fazer e iterar rascunhos de sua solução usando
-lápis e papel. Recomendamos que fotografe todas as iterações que fizer, suba
-para seu repositório e as mencione no `README.md`.
-
-#### Protótipo de alta fidelidade
-
-O passo seguinte é desenhar sua Interface de Usuário (UI - _User Interface_).
-Para isso você deverá aprender a usar alguma ferramenta de _visual design_. Nós
-recomendamos [Figma](https://www.figma.com/) que é uma ferramenta que funciona
-no navegador e no qual é possível criar uma conta gratuita. Mas você é livre
-para usar outros editores gráficos como Illustrator, Photoshop, PowerPoint,
-Keynote, etc. Lembre-se de usar a identidade gráfica correspondente ao arquivo
-de dados que escolher.
-
-O protótipo deve apresentar o que seria _ideal_ em sua solução. Digamos que é o
-que desejaria implementar se tivesse tempo ilimitado para hackear. Não se
-esqueça de incluir em seu protótipo os fundamentos de _visual design_.
-
-#### Testes de usabilidade
-
-Durante o desafio você deverá fazer testes de usabilidade com usuários
-diferentes, e com base nos resultados desses testes, iterar seus desenhos de
-interface. Conte-nos quais problemas de usabilidade você detectou através dos
-testes e como os resolveu na proposta final.
-
-### Implementação da interface de usuário (HTML/CSS/JS)
-
-Após desenhar sua interface de usuário, deverá trabalhar na sua implementação.
-**Não** é necessário que construa a interface exatamente da mesma forma que
-desenhou. Terá um tempo limitado para trabalhar no projeto, então você deve
-priorizar as tarefas.
-
-No mínimo, sua implementação deverá:
-
-1. Mostrar os dados em uma interface: pode ser em cards, tabelas, listas, etc.
-2. Permitir ao usuário interagir com a interface para obter as informações que
-   necessita;
-3. Ser _responsiva_, ou seja, deve ser visualizada sem problemas a partir de
-   diversos tamanhos de tela: celulares, tablets, notebooks, etc.
-4. Que a interface siga os fundamentos de _visual design_.
-
-### Testes unitários
-
-O _boilerplate_ do projeto não inclui testes unitários. Assim, você terá que
-escrever seus próprios testes para as funções encarregadas de _processar_,
-_filtrar_ e _ordenar_ os dados, assim como _calcular_ estatísticas.
-
-Seus testes unitários devem ter cobertura mínima de 70% de _statements_
-(_sentenças_), _functions_ (_funções_), _lines_ (_linhas_), e _branches_
-(_ramos_) do arquivo `src/data.js`, que irá conter suas funções e que está
-detalhado na seção de [Considerações técnicas](#srcdatajs).
-
-## 6. Hacker edition
-
-As seções chamadas _Hacker Edition_ são **opcionais**. Se já tiver terminado
-todos os requisitos anteriores e tiver tempo, pode tentar completá-las. Dessa
-forma, você pode aprofundar e/ou exercitar mais os objetivos de aprendizagem
-deste projeto.
-
-Features/características extra sugeridas:
-
-* Ao invés de consumir dados estáticos do repositório, pode fazer isso de forma
-  dinâmica, carregando um arquivo JSON com `fetch`. A pasta `src/data` contém
-  uma versão `.js` e uma `.json` de cada conjunto de dados.
-* Adicione à sua interface visualização de dados em forma de gráficos. Para
-  isso, recomendamos explorar bibliotecas de gráficos como
-  [Chart.js](https://www.chartjs.org/) ou [Google
-  Charts](https://developers.google.com/chart/).
-* 100% de cobertura nos testes.
-
-## 7. Considerações técnicas
-
-A lógica do projeto deve estar implementada somente em JavaScript (ES6), HTML e
-CSS. Neste projeto não está permitido o uso de bibliotecas e frameworks, apenas
-[vanilla
-JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e),
-com exceção das bibliotecas para gráficos (ver [_Parte
-opcional_](#6-hacker-edition) acima).
-
-O _boilerplate_ contém uma estrutura de arquivos como ponto de partida, assim
-como toda a configuração de dependências:
-
-```text
-.
-├── EXTRA.md
-├── README.md
-├── package.json
-├── src
-|  ├── data (de acordo com o data que forem trabalhar)
-|  |  ├── lol
-|  |  |  ├── lol.js
-|  |  |  ├── lol.json
-|  |  |  └── README.md
-|  |  ├── pokemon
-|  |  |  ├── pokemon.js
-|  |  |  ├── pokemon.json
-|  |  |  └── README.md
-|  |  └── rickandmorty
-|  |  |  ├── rickandmorty.js
-|  |  |  ├── rickandmorty.json
-|  |  |  └── README.md
-|  |  └── athletes
-|  |  |  ├── athletes.js
-|  |  |  ├── athletes.json
-|  |  |  └── README.md
-|  |  └── ghibli
-|  |  |  ├── ghibli.js
-|  |  |  ├── ghibli.json
-|  |  |  └── README.md
-|  |  └── got
-|  |  |  ├── got.js
-|  |  |  ├── got.json
-|  |  |  └── README.md
-|  |  └── breakingbad
-|  |  |  ├── breakingbad.js
-|  |  |  ├── breakingbad.json
-|  |  |  └── README.md
-|  |  └── countries
-|  |  |  ├── countries.js
-|  |  |  ├── countries.json
-|  |  |  └── README.md
-|  |  └── tarot
-|  |  |  ├── tarot.js
-|  |  |  ├── tarot.json
-|  |  |  └── README.md
-|  ├── data.js
-|  ├── index.html
-|  ├── main.js
-|  └── style.css
-└── test
-   └── data.spec.js
-```
-
-### `src/index.html`
-
-Como no projeto anterior, existe um arquivo `index.html`. Como já sabe, aqui
-entra a página que vai ser exibida ao usuário. Também serve para indicar quais
-scripts serão utilizados e juntar tudo o que foi feito.
-
-### `src/main.js`
-
-Recomendamos que utilize `src/main.js` para todos os códigos que tenham a ver
-com a exibição dos dados na tela. Com isto nos referimos basicamente à interação
-com o DOM. Operações como criação de nós, registro de manejadores de eventos
-(_event listeners_ ou _event handlers_) e etc.
-
-Esta não é a única forma de dividir seu código. Pode utilizar mais arquivos e
-pastas, sempre e quando a estrutura estiver clara para suas colegas.
-
-Neste arquivo você encontrará uma séris de _imports comentados_. Para carregar
-diferentes fontes de dados, você deverá "descomentar" estos _imports_. Cada um
-destes _imports_ criará uma variável `data` com os dados correspondentes à fonte
-escolhida.
-
-Por exemplo, se "descomentamos" a seguinte linha:
-
-```js
-// import data from './data/pokemon/pokemon.js';
-```
-
-A linha ficaria assim:
-
-```js
-import data from './data/pokemon/pokemon.js';
-```
-
-E agora teríamos a variável `data` disponível em `src/main.js`.
-
-### `src/data.js`
-
-O coração deste projeto é a manipulação de dados através de arrays e objetos.
-
-Recomendamos que este arquivo contenha toda a funcionalidade que corresponda a
-obter, processar e manipular dados (suas funções):
-
-* `filterData(data, condition)`: esta função receberia os dados e nos retornaria
-  os que cumprem com a condição.
-
-* `sortData(data, sortBy, sortOrder)`: esta função recebe três parâmetros. O
-  primeiro, `data`, nos entrega os dados. O segundo, `sortBy`, diz respeito a
-  qual das informações quer usar para ordenar. O terceiro, `sortOrder`, indica
-  se quer ordenar de maneira crescente ou decrescente.
-
-* `computeStats(data)`: essa função nos permite fazer cálculos estatísticos
-  básicos para serem exibidos de acordo com o que os dados permitem.
-
-Estes nomes de funções e parâmetros são somente referência, o que vocês decidir
-utilizar vai depender da sua implementação.
-
-Estas funções devem ser
-[_puras_](https://imasters.com.br/desenvolvimento/serie-js-e-vida-pure-functions-funcoes-puras)
-e independentes do DOM. Estas funções serão depois usadas a partir do arquivo
-`src/main.js`, ao carregar a página e a cada vez que o usuário interagir com a
-interface (cliques, seleções, filtros, ordenação, etc).
-
-### `src/data`
-
-Nesta pasta estão os dados de diferentes fontes. Você vai encontrar uma pasta
-para cada fonte, e dentro de cada pasta estão dois arquivos: um com a extensão
-`.js` e outro `.json`. Ambos os arquivos contém os mesmos dados; a diferença é
-que podemos usar o `.js` com uma tag `<script>`, enquanto o `.json` servirá
-para, opcionalmnente, ser carregado de forma assíncrona com
-[`fetch()`](https://developer.mozilla.org/pt-br/docs/Web/API/Fetch_API) (ver
-seção da [_Parte Opcional_](#6-hacker-edition)).
-
-### `test/data.spec.js`
-
-Você também deverá fazer os teste unitários das funções implementadas no arquivo
-`data.js`.
+* Consumir dados estáticos de forma dinâmica, carregando um arquivo JSON com fetch;
+* Adicione à sua interface visualização de dados em forma de gráficos;
+* 100% de cobertura nos testes;
+* Adicionar responsividade para que se adapte a mais telas;
+* Traduzir todas as informações dos personagens para o protuguês;
+* Adicionar uma página para que os usuários possam interagir e compartilhar informações e memes sobre os personagens;
+* Marcar personagens favoritos da série, para que o usuário possa acessá-los facilmente em uma lista personalizada.
 
 ***
 
-## 8. Pistas, dicas e leituras complementares
+## 10. Referências
 
-Participe do canal do Slack
-[#project-data-lovers](https://claseslaboratoria.slack.com/archives/C03MV35EP5M)
-para conversar e pedir ajuda no projeto.
+#### Imgens:
 
-### Primeiros passos
+* Gif ball (Rick and Morty) - 
+* Backgroud: gif (Rick and Morty) -
+* Background: Rick and Morty universo - 
+* Background: céu estrelado (cards e texto) - 
 
-Antes de começar a escrever o código, você deve definir seu produto com base no
-conhecimento que puder obter a respeito de seus usuários. Estas perguntas podem
-ajudar:
+#### Ícones:
 
-* Quem são os usuários principais do produto?
-* Quais são os objetivos dos usuários com relação ao produto?
-* Quais são os dados mais relevantes que querem ver na interface e por quê?
-* Quando utilizam ou utilizariam o produto?
-* Toda sua investigação prévia deve ter como resultado as histórias de usuário
-  de seu projeto.
-* Não faça os protótipos de alta fidelidade de todas as suas histórias. Comece
-  somente pela que necessite para seu Sprint 1.
+* Menu - 
+* View_carousel - 
+* House - 
+* Info - 
+* Live_tv - 
+* Keyboard_double_arrow_up - 
+* GitHub - 
 
-Quando estiver pronta para codar, sugerimos começar desta forma:
+#### Fontes:
 
-1. Uma das integrantes da dupla deve fazer um :fork_and_knife:
-   [fork](https://help.github.com/articles/fork-a-repo/) do repositório de sua
-   turma (a equipe de formação fornecerá o link). A outra integrante da dupla
-   deve fazer um fork **a partir do repositório de sua companheira** e
-   [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) um `remote`
-   a partir dele.
-2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   seu _fork_ para seu computador (cópia local).
-3. Instale as dependências do projeto com o comando `npm install`, assumindo que
-   já tenha instalado o [Node.js](https://nodejs.org/) (que inclui
-   [npm](https://docs.npmjs.com/)).
-4. Se tudo correr bem, deve ser capaz de executar os :traffic_light: testes
-   unitários (unit tests) com o comando `npm test`.
-5. Para ver a interface de seu programa no navegador, utilize o comando `npm
-   start` para subir o servidor web no endereço `http://localhost:5000`.
-6. Comece a codar! :rocket:
+* DK Crowbar - 
+* Kurts - 
+* Roboto - 
 
 ***
 
-### Conteúdo de referência
+## 11. Desenvolvedoras
 
-#### UX Design (Experiência do usuário)
-
-* Pesquisa com usuarios / entrevistas
-* Princípios de design/UI
-
-#### Desenvolvimento Front-End
-
-* Unidade de testes do curso de JavaScript do LMS.
-* Unidade de arrays do curso de JavaScript do LMS.
-* Unidade de objetos do curso de JavaScript do LMS.
-* Unidade de funções do curso de JavaScript do LMS.
-* Unidade de DOM do curso de JavaScript do LMS.
-* [Array no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array)
-* [Array.sort no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-* [Array.map no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-* [Array.filter no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filtro)
-* [Array.reduce no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-* [Array.forEach no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-* [Object.keys no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
-* [Object.entries no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
-* [Fetch API no MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [json.org](https://json.org/json-pt.html)
-* [expressions-vs-statements](https://2ality.com/2012/09/expressions-vs-statements.html)
-* [Tipos de Dados](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures)
-* [Modulos:
-  Export](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export)
-* [Modulos:
-  Import](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/import)
-
-#### Ferramentas
-
-* [Git](https://git-scm.com/)
-* [GitHub](https://github.com/)
-* [GitHub Pages](https://pages.github.com/)
-* [Node.js](https://nodejs.org/)
-* [Jest](https://jestjs.io/)
-
-#### Organização do trabalho
-
-* [Histórias de Usuário](https://www.youtube.com/watch?v=sEtiCJfXTE8)
-* [Definição de pronto](https://www.youtube.com/watch?v=Kfss63Q42F8)
-* [Critérios de
-  aceitação](https://medium.com/@karladiasn/user-stories-e-crit%C3%A9rios-de-aceita%C3%A7%C3%A3o-317c48403fcd)
-* [Guia para Data
-  Lovers](https://docs.google.com/presentation/d/1bOq8ns5wsvXdksdqYL3aQoxzFQsXTVlyvlV-yxI2oBM/present?token=AC4w5VhHBbEEA9u2w8bm3Ey1Cse349frbg%3A1567540902700&includes_info_params=1&eisi=CM_ytPW4teQCFQrJgQodeTcEZg#slide=id.g5282e1a53f_1_106)
-
-***
-
-## 9. Checklist
-
-* [ ] Usar VanillaJS.
-* [ ] Passa pelo linter (`npm run pretest`)
-* [ ] Passa pelos testes (`npm test`)
-* [ ] Testes unitários cobrem um mínimo de 70% de statements, functions, lines e
-  branches.
-* [ ] Inclui uma _definição de produto_ clara e informativa no `README.md`.
-* [ ] Inclui histórias de usuário no `README.md`.
-* [ ] Inclui rascunho da solução (protótipo de baixa fidelidade) no `README.md`.
-* [ ] Inclui uma lista de problemas detectados nos testes de usabilidade no
-  `README.md`.
-* [ ] UI: Mostra lista/tabela/etc com dados e/ou indicadores.
-* [ ] UI: Permite ordenar dados por um ou mais campos (asc e desc).
-* [ ] UI: Permite filtrar dados com base em uma condição.
-* [ ] UI: É _responsivo_.
+* Jayanny Santana: @jay-santana
+* Bianca Eugenia: @biancaBezerra
