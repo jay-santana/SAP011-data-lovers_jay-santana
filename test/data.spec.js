@@ -19,7 +19,6 @@ describe('statusFilter', () => {
   });
 });
 
-
 describe('speciesFilter', () => {
   it('is a function', () => {
     expect(typeof speciesFilter).toBe('function');
@@ -33,7 +32,6 @@ describe('speciesFilter', () => {
     expect(speciesFilter(array, "alien")).toStrictEqual([{name: "Alien", status: "dead", species: "alien", gender: "Female", episode: ["S01E01","S01E02"]}]);
   });
 });
-
 
 describe('genderFilter', () => {
   it('is a function', () => {
@@ -58,7 +56,6 @@ describe('searchName', () => {
     expect(searchName(array, "Alien")).toStrictEqual([{name: "Alien", status: "dead", species: "alien", gender: "Female",  episode: ["S01E01","S01E02"]}]);
   });
 });
-
 
 describe('alphabeticalOrder', () => {
   it('is a function', () => {

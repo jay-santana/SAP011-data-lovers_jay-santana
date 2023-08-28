@@ -58,8 +58,6 @@ const toggleModal = (dataRM) => {
   el.addEventListener('click', () => toggleModal());
 })
 
-
-
 //função para trazer todos os personagens em tela
 function cardCharacters(data) {
   const cardsContainer = document.getElementById('info-cards');
@@ -146,12 +144,10 @@ window.addEventListener('load', () => {
     orderedCharacters = alphabeticalOrder (selectionOrder, orderedCharacters);
     cardCharacters(orderedCharacters);
 
-
     //calculo de porcentagem em relação aos personagens filtrados
     const percentData = calculatePercent(dataRM.length, orderedCharacters.length);
     percentReturned.innerHTML = (`Este filtro representa <span class="percentStyleDesktop">${percentData}% </span> do <span class="allCharactersDesktop"> total de ${dataRM.length} </span> personagens.`);
-    percentReturnedMobile.innerHTML = (`Este filtro representa <span class="percentStyleMobile">${percentData}% </span>do <span class="allCharactersMobile"> total de ${dataRM.length} </span>personagens.`);
-    
+    percentReturnedMobile.innerHTML = (`Este filtro representa <span class="percentStyleMobile">${percentData}% </span>do <span class="allCharactersMobile"> total de ${dataRM.length} </span>personagens.`);  
   }
 });
 
@@ -189,7 +185,6 @@ function filterName() {
   cardCharacters(filteredDataName);
 }
 
-
 function filterNameMobile() {
   const characterNameFilterMobile = inputSearchNameMobile.value;
   const filteredDataName = searchName(dataRM, characterNameFilterMobile);
@@ -198,7 +193,6 @@ function filterNameMobile() {
 
 inputSearchName.addEventListener('input', filterName);
 inputSearchNameMobile.addEventListener('input', filterNameMobile);
-
 
 //Função menu-burguer
 const sideBarMobile = document.querySelector('.side-bar-mobile');

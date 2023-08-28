@@ -57,8 +57,10 @@ nav a {
 }
 
 #logo {
-  width: 22vw;
-  height: 22vh;
+  width: 20vw;
+  height: 20vh;
+  display: flex;
+  align-items: flex-start;
   margin-left: 3vw;
 }
 
@@ -81,14 +83,14 @@ main {
 }
 
 .text {
-  width: 70vh;
-  height: 45vh;
+  width: 60vh;
+  height: 40vh;
   background-image: url(./Assets/estrelas-espaço-céu-estrelado-.jpg);
   background-size: cover;
   background-position: fixed;
   background-repeat: no-repeat;
 
-  font-size: clamp(0.97em, 0.5em + 1vw, 1.5em);
+  font-size: clamp(0.97em, 1.2em + 1vw, 1.3em);
   font-family: 'crowbar', 'Roboto', sans-serif;
   font-weight: 400;
   color: #c4db43de;
@@ -106,10 +108,12 @@ main {
 }
 
 .menu-container {
+  width: 50%;
   display: flex;
   flex-direction: column;
+  justify-content:left;
   align-items: center;
-  margin-right: 15vw;
+  margin-left: 4vw;
 }
 
 .ball-RM-gif {
@@ -120,7 +124,7 @@ main {
 }
 
 .start {
-  width: 4vw;
+  width: 4.5vw;
   height: 4vh;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
@@ -144,6 +148,15 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+
+  .home,
+  .about,
+  .episode,
+  button,
+  .sky-img {
+    display: none;
+  }
+
 
   body {
     width: 100vw;
@@ -187,7 +200,6 @@ main {
     position: static;
     position: relative;
     bottom: 0vh;
-    /* border: 5px solid #fff; */
   }
 
   .text {
@@ -214,6 +226,7 @@ main {
     flex-direction: column;
     align-items: flex-start;
     margin-right: 0;
+    margin-left: 0;
   }
 
   .ball-RM-gif {
@@ -271,14 +284,6 @@ main {
     cursor: pointer;
   }
 
-  .home,
-  .about,
-  .episode,
-  button,
-  .sky-img {
-    display: none;
-  }
-
   .li-mobile,
   .nav-cards {
     font-family: 'Roboto', sans-serif;
@@ -291,6 +296,33 @@ main {
     align-items: center;
     text-align: center;
   }
+
+
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {}
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  #logo {
+    width: 30vw;
+    height: 14vh;
+    margin-left: 0vw;
+  }
+
+  .text {
+    width: 58vw;
+    height: 32vh;
+    font-size: clamp(1em, 1.2em + 1vw, 1.5em);
+    top: 5vh;
+  }
+
+  .ball-RM-gif {
+    width: 35vw;
+    margin-top: 8vh;
+  }
+
+  .nav-cards,
+  nav a,
+  #btnTopMobile {
+    font-size: 22px;
+  }
+}

@@ -52,9 +52,11 @@ nav a {
 }
 
 #logo {
-  width: 22vw;
-  height: 22vh;
-  margin-left: 3vw;
+  width: 20vw;
+  height: 20vh;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 4vw;
 }
 
 main {
@@ -237,4 +239,44 @@ h3 {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {}
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  #logo {
+    width: 30vw;
+    height: 14vh;
+    margin-left: 0vw;
+  }
+
+  h2 {
+    font-size: 36px;
+    color: #A4CD2D;
+    text-shadow: #000000 0.1em 0.1em 0.2em;
+    padding: 0vw;
+    width: 95vw;
+  }
+
+  h3 {
+    font-size: 24px;
+    padding: 0vw;
+    width: 65vw;  
+  }
+
+  .start {
+    width: 22vw;
+    font-size: 22px;
+  }
+
+  .initial-container {
+    gap: 6vh;
+  }
+
+  .initical-img {
+    width: 75vw;
+  }
+
+  nav a,
+  #btnTopMobile {
+    font-size: 22px;
+  }
+}
+

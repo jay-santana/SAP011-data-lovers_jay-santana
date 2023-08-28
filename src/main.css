@@ -61,9 +61,11 @@ nav a {
 }
 
 #logo {
-  width: 22vw;
-  height: 22vh;
-  margin-left: 3vw;
+  width: 20vw;
+  height: 20vh;
+  display: flex;
+  align-items: flex-start;
+  /* margin-left: 3vw; */
 }
 
 .search-box {
@@ -72,7 +74,6 @@ nav a {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-right: 7vw;
   /* Move a caixa de busca para a direita */
 }
 
@@ -112,9 +113,12 @@ main {
 }
 
 .side-container {
-  width: 100%;
+  width: 20vh;
+  display: flex;
+  justify-content:left;
   margin-top: 32vh;
-  margin-left: 14vh;
+  padding-left: 3.5vw;
+
 }
 
 .container-card {
@@ -125,7 +129,7 @@ main {
   text-align: center;
   margin-top: 20vh;
   padding-right: 7vw;
-  gap: 1.5vw;
+  gap: 2vw;
 }
 
 h2 {
@@ -605,37 +609,37 @@ h3 {
   }
 
   .search-box-mobile {
-    flex-grow: 1;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-grow: 1;
     margin-top: 12vh;
   }
 
   #search-box-field-mobile {
-    color: #ffffffc4;
-    font-family: 'Roboto', sans-serif;
-    background-color: #024650;
-    border: none;
-    font-size: 18px;
     width: 85vw;
     height: 4vh;
-    padding-left: 8vw;
+    background-color: #024650;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #ffffffc4;
+    border: none;
+    padding-left: 14vw;
   }
 
   #search-box-field-mobile::placeholder {
     background-color: #024650;
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: #979797;
-    padding-left: 14vw;
+    padding-left: 2vw;
     position: relative;
   }
 
   #lupa-search-mobile {
     position: absolute;
-    top: 12.5%;
-    left: 9vw;
+    top: 12.7vh;
+    left: 12vw;
   }
 
   .percentMobile {
@@ -673,6 +677,7 @@ h3 {
     padding-right: 0px;
     place-items: center;
     margin-top: 8vh;
+    padding-right: 0vw;
     gap: 0vw;
     row-gap: 1vh;
   }
@@ -719,8 +724,8 @@ h3 {
     font-weight: 500;
     display: flex;
     color: #949494;
-    padding-top: 0.2vh;
-    padding-bottom: 1vh;
+    padding-top: 0.1vh;
+    padding-bottom: 2vh;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -843,311 +848,191 @@ h3 {
     display: none;
   }
 
-
-  header {
-    width: 100vw;
-    height: 9vh;
-    padding: 0vw;
-  }
-
   #logo {
-    width: 50vw;
-    height: 13vh;
+    width: 35vw;
+    height: 14vh;
     margin-left: 0vw;
-    object-fit: contain;
-  }
-
-  main {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .search-box-mobile {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: 11.5vh;
-  }
-
-  #search-box-field-mobile {
-    color: #ffffffc4;
-    font-family: 'Roboto', sans-serif;
-    background-color: #024650;
-    border: none;
-    font-size: 30px;
-    width: 85vw;
-    height: 4vh;
-    padding-left: 18vw;
-  }
-
-  #search-box-field-mobile::placeholder {
-    background-color: #024650;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    color: #979797;
-    padding-left: 14vw;
-    position: relative;
-  }
-
-  #lupa-search-mobile {
-    position: absolute;
-    top: 12.5%;
-    left: 9vw;
-  }
-
-  .percentMobile {
-    background-color: #afdc2942;
-    box-shadow: 2px 2px 8px 8px #afdc2942;
-    border-radius: 10px;
-    font-size: 18px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    color: #00B5CC;
-    text-shadow: #000000 0.1em 0.1em 0.1em;
-    display: block;
-    text-align: center;
-    width: 80vw;
-    height: 5vh;
-    position: absolute;
-    top: 18vh; 
-  }
-
-  .percentStyleMobile{
-        color: #b2df28;
-        font-weight: 400;
-    }
-    
-  .allCharactersMobile{
-        color: #b2df28;
-        font-weight: 400; 
-    }
-
-  .container-card {
-    width: 90vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding-right: 0px;
-    place-items: center;
-    margin-top: 8vh;
-    gap: 0vw;
-    row-gap: 2vh;
-  }
-
-  #style-footer-mobile {
-    width: 100vw;
-    height: 9vh;
-    background-color: #017384f1;
-    display: flex;
-    position: fixed;
-    top: 92vh;  
-  }
-
-  .nav-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-  .li-footer {
-    font-size: 30px;
-    display: block;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #949494;
-  }
-
-  .ul-footer {
-    width: 100vw;
-    display: flex;
-    text-align: center;
-    justify-content: space-around;
-    align-items: center;
-    color: #949494;
-  }
-
-  nav a,
-  #btnTopMobile {
-    font-family: 'Roboto', sans-serif;
-    font-size: 25px;
-    font-weight: 500;
-    display: flex;
-    color: #949494;
-    padding-top: 0.2vh;
-    padding-bottom: 1vh;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
   }
 
   #burguer {
-    display: block;
-    width: 90vw;
-    font-size: 3.5em;
-    color: #949494;
-    cursor: pointer;
-    position: absolute;
+    width: 85vw;
+    font-size: 2.5em;
     left: 80%;
     top: 3.5%;
   }
 
-  #style-mobile {
-    width: 60vw;
-    height: 40vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: absolute;
-    right: 0;
-    top: 10%;
-  }
-
-  .side-container-mobile,
-  #select-mobile {
-    width: 60vw;
-    height: 50vh;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: absolute;
-    right: 1%;
-    top: 20%;
-    z-index: 50;
-  }
-
-  #select-mobile {
-    visibility: hidden;
-  }
-
-  .status-filter:hover {
-    background-color: #83a02bee;
-    cursor: pointer;
-  }
-
-  .side-bar-mobile.active #select-mobile {
-    visibility: visible;
-  }
-
-  .side-container-mobile {
-    width: 0;
-    height: 0;
-  }
-
   #advanced-search-mobile,
   #order-mobile {
-    width: 60vw;
-    height: 5vh;
-    font-family: 'Roboto', sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #fff;
-    text-shadow: #000000de 0.1em 0.1em 0.1em;
-    text-align: center;
-    gap: 2;
-    background-color: #034e59;
-    border-color: #aedc29;
-    border-style: solid;
-    border-radius: 0px;
-    border-width: 1px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    cursor: pointer;
+    width: 50vw;
+    font-size: 26px;
+    margin-left: 10vw;
   }
 
   .status-filter {
+    width: 50vw;
+    font-size: 24px;
+    margin-left: 10vw;
+  }
+
+  .search-box-mobile {
+    margin-top: 11.5vh;
+  }
+
+  #search-box-field-mobile {
     width: 60vw;
-    height: 5vh;
-    font-family: 'Roboto', sans-serif;
     font-size: 25px;
-    font-weight: 500;
-    color: #cccccc;
-    text-shadow: #0000005e 0.1em 0.1em 0.1em;
-    text-align: center;
-    gap: 2;
+    padding-left: 9vw;
+  }
 
+  #search-box-field-mobile::placeholder {
+    font-size: 22px;
+    padding-left: 0vw;
+  }
 
-    background-color: #017384e7;
-    border-color: #90a033;
-    border-style: solid;
-    border-radius: 0px;
-    border-width: 1px;
+  #lupa-search-mobile {
+    top: 13vh;
+    left: 23vw;
+  }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    cursor: pointer;
+  .percentMobile {
+    font-size: 26px;
+    width: 70vw;
+    height: 5.5vh;
+    top: 16.5vh; 
+  }
+
+  .container-card {
+    width: 90vw;
+    grid-template-columns: repeat(3, 1fr);
+    padding-right: 0px;
+    row-gap: 2vh;
   }
 
   .style-container {
-    background-image: url('Assets/estrelas-espaço-céu-estrelado-.jpg');
-    border-radius: 25px;
     width: 215px;
-    height: 300px;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    /* box-shadow: 0 10px 10px 0 rgba(123, 148, 90, 0.3); */
+    height: 280px;
   }
   
   .border-container {
-    border: solid #aedc29;
-    border-radius: 25px;
-    width: 210px;
-    height: 280px;
-    padding: 5px;
+    width: 185px;
+    height: 250px;
   }
   
   #img-card {
-    width: 100%;
-    height: 260px;
-    border: 0;
-    object-fit: cover;
+    height: 205px;
   }
   
   .cards {
     position: relative;
     cursor: pointer;
   }
-  h2 {
-    font-size: 19px;
-
-  }
   
   .name-container {
-    background-color: #034e59;
-    border-color: #1f9dcb;
-    border-radius: 16px;
-    border-style: solid;
-    border-width: 1px;
-    overflow: hidden;
-  
-    position: absolute;
-    top: 224px;
-    width: 170px;
-    height: 45px;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 193px;
+    width: 169px;
+    height: 40px;
   }
 
+  h2 {
+    font-size: 16px;
+  }
 
+#modal {
+  width: 450px;
+  height: 668px;
+}
+
+#close-modal {
+  font-size: 1.6rem;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.border-modal-container {
+  width: 410px;
+  height: 628px;
+}
+
+#img-modal-card {
+  height: 290px;
+}
+
+.name-modal-container {
+  position: absolute;
+  top: 290px;
+  width: 380px;
+  height: 40px;
+}
+
+#status-modal,
+#species-modal,
+#type-modal,
+#gender-modal,
+#origin-modal,
+#location-modal,
+#popularity-modal {
+  font-size: 22px;
+}
+
+#name-modal {
+  font-size: 24px;
+}
+
+#location-modal-data,
+#origin-modal-data,
+#gender-modal-data,
+#type-modal-data,
+#species-modal-data,
+#status-modal-data,
+#popularity-modal-data {
+  font-size: 21px;
+}
+
+.status-modal-container {
+  top: 330px;
+  width: 360px;
+  height: 38px;
+}
+
+.species-modal-container {
+  top: 368px;
+  width: 360px;
+  height: 38px;
+
+}
+
+.type-modal-container {
+  top: 406px;
+  width: 360px;
+  height: 38px;
+}
+
+.gender-modal-container {
+  top: 444px;
+  width: 360px;
+  height: 38px;
+}
+
+.origin-modal-container {
+  top: 482px;
+  width: 360px;
+  height: 38px;
+}
+
+.location-modal-container {
+  top: 520px;
+  width: 360px;
+  height: 52px;
+}
+
+.popularity-modal-container {
+  top: 572px;
+  width: 360px;
+  height: 38px;
+}
+
+  nav a,
+  #btnTopMobile {
+    font-size: 22px;
+  }
 }

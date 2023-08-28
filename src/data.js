@@ -1,5 +1,4 @@
 // estas funciones son de ejemplo
-
 export const statusFilter = (data, filter) => {
   if (filter === "All") {
     return data;
