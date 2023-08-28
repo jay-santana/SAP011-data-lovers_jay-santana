@@ -2,21 +2,22 @@
 
 ## Índice
 
-* [1. Preâmbulo](#1-preâmbulo)
+* [1. Prefácio](#1-prefácil)
 * [2. Resumo do projeto](#2-resumo-do-projeto)
-* [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
-* [4. Considerações gerais](#4-considerações-gerais)
-* [5. Critérios mínimos de aceitação do
-  projeto](#5-critérios-mínimos-de-aceitação-do-projeto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Considerações técnicas](#7-considerações-técnicas)
-* [8. Pistas, dicas e leituras
-  complementares](#8-pistas-dicas-e-leituras-complementares)
-* [9. Checklist](#9-checklist)
+* [3. Histórias de usuário](#3-histórias-de-usuário)
+* [4. Protótipos](#4-protótipos)
+* [5. Testes de usabilidade](#5-testes-de-usabilidade)
+* [6. Interface do projeto e objetivos alcançados](#6-interface-do-projeto-e-objetivos-alcançados)
+* [7. Instruções de uso](#7-instruções-de-uso)
+* [8. Testes unitários](#8-testes-unitários)
+* [9. Especificações Técnicas](#9-especificações-técnicas)
+* [10. Implementações futuras](#10-implementações-futuras)
+* [11. Referências](#11-referências)
+* [12. Desenvolvedoras](#12-desenvolvedoras)
 
 ***
 
-## 1. Preâmbulo
+## 1. Prefácio
 
 Segundo a
 [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read)
