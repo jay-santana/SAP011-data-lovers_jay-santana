@@ -15,6 +15,11 @@
 * [11. Desenvolvedoras](#11-desenvolvedoras)
 
 ***
+<p align="center">
+<img style = 'border-radius: 12px' src="./src/Assets/Rick-And-Morty-readme.jpg" alt="Rick ando Morty Logo" />
+</p>
+
+***
 
 ## 1. Prefácio
 
@@ -223,15 +228,27 @@ O desenho da interface do usuário (UI) é uma etapa fundamental de extrema impo
 
 ### Protótipo de baixa fidelidade (desktop)
 
+<h1 align = 'center'>
+  <img alt = prototypeLowFidelityDesktop title = prototypeLowFidelityDesktop  src ="./src/Assets/prototipo_de_baixa_fidelidade_desktop.jpg"/>
+</h1>
 
 ### Protótipo de baixa fidelidade (mobile)
 
+<h1 align = 'center'>
+  <img width = 200 alt = prototypeLowFidelityMobile title = prototypeLowFidelityMobile  src ="./src/Assets/prototipo_de_baixa_fidelidade_mobile.jpg"/>
+</h1>
 
-### Protótipo de alta fidelidade (desketop)
+### Protótipo de alta fidelidade (desktop)
 
+<h1 align = 'center'>
+  <img alt = prototypeHighFidelityDesktop title = prototypeHighFidelityDesktop  src ="./src/Assets/prototipo_de_alta_fidelidade_desktop.gif"/>
+</h1>
 
 ### Protótipo de alta fidelidade (mobile)
 
+<h1 align = 'center'>
+  <img width = 190vw  alt = prototypeHighFidelityMobile title = prototypeHighFidelityMobile src="./src/Assets/prototipo_de_alta_fidelidade_mobile.gif"/>
+</h1>
 
 ### Testes de usabilidade
 
@@ -324,5 +341,6 @@ Ideias para melhorias futuras:
 
 ## 11. Desenvolvedoras
 
-* Jayanny Santana: @jay-santana
-* Bianca Eugenia: @biancaBezerra
+* Made with 💗 by JAYANNY SANTANA 💻 [See my LinkedIn](https://www.linkedin.com/in/bianca-bezerra-63447b160/)
+
+* Made with 💛 by BIANCA BEZERRA 💻 [See my LinkedIn](https://www.linkedin.com/in/bianca-bezerra-63447b160/)
