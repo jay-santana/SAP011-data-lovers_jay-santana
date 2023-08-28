@@ -16,7 +16,7 @@
 
 ***
 <p align="center">
-<img style = 'border-radius: 20px' width = 500 height = 200 src="./src/Assets/Rick-And-Morty-readme.jpg" alt="Rick ando Morty Logo" />
+<img style = 'border-radius: 20px' width = 800 height = 200 src="./src/Assets/Rick-And-Morty-readme.jpg" alt="Rick ando Morty Logo" />
 </p>
 
 ***
