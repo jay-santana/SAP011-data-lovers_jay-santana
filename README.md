@@ -285,7 +285,11 @@ Demonstração de uso:
 
 Para este projeto foi desenvolvido um _boilerplate_ que inclui testes unitários do projeto. Assim, foram escritos testes unitários para as funções encarregadas de _processar_, _filtrar_ e _ordenar_ os dados, assim como _calcular_ estatísticas.
 
-Os testes unitários realizados obtiveram uma cobertura de 100% de _statements_ (_sentenças_)_functions_ (_funções_), _lines_ (_linhas_), e 95% das _branches_ (_ramos_) do arquivo `src/data.js`, no qual contém as funções referentes a esse projeto.
+Os testes unitários realizados obtiveram uma cobertura de 100% de _statements_ (_sentenças_), _functions_ (_funções_), _lines_ (_linhas_), e 95% das _branches_ (_ramos_) do arquivo `src/data.js`, no qual contém as funções referentes a esse projeto.
+
+<h1 align = 'center'>
+  <img alt = testesUnitáriosRickAndMorty title = testesUnitáriosRickAndMorty  src ="./src/Assets/testes_unitarios_data_lovers_rick_and_morty.png"/>
+</h1>
 
 ## 7. Especificações Técnicas
 
