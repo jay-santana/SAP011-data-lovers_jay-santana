@@ -240,13 +240,13 @@ O desenho da interface do usuário (UI) é uma etapa fundamental de extrema impo
 ### Protótipo de alta fidelidade (desktop)
 
 <h1 align = 'center'>
-  <img alt = prototypeHighFidelityDesktop title = prototypeHighFidelityDesktop  src ="./src/Assets/prototipo_de_alta_fidelidade_desk.png"/>
+  <img alt = prototypeHighFidelityDesktop title = prototypeHighFidelityDesktop  src ="./src/Assets/prototipo_de_alta_fidelidade_desktop.gif"/>
 </h1>
 
 ### Protótipo de alta fidelidade (mobile)
 
 <h1 align = 'center'>
-  <img width = 200  alt = prototypeHighFidelityMobile title = prototypeHighFidelityMobile src="./src/Assets/prototipo_de_alta_fidelidade_mob.png"/>
+  <img width = 200  alt = prototypeHighFidelityMobile title = prototypeHighFidelityMobile src="./src/Assets/prototipo_de_alta_fidelidade_mobile.gif"/>
 </h1>
 
 ### Testes de usabilidade
@@ -269,11 +269,11 @@ Demonstração de uso:
   <img alt = prototypeHighFidelityDesktop title = prototypeHighFidelityDesktop  src ="./src/Assets/prototipo_de_alta_fidelidade_desktop.gif"/>
 </h1>
 
-### Mobile
+<!-- ### Mobile
 
 <h1 align = 'center'>
   <img width = 200  alt = prototypeHighFidelityMobile title = prototypeHighFidelityMobile src="./src/Assets/prototipo_de_alta_fidelidade_mobile.gif"/>
-</h1>
+</h1> -->
 
 
 
@@ -326,26 +326,26 @@ Ideias para melhorias futuras:
 
 #### Imgens:
 
-* Gif ball (Rick and Morty) - 
-* Backgroud: gif (Rick and Morty) -
-* Background: Rick and Morty universo - 
-* Background: céu estrelado (cards e texto) - 
+* Gif ball (Rick and Morty) - [Pinterest](https://br.pinterest.com/pin/642537071835616896/)
+* Backgroud: gif (Rick and Morty) - [Pinterest](https://br.pinterest.com/pin/825214331724886693/)
+* Background: Rick and Morty universo - [WallpaperAccess](https://wallpaperaccess.com/rick-and-morty-galaxy)
+* Background: céu estrelado (cards e texto) - [iStock](https://www.istockphoto.com/br/vetor/fundo-abstrato-noturno-estrelado-com-estrelas-vetoriais-dispersas-no-c%C3%A9u-negro-gm1438664404-479114206)
 
 #### Ícones:
 
-* Menu - 
-* View_carousel - 
-* House - 
-* Info - 
-* Live_tv - 
-* Keyboard_double_arrow_up - 
+* Menu - [Google ícons](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:menu:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=menu)
+* View_carousel - [Google ícons](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:view_carousel:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=View_carousel)
+* House - [Google ícons](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:house:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=home)
+* Info - [Google ícons](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:info:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=Info)
+* Live_tv - [Google ícons](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:live_tv:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=Live_tv)
+* Keyboard_double_arrow_up - [Google ícons](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:keyboard_double_arrow_up:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=Keyboard_double_arrow_up)
 * GitHub - 
 
 #### Fontes:
 
-* DK Crowbar - 
-* Kurts - 
-* Roboto - 
+* DK Crowbar - [Dafonte](https://www.dafont.com/dk-crowbar.font)
+* Kurts - [MiasFontes](https://br.maisfontes.com/kust.fonte)
+* Roboto - [Google Fonts](https://fonts.google.com/specimen/Roboto)
 
 ***
 
