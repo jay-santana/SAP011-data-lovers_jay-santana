@@ -266,16 +266,8 @@ Demonstração de uso:
 ### Desktop
 
 <h1 align = 'center'>
-  <img alt = prototypeHighFidelityDesktop title = prototypeHighFidelityDesktop  src ="./src/Assets/prototipo_de_alta_fidelidade_desktop.gif"/>
+  <img alt = prototypeHighFidelityDesktop title = prototypeHighFidelityDesktop  src ="./src/Assets/data_lovers_rick_and_morty_desktop.gif"/>
 </h1>
-
-<!-- ### Mobile
-
-<h1 align = 'center'>
-  <img width = 200  alt = prototypeHighFidelityMobile title = prototypeHighFidelityMobile src="./src/Assets/prototipo_de_alta_fidelidade_mobile.gif"/>
-</h1> -->
-
-
 
 ### Objetivos gerais alcançados no projeto:
 
@@ -288,7 +280,6 @@ Demonstração de uso:
 [✔] Que a interface siga os fundamentos de visual design;
 
 [✔] Testes unitários cobrirem um mínimo de 70% de statements, functions, lines e branches.
-
 
 ## 6. Testes unitários
 
@@ -326,6 +317,7 @@ Ideias para melhorias futuras:
 
 #### Imgens:
 
+* Gif README - [Gifer](https://gifer.com/en/Ifpd)
 * Gif ball (Rick and Morty) - [Pinterest](https://br.pinterest.com/pin/642537071835616896/)
 * Backgroud: gif (Rick and Morty) - [Pinterest](https://br.pinterest.com/pin/825214331724886693/)
 * Background: Rick and Morty universo - [WallpaperAccess](https://wallpaperaccess.com/rick-and-morty-galaxy)
@@ -339,7 +331,6 @@ Ideias para melhorias futuras:
 * Info - [Google ícons](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:info:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=Info)
 * Live_tv - [Google ícons](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:live_tv:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=Live_tv)
 * Keyboard_double_arrow_up - [Google ícons](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:keyboard_double_arrow_up:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=Keyboard_double_arrow_up)
-* GitHub - 
 
 #### Fontes:
 
