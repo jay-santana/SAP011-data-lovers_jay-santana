@@ -7,16 +7,15 @@
 * [3. Histórias de usuário](#3-histórias-de-usuário)
 * [4. Desenho de interface do usuário](#4-desenho-de-interface-do-usuário)
 * [5. Interface do projeto e objetivos alcançados](#5-interface-do-projeto-e-objetivos-alcançados)
-* [6. Instruções de uso](#6-instruções-de-uso)
-* [7. Testes unitários](#7-testes-unitários)
-* [8. Especificações Técnicas](#8-especificações-técnicas)
-* [9. Implementações futuras](#9-implementações-futuras)
-* [10. Referências](#10-referências)
-* [11. Desenvolvedoras](#11-desenvolvedoras)
+* [6. Testes unitários](#6-testes-unitários)
+* [7. Especificações Técnicas](#7-especificações-técnicas)
+* [8. Implementações futuras](#8-implementações-futuras)
+* [9. Referências](#9-referências)
+* [10. Desenvolvedoras](#10-desenvolvedoras)
 
 ***
 <p align="center">
-<img style = 'border-radius: 20px' width = 600 height = 200 src="./src/Assets/Rick-And-Morty-readme.jpg" alt="Rick ando Morty Logo" />
+<img style = 'border-radius: 20px' style = 'object-fit: cover;' width = 600 height = 200 src="./src/Assets/gif_rick_morty_logo.gif" alt="Rick and Morty Logo" />
 </p>
 
 ***
@@ -241,13 +240,13 @@ O desenho da interface do usuário (UI) é uma etapa fundamental de extrema impo
 ### Protótipo de alta fidelidade (desktop)
 
 <h1 align = 'center'>
-  <img alt = prototypeHighFidelityDesktop title = prototypeHighFidelityDesktop  src ="./src/Assets/prototipo_de_alta_fidelidade_desktop.gif"/>
+  <img alt = prototypeHighFidelityDesktop title = prototypeHighFidelityDesktop  src ="./src/Assets/prototipo_de_alta_fidelidade_desk.png"/>
 </h1>
 
 ### Protótipo de alta fidelidade (mobile)
 
 <h1 align = 'center'>
-  <img width = 200  alt = prototypeHighFidelityMobile title = prototypeHighFidelityMobile src="./src/Assets/prototipo_de_alta_fidelidade_mobile.gif"/>
+  <img width = 200  alt = prototypeHighFidelityMobile title = prototypeHighFidelityMobile src="./src/Assets/prototipo_de_alta_fidelidade_mob.png"/>
 </h1>
 
 ### Testes de usabilidade
@@ -264,6 +263,19 @@ O usuário poderá, também, clicar em um card de personagem e visualizar inform
 
 Demonstração de uso:
 
+### Desktop
+
+<h1 align = 'center'>
+  <img alt = prototypeHighFidelityDesktop title = prototypeHighFidelityDesktop  src ="./src/Assets/prototipo_de_alta_fidelidade_desktop.gif"/>
+</h1>
+
+### Mobile
+
+<h1 align = 'center'>
+  <img width = 200  alt = prototypeHighFidelityMobile title = prototypeHighFidelityMobile src="./src/Assets/prototipo_de_alta_fidelidade_mobile.gif"/>
+</h1>
+
+
 
 ### Objetivos gerais alcançados no projeto:
 
@@ -277,16 +289,14 @@ Demonstração de uso:
 
 [✔] Testes unitários cobrirem um mínimo de 70% de statements, functions, lines e branches.
 
-## 6. Instruções de uso
 
-
-## 7. Testes unitários
+## 6. Testes unitários
 
 Para este projeto foi desenvolvido um _boilerplate_ que inclui testes unitários do projeto. Assim, foram escritos testes unitários para as funções encarregadas de _processar_, _filtrar_ e _ordenar_ os dados, assim como _calcular_ estatísticas.
 
 Os testes unitários realizados obtiveram uma cobertura de 100% de _statements_ (_sentenças_)_functions_ (_funções_), _lines_ (_linhas_), e 95% das _branches_ (_ramos_) do arquivo `src/data.js`, no qual contém as funções referentes a esse projeto.
 
-## 8. Especificações Técnicas
+## 7. Especificações Técnicas
 
 O projeto foi desenvolvido utilizando como ferramentas e tecnologias:
 
@@ -298,7 +308,7 @@ O projeto foi desenvolvido utilizando como ferramentas e tecnologias:
 * GitBash
 * GitHub
 
-## 9. Implementações futuras
+## 8. Implementações futuras
 
 Ideias para melhorias futuras:
 
@@ -312,7 +322,7 @@ Ideias para melhorias futuras:
 
 ***
 
-## 10. Referências
+## 9. Referências
 
 #### Imgens:
 
@@ -339,8 +349,8 @@ Ideias para melhorias futuras:
 
 ***
 
-## 11. Desenvolvedoras
+## 10. Desenvolvedoras
 
-* Made with 💗 by JAYANNY SANTANA 💻 [See my LinkedIn](https://www.linkedin.com/in/bianca-bezerra-63447b160/)
+* Made with 💗 by JAYANNY SANTANA 💻 [See my LinkedIn](https://br.linkedin.com/in/jayanny-santana-2b9388285/)
 
 * Made with 💛 by BIANCA BEZERRA 💻 [See my LinkedIn](https://www.linkedin.com/in/bianca-bezerra-63447b160/)
