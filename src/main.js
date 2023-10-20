@@ -191,6 +191,7 @@ function filterNameMobile() {
   cardCharacters(filteredDataName);
 }
 
+
 inputSearchName.addEventListener('input', filterName);
 inputSearchNameMobile.addEventListener('input', filterNameMobile);
 
@@ -204,5 +205,7 @@ function toggleMenuBurguer(){
   sideBarMobile.classList.toggle('active');
   menuBurguer.classList.toggle('open');
 }
+
+
 
 

@@ -227,27 +227,27 @@ O desenho da interface do usuário (UI) é uma etapa fundamental de extrema impo
 
 ### Protótipo de baixa fidelidade (desktop)
 
-<h1 align = 'center'>
+<p align = 'center'>
   <img alt = prototypeLowFidelityDesktop title = prototypeLowFidelityDesktop  src ="./src/Assets/prototipo_de_baixa_fidelidade_desktop.jpg"/>
-</h1>
+</p>
 
 ### Protótipo de baixa fidelidade (mobile)
 
-<h1 align = 'center'>
+<p align = 'center'>
   <img width = 220 alt = prototypeLowFidelityMobile title = prototypeLowFidelityMobile  src ="./src/Assets/prototipo_de_baixa_fidelidade_mobile.jpg"/>
-</h1>
+</p>
 
 ### Protótipo de alta fidelidade (desktop)
 
-<h1 align = 'center'>
+<p align = 'center'>
   <img alt = prototypeHighFidelityDesktop title = prototypeHighFidelityDesktop  src ="./src/Assets/prototipo_de_alta_fidelidade_desktop.gif"/>
-</h1>
+</p>
 
 ### Protótipo de alta fidelidade (mobile)
 
-<h1 align = 'center'>
+<p align = 'center'>
   <img width = 200  alt = prototypeHighFidelityMobile title = prototypeHighFidelityMobile src="./src/Assets/prototipo_de_alta_fidelidade_mobile.gif"/>
-</h1>
+</p>
 
 ### Testes de usabilidade
 
@@ -265,9 +265,9 @@ Demonstração de uso:
 
 ### Desktop
 
-<h1 align = 'center'>
+<p align = 'center'>
   <img alt = prototypeHighFidelityDesktop title = prototypeHighFidelityDesktop  src ="./src/Assets/data_lovers_rick_and_morty_desktop.gif"/>
-</h1>
+</p>
 
 ### Objetivos gerais alcançados no projeto:
 
@@ -287,9 +287,9 @@ Para este projeto foi desenvolvido um _boilerplate_ que inclui testes unitários
 
 Os testes unitários realizados obtiveram uma cobertura de 100% de _statements_ (_sentenças_), _functions_ (_funções_), _lines_ (_linhas_), e 95% das _branches_ (_ramos_) do arquivo `src/data.js`, no qual contém as funções referentes a esse projeto.
 
-<h1 align = 'center'>
+<p align = 'center'>
   <img alt = testesUnitáriosRickAndMorty title = testesUnitáriosRickAndMorty  src ="./src/Assets/testes_unitarios_data_lovers_rick_and_morty.png"/>
-</h1>
+</p>
 
 ## 7. Especificações Técnicas
 

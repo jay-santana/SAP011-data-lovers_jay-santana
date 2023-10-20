@@ -68,7 +68,6 @@ export function popularityOrder(value, dataRM) {
     charactersPopularity.sort((a, b) => a.episode.length - b.episode.length);
   }
 
-  console.log("Inside popularityOrder: charactersPopularity =", charactersPopularity);
   return charactersPopularity;
 }
 
