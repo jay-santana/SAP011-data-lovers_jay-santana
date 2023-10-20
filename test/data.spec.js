@@ -1,10 +1,14 @@
+// Importando funções do módulo '../src/data.js'
 import { statusFilter, speciesFilter, genderFilter, searchName, alphabeticalOrder, popularityOrder, calculatePercent } from '../src/data.js';
+
+// Criando um array de objetos
 const array = [
   {name: "Rick", status: "alive", species: "human", gender: "Male", episode: ["S01E01","S01E02", "S01E03", "S01E04"]},
   {name: "Alien", status: "dead" , species: "alien", gender: "Female",  episode: ["S01E01","S01E02"]},
   {name: "Morty", status: "alive", species: "human", gender: "Male",  episode: ["S01E01","S01E02", "S01E03"]},
 ]
 
+//Testes unitários da função statusFilter
 describe('statusFilter', () => {
   it('is a function', () => {
     expect(typeof statusFilter).toBe('function');
@@ -14,11 +18,12 @@ describe('statusFilter', () => {
     expect(statusFilter(array, "All")).toBe(array);
   });
 
-  it(`retorna todos os personagens mortos`, () => {
+  it(`retorna todos os personagens mortos quando forem filtrados`, () => {
     expect(statusFilter(array, "dead")).toStrictEqual([{name: "Alien", status: "dead",  species: "alien", gender: "Female", episode: ["S01E01","S01E02"]}]);
   });
 });
 
+//Testes unitários da função speciesFilter
 describe('speciesFilter', () => {
   it('is a function', () => {
     expect(typeof speciesFilter).toBe('function');
@@ -33,6 +38,7 @@ describe('speciesFilter', () => {
   });
 });
 
+//Testes unitários da função genderFilter
 describe('genderFilter', () => {
   it('is a function', () => {
     expect(typeof genderFilter).toBe('function');
@@ -47,6 +53,7 @@ describe('genderFilter', () => {
   });
 });
 
+//Testes unitários da função para pesquisar por nome
 describe('searchName', () => {
   it('is a function', () => {
     expect(typeof searchName).toBe('function');
@@ -57,6 +64,7 @@ describe('searchName', () => {
   });
 });
 
+//Testes unitários da função para ordenar alfabeticamente
 describe('alphabeticalOrder', () => {
   it('is a function', () => {
     expect(typeof alphabeticalOrder).toBe('function');
@@ -85,9 +93,9 @@ describe('alphabeticalOrder', () => {
     ];
     expect(result).toEqual(expectedOutput);
   });
-
 });
 
+//Testes unitários da função para ordenar por popularidade
 describe('popularityOrder', () => {
   it('is a function', () => {
     expect(typeof popularityOrder).toBe('function');
@@ -118,6 +126,7 @@ describe('popularityOrder', () => {
   });
 });
 
+//Testes unitários da função para calcular percentagem
 describe('calculatePercent', () => {
   it('is a function', () => {
     expect(typeof calculatePercent).toBe('function');
