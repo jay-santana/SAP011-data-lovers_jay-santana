@@ -1,4 +1,5 @@
-// estas funciones son de ejemplo
+// Funções de filtro
+// Função para filtrar por status
 export const statusFilter = (data, filter) => {
   if (filter === "All") {
     return data;
@@ -7,6 +8,7 @@ export const statusFilter = (data, filter) => {
   }
 };
 
+// Função para filtrar por espécie
 export const speciesFilter = (data, filter) => {
   if (filter === "All") {
     return data;
@@ -15,6 +17,7 @@ export const speciesFilter = (data, filter) => {
   }
 };
 
+// Função para filtrar por gênero
 export const genderFilter = (data, filter) => {
   if (filter === "All") {
     return data;
@@ -23,7 +26,7 @@ export const genderFilter = (data, filter) => {
   }
 };
 
-// Filtro de busca por nome
+// Função para pesquisar por nome
 export const searchName = (dataRM, name) => {
   const filterName = character => character.name.toUpperCase().includes(name.toUpperCase());
   const filteredName = dataRM.filter(filterName);
@@ -31,32 +34,30 @@ export const searchName = (dataRM, name) => {
   return filteredName;
 }
 
-export function alphabeticalOrder (value, dataRM) {
+// Função para ordenar alfabeticamente
+export function alphabeticalOrder(value, dataRM) {
   const charactersAlphabetical = [...dataRM];
 
   if (value === "All") {
     return dataRM;
-    
+
   } else if (value === 'ascending-order') {
-    charactersAlphabetical.sort(function(a, b) {
+    charactersAlphabetical.sort(function (a, b) {
       if (a.name < b.name) {
         return -1
       }
     })
   } else {
-    charactersAlphabetical.sort(function(a, b) {
+    charactersAlphabetical.sort(function (a, b) {
       if (a.name > b.name) {
         return -1
       }
     })
-  } 
+  }
   return charactersAlphabetical;
 }
 
-export const calculatePercent = (dataRM, id) => {
-  return ((id / dataRM * 100)).toFixed(2);
-}
-
+// Função para ordenar por popularidade
 export function popularityOrder(value, dataRM) {
   const charactersPopularity = [...dataRM];
 
@@ -68,7 +69,17 @@ export function popularityOrder(value, dataRM) {
     charactersPopularity.sort((a, b) => a.episode.length - b.episode.length);
   }
 
-  console.log("Inside popularityOrder: charactersPopularity =", charactersPopularity);
+<<<<<<< HEAD
+=======
+  // console.log("Inside popularityOrder: charactersPopularity =", charactersPopularity);
+>>>>>>> e96a49486a06fb4d5f195191aa1537d53f0f7e2b
   return charactersPopularity;
 }
+
+// Função para calcular percentagem
+export const calculatePercent = (dataRM, id) => {
+  return ((id / dataRM * 100)).toFixed(2);
+}
+
+
 
