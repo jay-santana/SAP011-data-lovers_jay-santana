@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img id="logo" src="./Assets/Rick-And-Morty-Logo.png" alt="Rick_and_Morty_logo"></a>
+    <nav>
+      <ul>
+        <div class="search-box">
+          <input type="text" class="search-box-field" id="search-box-field-desktop" placeholder="Busca por personagem">
+          <a class="search-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#fff" id="lupa-search-desktop"
+              viewBox="0 0 20 20">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+              </path>
+            </svg>
+          </a>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="https://www.hbomax.com/br/pt/series/urn:hbo:series:GXkRjxwjR68PDwwEAABKJ" target="_blank">Assistir
+            Episódios</a></li>
+      </ul>
+    </nav>
+
+    <div id="style-mobile">
+      <span id="burguer" class="material-symbols-outlined">menu</span>
+      <section class="side-container-mobile">
+        <aside class="side-bar-mobile">
+
+          <div id="select-mobile">
+            <div class="options-side-bar-mobile">
+              <a href="./main.html">
+                <p id="advanced-search-mobile">Busca Avançada</p>
+              </a>
+            </div>
+
+            <select class="status-filter" name="status" id="status-filter-mobile">
+              <option value="All">Status</option>
+              <option value="Alive">Vivo</option>
+              <option value="Dead">Morto</option>
+              <option value="unknown">Desconhecido</option>
+            </select>
+
+            <select class="status-filter" name="species" id="species-filter-mobile">
+              <option value="All">Espécie</option>
+              <option value="Human">Humano</option>
+              <option value="Alien">Alienígena</option>
+              <option value="Animal">Animal</option>
+              <option value="Robot">Robô</option>
+              <option value="Vampire">Vampiro</option>
+              <option value="Humanoid">Humanóide</option>
+              <option value="Poopybutthole">Poopybutthole</option>
+              <option value="Mytholog">Mitológico</option>
+              <option value="Cronenberg">Cronenberg</option>
+              <option value="Disease">Doença</option>
+              <option value="Parasite">Parasita</option>
+              <option value="unknown">Desconhecida</option>
+            </select>
+
+            <select class="status-filter" name="gender" id="gender-filter-mobile">
+              <option value="All">Gênero</option>
+              <option value="Male">Masculino</option>
+              <option value="Female">Feminino</option>
+              <option value="unknown">Desconhecido</option>
+              <option value="Genderless">Sem gênero</option>
+            </select>
+
+            <div class="order-side-mobile">
+              <a href="./main.html">
+                <p id="order-mobile">Ordenação</p>
+              </a>
+              <select class="status-filter" name="order-alphabetical" id="order-alphabetical-mobile">
+                <option value="All">Alfabética</option>
+                <option value="ascending-order">A-Z</option>
+                <option value="descending-order">Z-A</option>
+              </select>
+
+              <select class="status-filter" name="order-popularity" id="order-popularity-mobile">
+                <option value="All">Popularidade</option>
+                <option value="more-popular">Mais populares</option>
+                <option value="less-popular">Menos populares</option>
+              </select>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </div>
+  </header>
+
+  <div id="fade" class="hide"></div>
+  <div id="modal" class="hide">
+    <button id="close-modal">x</button>
+    <div id="modal-body" class="hide">
+      <p></p>
+    </div>
+  </div>
+
+  <main>
+    <section class="side-container">
+      <aside class="side-bar">
+        <div class="percentDesktop" id="percentText"></div>
+        <div class="options-side-bar">
+          <a href="./main.html">
+            <p id="advanced-search">Busca Avançada</p>
+          </a>
+        </div>
+        <select name="status" id="status-filter">
+          <option value="All">Status</option>
+          <option value="Alive">Vivo</option>
+          <option value="Dead">Morto</option>
+          <option value="unknown">Desconhecido</option>
+        </select>
+
+        <select name="species" id="species-filter">
+          <option value="All">Espécie</option>
+          <option value="Human">Humano</option>
+          <option value="Alien">Alienígena</option>
+          <option value="Animal">Animal</option>
+          <option value="Robot">Robô</option>
+          <option value="Vampire">Vampiro</option>
+          <option value="Humanoid">Humanóide</option>
+          <option value="Poopybutthole">Poopybutthole</option>
+          <option value="Mytholog">Mitológico</option>
+          <option value="Cronenberg">Cronenberg</option>
+          <option value="Disease">Doença</option>
+          <option value="Parasite">Parasita</option>
+          <option value="unknown">Desconhecida</option>
+        </select>
+
+        <select name="gender" id="gender-filter">
+          <option value="All">Gênero</option>
+          <option value="Male">Masculino</option>
+          <option value="Female">Feminino</option>
+          <option value="unknown">Desconhecido</option>
+          <option value="Genderless">Sem gênero</option>
+        </select>
+
+        <div class="order-side">
+          <a href="./main.html">
+            <p id="order">Ordenação</p>
+          </a>
+          <select name="order-alphabetical" id="order-alphabetical">
+            <option value="All">Alfabética</option>
+            <option value="ascending-order">A-Z</option>
+            <option value="descending-order">Z-A</option>
+          </select>
+
+          <select name="order-popularity" id="order-popularity">
+            <option value="All">Popularidade</option>
+            <option value="more-popular">Mais populares</option>
+            <option value="less-popular">Menos populares</option>
+          </select>
+        </div>
+      </aside>
+    </section>
+
+    <div class="search-box-mobile">
+      <input type="text" class="search-box-field" id="search-box-field-mobile" placeholder="Busca por personagem">
+      <a class="search-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="#979797" id="lupa-search-mobile"
+          viewBox="0 0 20 20">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+          </path>
+        </svg>
+      </a>
+    </div>
+
+    <div class="percentMobile" id="percentText-mobile"></div>
+
+    <section class="card-container">
+      <p class="message" id="message-data"></p>
+      <div class="container-card" id="info-cards"></div>
+    </section>
+
+    <button id="btnTop" class="btn-top">
+      <img class="btn-top" src="./Assets/arrowUp.png" alt="botão_voltar_topo">
+    </button>
+  </main>
+
+  <footer id="style-footer-mobile">
+    <nav class="nav-footer">
+      <ul class="ul-footer">
+        <li class="li-footer"><span class="material-symbols-outlined">House</span><a href="index.html">Home</a></li>
+        <li class="li-footer"><span class="material-symbols-outlined">info</span><a href="about.html">Sobre</a></li>
+        <li class="li-footer"><span class="material-symbols-outlined">live_tv</span><a
+            href="https://www.hbomax.com/br/pt/series/urn:hbo:series:GXkRjxwjR68PDwwEAABKJ"
+            target="_blank">Episódios</a></li>
+        <li class="li-footer"><span class="material-symbols-outlined">keyboard_double_arrow_up</span><button
+            id="btnTopMobile">Topo</button></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>
