@@ -7,6 +7,7 @@ const modal = document.getElementById("modal");
 const fade = document.getElementById("fade");
 const totalEpisodes = popularityOrder("more-popular", dataRM)[0].episode.length;
 
+// Manipulação do modal
 const toggleModal = (dataRM) => {
   modal.classList.toggle('hide');
   fade.classList.toggle('hide');
@@ -179,6 +180,9 @@ function scrollToTop (){
 const inputSearchName = document.getElementById("search-box-field-desktop");
 const inputSearchNameMobile = document.getElementById("search-box-field-mobile");
 
+inputSearchName.addEventListener('input', filterName);
+inputSearchNameMobile.addEventListener('input', filterNameMobile);
+
 function filterName() {
   const characterNameFilter = inputSearchName.value;
   const filteredDataName = searchName(dataRM, characterNameFilter);
@@ -191,10 +195,13 @@ function filterNameMobile() {
   cardCharacters(filteredDataName);
 }
 
+<<<<<<< HEAD
 
 inputSearchName.addEventListener('input', filterName);
 inputSearchNameMobile.addEventListener('input', filterNameMobile);
 
+=======
+>>>>>>> e96a49486a06fb4d5f195191aa1537d53f0f7e2b
 //Função menu-burguer
 const sideBarMobile = document.querySelector('.side-bar-mobile');
 const menuBurguer = document.getElementById('burguer');
@@ -203,7 +210,7 @@ menuBurguer.addEventListener('click', toggleMenuBurguer);
 
 function toggleMenuBurguer(){
   sideBarMobile.classList.toggle('active');
-  menuBurguer.classList.toggle('open');
+  // menuBurguer.classList.toggle('open');
 }
 
 
